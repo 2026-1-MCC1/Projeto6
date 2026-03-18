@@ -14,11 +14,7 @@ Vide tutoriais do PI.
 
 ## Nome do Grupo
 
-## Integrantes: 
-<a href="https://www.linkedin.com/in/kauã-casella-da-silva/">Kauã Casella</a>, 
-<a href="https://www.linkedin.com/in/julia-damasio-b6531a24a?">Julia Damasio</a>, 
-<a href="https://www.linkedin.com/in/flavio-lima-ab8989262/">Flavio dos Santos Lima</a>,  
-<a href=" https://www.linkedin.com/in/otavio-sanches-pierini-0b6993306">Otavio Sanches Pierini</a>, 
+## Integrantes:<a href="https://www.linkedin.com/in/kauã-casella-da-silva/">Kauã Casella</a>, <a href="https://www.linkedin.com/in/julia-damasio-b6531a24a?">Julia Damasio</a>, <a href="https://www.linkedin.com/in/flavio-lima-ab8989262/">Flavio dos Santos Lima</a>,  <a href=" https://www.linkedin.com/in/otavio-sanches-pierini-0b6993306">Otavio Sanches Pierini</a>, 
 
 ## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Dr. Victor Von Doom</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Saitama</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Strange</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Yoda</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Gero</a>
 
