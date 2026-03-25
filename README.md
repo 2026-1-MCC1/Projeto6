@@ -32,10 +32,6 @@ Teste sua precisão, agilidade e estratégia enquanto corre contra o tempo para 
 
 <br><br>
 
-<br><br>
-
-<br><br>
-
 ## 🛠 Estrutura de pastas
 
 -Raiz<br>
