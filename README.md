@@ -12,7 +12,7 @@ Vide tutoriais do PI.
 
 # Nome do Projeto AgroCAP
 
-## Nome do Grupo AgroCAPINHOS
+## Nome do Grupo AgroCapinhos
 
 ## Integrantes: <a href="https://www.linkedin.com/in/kauã-casella-da-silva-9a1135346?">Kauã Casella</a>, <a href="https://www.linkedin.com/in/otavio-sanches-pierini-0b6993306">Otavio Sanches</a>, <a href="https://www.linkedin.com/in/victorbarq/">Ikki de Fenix</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, <a href="https://www.linkedin.com/in/victorbarq/">Roronoa Zoro</a>, <a href="https://www.linkedin.com/in/flavio-lima-ab8989262/">Miles Morales</a>
 
@@ -21,16 +21,18 @@ Vide tutoriais do PI.
 ## Descrição
 
 <p align="center">
-<img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
+<img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="AgroCap" border="0">
   Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
 </p>
 
+Nosso projeto consiste no desenvolvimento de um jogo interativo inspirado no estilo pinball, ambientado em uma fazenda e com mecânicas inovadoras. O jogador deve controlar o lançamento e a trajetória de uma bolinha dentro de um cenário dinâmico, com o objetivo de direcioná-la para áreas específicas que representam diferentes ingredientes. A proposta combina elementos de precisão, estratégia e agilidade, criando uma experiência envolvente e desafiadora ao integrar a temática rural com a lógica clássica de jogos de habilidade.
 
-De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
+Durante a partida, o jogador terá um tempo limitado para coletar os ingredientes necessários e completar uma receita, como a produção de um bolo. Ao final do jogo, será apresentado um sistema de pontuação que avalia o desempenho com base no tempo, eficiência e acertos, além de possibilitar a comparação com outros jogadores. Dessa forma, o projeto busca proporcionar entretenimento aliado ao desenvolvimento de habilidades como raciocínio rápido, coordenação motora e tomada de decisões sob pressão.
+
 <br><br>
-Meu projeto ajuda estudantes FECAP a configurarem seus githubs.
+
 <br><br>
-May the force be with you!
+
 <br><br>
 
 ## 🛠 Estrutura de pastas
