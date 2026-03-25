@@ -21,8 +21,8 @@ Vide tutoriais do PI.
 ## Descrição
 
 <p align="center">
-<img>
-<img link="agrocap.png" alt="AgroCap" width="700">
+<img src="imagens/agrocap.png" alt="AgroCap" width="700">
+</p>
 
 
 Entre em uma experiência única que mistura a ação clássica do pinball com o charme de uma fazenda! Em AgroCap, você controla o lançamento de uma bolinha em um cenário dinâmico, cheio de desafios e obstáculos, com o objetivo de coletar ingredientes espalhados pelo mapa.
