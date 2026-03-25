@@ -21,13 +21,15 @@ Vide tutoriais do PI.
 ## Descrição
 
 <p align="center">
-<img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="AgroCap" border="0">
+<img>
+<img src="agrocap.png" alt="AgroCap" width="700">
+
   Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
 </p>
 
-Nosso projeto consiste no desenvolvimento de um jogo interativo inspirado no estilo pinball, ambientado em uma fazenda e com mecânicas inovadoras. O jogador deve controlar o lançamento e a trajetória de uma bolinha dentro de um cenário dinâmico, com o objetivo de direcioná-la para áreas específicas que representam diferentes ingredientes. A proposta combina elementos de precisão, estratégia e agilidade, criando uma experiência envolvente e desafiadora ao integrar a temática rural com a lógica clássica de jogos de habilidade.
+Entre em uma experiência única que mistura a ação clássica do pinball com o charme de uma fazenda! Em AgroCap, você controla o lançamento de uma bolinha em um cenário dinâmico, cheio de desafios e obstáculos, com o objetivo de coletar ingredientes espalhados pelo mapa.
 
-Durante a partida, o jogador terá um tempo limitado para coletar os ingredientes necessários e completar uma receita, como a produção de um bolo. Ao final do jogo, será apresentado um sistema de pontuação que avalia o desempenho com base no tempo, eficiência e acertos, além de possibilitar a comparação com outros jogadores. Dessa forma, o projeto busca proporcionar entretenimento aliado ao desenvolvimento de habilidades como raciocínio rápido, coordenação motora e tomada de decisões sob pressão.
+Teste sua precisão, agilidade e estratégia enquanto corre contra o tempo para reunir todos os itens necessários e completar deliciosas receitas, como bolos. Ao final de cada partida, veja sua pontuação, analise seu desempenho e compare seus resultados com outros jogadores. Será que você consegue ser o melhor?
 
 <br><br>
 
