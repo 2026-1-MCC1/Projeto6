@@ -29,6 +29,7 @@ Entre em uma experiência única que mistura a ação clássica do pinball com o
 
 Teste sua precisão, agilidade e estratégia enquanto corre contra o tempo para reunir todos os itens necessários e completar deliciosas receitas, como bolos. Ao final de cada partida, veja sua pontuação, analise seu desempenho e compare seus resultados com outros jogadores. Será que você consegue ser o melhor?
 
+
 <br><br>
 
 <br><br>
