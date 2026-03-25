@@ -22,10 +22,8 @@ Vide tutoriais do PI.
 
 <p align="center">
 <img>
-<img src="agrocap.png" alt="AgroCap" width="700">
+<img link="agrocap.png" alt="AgroCap" width="700">
 
-  Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
-</p>
 
 Entre em uma experiência única que mistura a ação clássica do pinball com o charme de uma fazenda! Em AgroCap, você controla o lançamento de uma bolinha em um cenário dinâmico, cheio de desafios e obstáculos, com o objetivo de coletar ingredientes espalhados pelo mapa.
 
