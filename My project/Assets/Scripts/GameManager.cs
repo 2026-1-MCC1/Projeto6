@@ -4,47 +4,56 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [Header("Configuração")]
-    // Quantidade inicial de vidas do jogador
     [SerializeField] private int lifes = 3;
 
-    // Indica se o jogo já terminou
+    // Indica se o jogo já terminou (evita execução de lógica após Game Over)
     private bool end = false;
 
     [Header("UI")]
-    // Texto das as vidas
-    [SerializeField] private TextMeshProUGUI TextLifes;
-    // Texto de Game Over
-    [SerializeField] private GameObject TextGameOver;
 
-    public void Start()
+    // Canvas do HUD
+    [SerializeField] private GameObject CanvaLife;
+    // Texto das vidas
+    [SerializeField] private TextMeshProUGUI TextLifes;
+    // Canvas do Game Over
+    [SerializeField] private GameObject CanvaGameOver;
+
+    void Start()
     {
+        // HUD começa ativo
+        CanvaLife.SetActive(true);
+        // Game Over começa escondido
+        CanvaGameOver.SetActive(false);
+
         AtualizarUI();
-        TextGameOver.SetActive(false);
     }
-    //Remove uma vida do jogador
+
     public void PerderVida()
     {
-        // Se o jogo já acabou
         if (end) return;
-        // Tira o número de vidas
+
         lifes--;
+
         AtualizarUI();
-        // Exibe no console
+
+        // Exibe no console para debug
         Debug.Log("Vidas restantes: " + lifes);
-        // Verifica se acabou o jogo
+        // Verifica se as vidas acabaram
         if (lifes <= 0)
         {
             GameOver();
         }
     }
+
     public void AtualizarUI()
     {
         if (TextLifes == null)
         {
+            // Para segurança evita erro se o texto não estiver conectado
             Debug.LogError("Texto de vidas NÃO está conectado!");
             return;
         }
-
+        // Atualiza o texto exibido na tela
         TextLifes.text = "Vidas: " + lifes;
     }
 
@@ -52,18 +61,17 @@ public class GameManager : MonoBehaviour
     {
         return end;
     }
-    //Chamado quando o jogador perde todas as vidas
+
+    // Executado quando o jogador perde todas as vidas
     private void GameOver()
     {
-        // Marca o jogo como finalizado
         end = true;
+
         Debug.Log("Game Over");
-        // Aqui para o jogo
+        // Esconde o HUD (vidas)
+        CanvaLife.SetActive(false);
+        // Mostra a tela de Game Over (com botões)
+        CanvaGameOver.SetActive(true);
         Time.timeScale = 0f;
-        // Mostra texto na tela
-        TextGameOver.SetActive(true);
     }
 }
-
-
-
