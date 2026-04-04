@@ -795,8 +795,8 @@ Transform:
   m_GameObject: {fileID: 149326865}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -3.05209, y: -0.9700004, z: -5.4299994}
-  m_LocalScale: {x: 0.6, y: 1, z: 0.6}
+  m_LocalPosition: {x: -3.0521, y: -0.97, z: -4.4393}
+  m_LocalScale: {x: 0.6, y: 0.3992635, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 758746568}
@@ -1459,7 +1459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d35082bc3941f294a832a9e1c93e5ea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Plungler
-  maxPower: 60
+  maxPower: 30
   powerSlider: {fileID: 1194428119}
 --- !u!1 &219458917
 GameObject:
@@ -3419,7 +3419,7 @@ Transform:
   m_GameObject: {fileID: 621045486}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.049999952, y: 0.309, z: 1.385}
+  m_LocalPosition: {x: -0.049999952, y: 0.2106, z: 1.385}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6681,7 +6681,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1586757441}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 2
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -9883,8 +9883,8 @@ Transform:
   m_GameObject: {fileID: 1690726131}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -3.05209, y: -0.9700011, z: -5.039999}
-  m_LocalScale: {x: -0.5, y: 1.3, z: 0.4}
+  m_LocalPosition: {x: -3.0521, y: -0.97, z: -4.1846}
+  m_LocalScale: {x: -0.5, y: 0.4446, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 844110828}
