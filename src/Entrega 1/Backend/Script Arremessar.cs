@@ -41,7 +41,7 @@ public class Plungler : MonoBehaviour
             {
                 foreach (Rigidbody r in balllist)
                 {
-                    r.AddForce(power * Vector3.forward, ForceMode.Impulse);
+                    r.AddForce(power * transform.forward, ForceMode.Impulse);
                 }
             }
         }
