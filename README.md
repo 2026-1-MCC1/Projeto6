@@ -16,25 +16,25 @@ Vide tutoriais do PI.
 
 ## Integrantes: <a href="https://www.linkedin.com/in/kauã-casella-da-silva-9a1135346?">Kauã Casella</a>, <a href="https://www.linkedin.com/in/otavio-sanches-pierini-0b6993306">Otavio Sanches</a>, <a href="https://www.linkedin.com/in/julia-damasio-b6531a24a/">Julia Damasio</a>, <a href="https://www.linkedin.com/in/flavio-lima-ab8989262/">Flavio Lima</a>
 
-## Professores Orientadores: <br><a href="https://www.linkedin.com/in/adriano-valente-534576135/" target="_blank" rel="noopener noreferrer"> Adriano Felix Valente </a>
-<br><a href="https://www.linkedin.com/in/aimarlopes/" target="_blank" rel="noopener noreferrer"> Aimar Martins Lopes </a>
-<br><a href="https://www.linkedin.com/in/dolemes/" target="_blank" rel="noopener noreferrer"> David de Oliveira Lemes</a>
-<br><a href="https://www.linkedin.com/in/edsonbarbero/" target="_blank" rel="noopener noreferrer"> Edson Barbero</a>
-<br><a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/" target="_blank" rel="noopener noreferrer"> Eduardo Savino Gomes </a>
-<br><a href="https://www.linkedin.com/in/fabiano-on%C3%A7a-3214a12/" target="_blank" rel="noopener noreferrer"> Fabiano Onça </a>
-<br><a href="https://www.linkedin.com/in/francisco-escobar/" target="_blank" rel="noopener noreferrer"> Francisco de Souza Escobar </a>
-<br><a href="https://www.linkedin.com/in/jefferson-o-silva/" target="_blank" rel="noopener noreferrer"> Jefferson de Oliveira Silva </a>
-<br><a href="https://www.linkedin.com/in/j%C3%A9sus-gomes-83b769108/" target="_blank" rel="noopener noreferrer"> Jésus Gomes </a>
-<br><a href="https://www.linkedin.com/in/jbuesso/" target="_blank" rel="noopener noreferrer"> José Carlos Buesso Jr </a>
-<br><a href="https://www.linkedin.com/in/katia-bossi/" target="_blank" rel="noopener noreferrer"> Kátia Bossi </a>
-<br><a href="https://www.linkedin.com/in/lucymari/" target="_blank" rel="noopener noreferrer"> Lucy Mari Tabuti</a>
-<br><a href="" target="_blank" rel="noopener noreferrer"> Marco Aurélio </a>
-<br><a href="https://www.linkedin.com/in/paula-astorino-432b5812a/" target="_blank" rel="noopener noreferrer"> Paula Astorino </a>
-<br><a href="https://www.linkedin.com/in/remuniz/" target="_blank" rel="noopener noreferrer"> Renata Muniz do Nascimento </a>
-<br><a href="https://www.linkedin.com/in/professorrodnil/" target="_blank" rel="noopener noreferrer"> Rodnil da Silva Moreira Lisbôa </a>
-<br><a href="https://www.linkedin.com/in/ronaldo-araujo-pinto-3542811a/" target="_blank" rel="noopener noreferrer"> Ronaldo Araujo Pinto </a>
-<br><a href="https://www.linkedin.com/in/victorbarq/" target="_blank" rel="noopener noreferrer"> Victor Bruno Alexander Rosetti de Quiroz </a>
-<br><a href="https://www.linkedin.com/in/vheltai/" target="_blank" rel="noopener noreferrer"> Vinicius Heltai</a>
+## Professores Orientadores: <a href="https://www.linkedin.com/in/adriano-valente-534576135/" target="_blank" rel="noopener noreferrer"> Adriano Felix Valente </a>
+<a href="https://www.linkedin.com/in/aimarlopes/" target="_blank" rel="noopener noreferrer"> Aimar Martins Lopes </a>
+<a href="https://www.linkedin.com/in/dolemes/" target="_blank" rel="noopener noreferrer"> David de Oliveira Lemes</a>
+<a href="https://www.linkedin.com/in/edsonbarbero/" target="_blank" rel="noopener noreferrer"> Edson Barbero</a>
+<a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/" target="_blank" rel="noopener noreferrer"> Eduardo Savino Gomes </a>
+<a href="https://www.linkedin.com/in/fabiano-on%C3%A7a-3214a12/" target="_blank" rel="noopener noreferrer"> Fabiano Onça </a>
+<a href="https://www.linkedin.com/in/francisco-escobar/" target="_blank" rel="noopener noreferrer"> Francisco de Souza Escobar </a>
+<a href="https://www.linkedin.com/in/jefferson-o-silva/" target="_blank" rel="noopener noreferrer"> Jefferson de Oliveira Silva </a>
+<a href="https://www.linkedin.com/in/j%C3%A9sus-gomes-83b769108/" target="_blank" rel="noopener noreferrer"> Jésus Gomes </a>
+<a href="https://www.linkedin.com/in/jbuesso/" target="_blank" rel="noopener noreferrer"> José Carlos Buesso Jr </a>
+<a href="https://www.linkedin.com/in/katia-bossi/" target="_blank" rel="noopener noreferrer"> Kátia Bossi </a>
+<a href="https://www.linkedin.com/in/lucymari/" target="_blank" rel="noopener noreferrer"> Lucy Mari Tabuti</a>
+<a href="" target="_blank" rel="noopener noreferrer"> Marco Aurélio </a>
+<a href="https://www.linkedin.com/in/paula-astorino-432b5812a/" target="_blank" rel="noopener noreferrer"> Paula Astorino </a>
+<a href="https://www.linkedin.com/in/remuniz/" target="_blank" rel="noopener noreferrer"> Renata Muniz do Nascimento </a>
+<a href="https://www.linkedin.com/in/professorrodnil/" target="_blank" rel="noopener noreferrer"> Rodnil da Silva Moreira Lisbôa </a>
+<a href="https://www.linkedin.com/in/ronaldo-araujo-pinto-3542811a/" target="_blank" rel="noopener noreferrer"> Ronaldo Araujo Pinto </a>
+<a href="https://www.linkedin.com/in/victorbarq/" target="_blank" rel="noopener noreferrer"> Victor Bruno Alexander Rosetti de Quiroz </a>
+<a href="https://www.linkedin.com/in/vheltai/" target="_blank" rel="noopener noreferrer"> Vinicius Heltai</a>
 
 ## Descrição
 
