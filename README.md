@@ -14,20 +14,20 @@ Vide tutoriais do PI.
 
 ## Nome do Grupo AgroCapinhos
 
-## Integrantes: <a href="https://www.linkedin.com/in/kauã-casella-da-silva-9a1135346?">Kauã Casella</a>, <a href="https://www.linkedin.com/in/otavio-sanches-pierini-0b6993306">Otavio Sanches</a>, <a href="https://www.linkedin.com/in/julia-damasio-b6531a24a/">Julia Damasio</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, <a href="https://www.linkedin.com/in/victorbarq/">Roronoa Zoro</a>, <a href="https://www.linkedin.com/in/flavio-lima-ab8989262/">Miles Morales</a>
+## Integrantes: <a href="https://www.linkedin.com/in/kauã-casella-da-silva-9a1135346?">Kauã Casella</a>, <a href="https://www.linkedin.com/in/otavio-sanches-pierini-0b6993306">Otavio Sanches</a>, <a href="https://www.linkedin.com/in/julia-damasio-b6531a24a/">Julia Damasio</a>, <a href="https://www.linkedin.com/in/flavio-lima-ab8989262/">Flavio Lima</a>
 
 ## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Dr. Victor Von Doom</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Saitama</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Strange</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Yoda</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Gero</a>
 
 ## Descrição
 
-<p align="center">
+<p class="center">
 <img src="imagens/agrocap.png" alt="AgroCap" width="700">
 </p>
 
 
 Entre em uma experiência única que mistura a ação clássica do pinball com o charme de uma fazenda! Em AgroCap, você controla o lançamento de uma bolinha em um cenário dinâmico, cheio de desafios e obstáculos, com o objetivo de coletar ingredientes espalhados pelo mapa.
 
-Teste sua precisão, agilidade e estratégia enquanto corre contra o tempo para reunir todos os itens necessários e completar deliciosas receitas, como bolos. Ao final de cada partida, veja sua pontuação, analise seu desempenho e compare seus resultados com outros jogadores. Será que você consegue ser o melhor?
+Teste sua precisão, agilidade e estratégia enquanto coleta itens necessários para completar deliciosas receitas, como bolos de diversos sabores. Ao final de cada partida, veja sua pontuação, analise seu desempenho e compare seus resultados com outros jogadores. Será que você consegue ser o melhor confeiteiro desse pinball?
 
 
 <br><br>
