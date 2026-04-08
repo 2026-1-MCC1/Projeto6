@@ -16,25 +16,7 @@ Vide tutoriais do PI.
 
 ## Integrantes: <a href="https://www.linkedin.com/in/kauã-casella-da-silva-9a1135346?">Kauã Casella</a>, <a href="https://www.linkedin.com/in/otavio-sanches-pierini-0b6993306">Otavio Sanches</a>, <a href="https://www.linkedin.com/in/julia-damasio-b6531a24a/">Julia Damasio</a>, <a href="https://www.linkedin.com/in/flavio-lima-ab8989262/">Flavio Lima</a>
 
-## Professores Orientadores: <a href="https://www.linkedin.com/in/adriano-valente-534576135/">Adriano Felix Valente </a>, <a href="https://www.linkedin.com/in/aimarlopes/"> Aimar Martins Lopes</a>,
-<a href="https://www.linkedin.com/in/dolemes/"> David de Oliveira Lemes</a>,
-<a href="https://www.linkedin.com/in/edsonbarbero/"> Edson Barbero</a>,
-<a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/"> Eduardo Savino Gomes</a>,
-<a href="https://www.linkedin.com/in/fabiano-on%C3%A7a-3214a12/"> Fabiano Onça</a>,
-<a href="https://www.linkedin.com/in/francisco-escobar/"> Francisco de Souza Escobar</a>,
-<a href="https://www.linkedin.com/in/jefferson-o-silva/"> Jefferson de Oliveira Silva</a>,
-<a href="https://www.linkedin.com/in/j%C3%A9sus-gomes-83b769108/"> Jésus Gomes</a>,
-<a href="https://www.linkedin.com/in/jbuesso/"> José Carlos Buesso Jr</a>,
-<a href="https://www.linkedin.com/in/katia-bossi/"> Kátia Bossi</a>,
-<a href="https://www.linkedin.com/in/lucymari/"> Lucy Mari Tabuti</a>,
-
-<a href=""> Marco Aurélio</a>,
-<a href="https://www.linkedin.com/in/paula-astorino-432b5812a/"> Paula Astorino</a>,
-<a href="https://www.linkedin.com/in/remuniz/"> Renata Muniz do Nascimento</a>,
-<a href="https://www.linkedin.com/in/professorrodnil/"> Rodnil da Silva Moreira Lisbôa</a>,
-<a href="https://www.linkedin.com/in/ronaldo-araujo-pinto-3542811a/"> Ronaldo Araujo Pinto</a>,
-<a href="https://www.linkedin.com/in/victorbarq/"> Victor Bruno Alexander Rosetti de Quiroz</a>,
-<a href="https://www.linkedin.com/in/vheltai/"> Vinicius Heltai</a>,
+## Professores Orientadores: <a href="https://www.linkedin.com/in/adriano-valente-534576135/">Adriano Felix Valente </a>, <a href="https://www.linkedin.com/in/aimarlopes/"> Aimar Martins Lopes</a>, <a href="https://www.linkedin.com/in/dolemes/"> David de Oliveira Lemes</a>, <a href="https://www.linkedin.com/in/edsonbarbero/"> Edson Barbero</a>, <a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/"> Eduardo Savino Gomes</a>, <a href="https://www.linkedin.com/in/fabiano-on%C3%A7a-3214a12/"> Fabiano Onça</a>, <a href="https://www.linkedin.com/in/francisco-escobar/"> Francisco de Souza Escobar</a>, <a href="https://www.linkedin.com/in/jefferson-o-silva/"> Jefferson de Oliveira Silva</a>, <a href="https://www.linkedin.com/in/j%C3%A9sus-gomes-83b769108/"> Jésus Gomes</a>, <a href="https://www.linkedin.com/in/jbuesso/"> José Carlos Buesso Jr</a>, <a href="https://www.linkedin.com/in/katia-bossi/"> Kátia Bossi</a>, <a href="https://www.linkedin.com/in/lucymari/"> Lucy Mari Tabuti</a>, <a href=""> Marco Aurélio</a>, <a href="https://www.linkedin.com/in/paula-astorino-432b5812a/"> Paula Astorino</a>, <a href="https://www.linkedin.com/in/remuniz/"> Renata Muniz do Nascimento</a>, <a href="https://www.linkedin.com/in/professorrodnil/"> Rodnil da Silva Moreira Lisbôa</a>, <a href="https://www.linkedin.com/in/ronaldo-araujo-pinto-3542811a/"> Ronaldo Araujo Pinto</a>, <a href="https://www.linkedin.com/in/victorbarq/"> Victor Bruno Alexander Rosetti de Quiroz</a>, <a href="https://www.linkedin.com/in/vheltai/"> Vinicius Heltai</a>.
 
 ## Descrição
 
