@@ -7,7 +7,7 @@ public class ScoreManager : MonoBehaviour
 {
     [Header("Pontuação")]
     // Armazena a pontuação atual do jogador
-    private int pontos = 0;
+    private int score = 0;
 
     [Header("UI")]
 
@@ -20,31 +20,31 @@ public class ScoreManager : MonoBehaviour
         AtualizarUI();
     }
 
-    /// Adiciona pontos com base no tipo de ingrediente coletado
+    // Adiciona pontos com base no tipo de ingrediente coletado
     public void AdicionarPontos(string ingrediente)
     {
         // Verifica qual ingrediente foi coletado e adiciona pontos correspondentes
         switch (ingrediente)
         {
             case "trigo":
-                pontos += 10; // trigo vale 10 pontos
+                score += 10; 
                 break;
 
             case "ovo":
-                pontos += 20; // ovo vale 20 pontos
+                score += 20; 
                 break;
 
             case "leite":
-                pontos += 15; // leite vale 15 pontos
+                score += 15; 
                 break;
 
             case "chocolate":
-                pontos += 25; // chocolate vale 25 pontos
+                score += 25;
                 break;
         }
 
         // Exibe no console para debug
-        Debug.Log("Pontos: " + pontos);
+        Debug.Log("Pontos: " + score);
 
         // Atualiza o valor na interface
         AtualizarUI();
@@ -57,7 +57,7 @@ public class ScoreManager : MonoBehaviour
         if (textoPontos != null)
         {
             // Atualiza o texto exibido na tela
-            textoPontos.text = "Pontos: " + pontos;
+            textoPontos.text = "Pontos: " + score;
         }
         else
         {
