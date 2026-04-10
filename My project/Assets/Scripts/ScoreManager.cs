@@ -1,17 +1,17 @@
 using TMPro;
 using UnityEngine;
 
-// Gerencia a pontuação do jogo baseada nos ingredientes coletados.
-// Cada ingrediente possui um valor específico em pontos.
+// Gerencia a pontuaÃ§ao do jogo baseada nos ingredientes coletados.
+// Cada ingrediente possui um valor especifico em pontos.
 public class ScoreManager : MonoBehaviour
 {
-    [Header("Pontuação")]
-    // Armazena a pontuação atual do jogador
+    [Header("PontuaÃ§ao")]
+    // Armazena a pontuaÃ§ao atual do jogador
     private int pontos = 0;
 
     [Header("UI")]
 
-    // Referência ao texto que exibe os pontos na tela
+    // Referencia ao texto que exibe os pontos na tela
     [SerializeField] private TextMeshProUGUI textoPontos;
 
     // Inicializa o sistema atualizando a UI com o valor inicial
@@ -50,10 +50,10 @@ public class ScoreManager : MonoBehaviour
         AtualizarUI();
     }
 
-    // Atualiza o texto da UI com a pontuação atual
+    // Atualiza o texto da UI com a pontuaÃ§ao atual
     private void AtualizarUI()
     {
-        // Verifica se o texto foi corretamente atribuído
+        // Verifica se o texto foi corretamente atribuido
         if (textoPontos != null)
         {
             // Atualiza o texto exibido na tela
@@ -61,8 +61,8 @@ public class ScoreManager : MonoBehaviour
         }
         else
         {
-            // Mensagem de erro caso não esteja conectado
-            Debug.LogError("Texto de pontos NÃO está conectado!");
+            // Mensagem de erro caso no esteja conectado
+            Debug.LogError("Texto de pontos esta conectado!");
         }
     }
 }
