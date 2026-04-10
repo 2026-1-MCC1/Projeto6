@@ -1,31 +1,31 @@
-using System.Text.RegularExpressions;
-using Unity.VisualScripting;
 using UnityEngine;
 
+// Controla troca de câmeras no pinball
 public class CameraPinball : MonoBehaviour
 {
-    // Array para guardar as 3 posições da câmera
+    [Header("Posições da câmera")]
+    // Array com posições pré-definidas
     public Transform[] cameraPositions;
 
-    // Velocidade de transição da câmera (quanto maior, mais rápido)
+    [Header("Configuração")]
+    // Velocidade de transição
     public float smoothSpeed = 5f;
 
-    // Índice da câmera atual (começa na 0)
+    // Índice da câmera atual
     private int currentIndex = 0;
 
-    public Transform Capsule { get; private set; }
+    [Header("Referências")]
+    // Objeto que a câmera vai usar como ponto de refencia (para onde ela vai olhar)
+    public Transform ReferencePoint;
 
-    public Transform bola;
- 
     void Update()
     {
-        // Verifica se o jogador apertou a tecla C
+        // Troca de câmera ao apertar C
         if (Input.GetKeyDown(KeyCode.C))
         {
-            // Passa para a próxima câmera
             currentIndex++;
 
-            // Se passar da última, volta para a primeira
+            // Volta para 0 se passar do limite
             if (currentIndex >= cameraPositions.Length)
             {
                 currentIndex = 0;
@@ -35,40 +35,20 @@ public class CameraPinball : MonoBehaviour
 
     void LateUpdate()
     {
-        // LateUpdate é melhor para câmera (evita tremedeira)
-
-        // Pega a posição e rotação do alvo atual
+        if (cameraPositions.Length == 0) return;
+        // Garante que o índice não ultrapasse o tamanho do array
+        if (currentIndex >= cameraPositions.Length)
+            currentIndex = 0;
+        // Define o alvo atual da câmera (posição desejada)
         Transform target = cameraPositions[currentIndex];
-
-        // Faz uma transição suave de posição
+        // Move a câmera suavemente até a posição do alvo
         transform.position = Vector3.Lerp(
-            transform.position,      // posição atual
-            target.position,         // posição alvo
-            smoothSpeed * Time.deltaTime // velocidade suavizada
-        );
-
-        // olha pra bola// apagar depois (provavelmente)
-        void LateUpdate()
-        {
-            // Pega o alvo atual (posição da câmera)
-            Transform target = cameraPositions[currentIndex];
-
-            // Move suavemente a câmera até a posição desejada
-            transform.position = Vector3.Lerp(
-                transform.position,
-                target.position,
-                smoothSpeed * Time.deltaTime
-            );
-
-            // Faz a câmera sempre olhar para a bola
-            transform.LookAt(bola);
-        }
-
-        // Faz uma transição suave de rotação
-        transform.rotation = Quaternion.Lerp(
-            transform.rotation,
-            target.rotation,
+            transform.position,
+            target.position,
             smoothSpeed * Time.deltaTime
         );
+        // Move a câmera suavemente até a posição do alvo
+        if (ReferencePoint != null)
+            transform.LookAt(ReferencePoint);
     }
 }

@@ -10,7 +10,7 @@ public class Plungler : MonoBehaviour
     public Slider powerSlider;
     List<Rigidbody> balllist = new List<Rigidbody>();
     bool ballReady;
-    
+
     void Start()
     {
         powerSlider.minValue = 0f;
@@ -55,18 +55,18 @@ public class Plungler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Bolinha"))
+        if (other.gameObject.CompareTag("Ball"))
         {
             balllist.Add(other.GetComponent<Rigidbody>());
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Bolinha"))
+        if (other.gameObject.CompareTag("Ball"))
         {
             balllist.Remove(other.GetComponent<Rigidbody>());
             power = 0f;
         }
-        
+
     }
 }
