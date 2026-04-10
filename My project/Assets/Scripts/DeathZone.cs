@@ -10,7 +10,7 @@ public class DeathZone : MonoBehaviour
     [SerializeField] private float respawnDelay = 1f;
 
     [Header("Referencias")]
-    // Refer�ncia ao GameManager para controlar vidas
+    // Referencia ao GameManager para controlar vidas
     [SerializeField] private GameManager GameManager;
 
     private void OnTriggerEnter(Collider other)
