@@ -3,21 +3,21 @@ using System.Collections;
 
 public class DeathZone : MonoBehaviour
 {
-    [Header("Configurao")]
-    //Ponto onde a bola ser reposicionada
+    [Header("Configuração")]
+    //Ponto onde a bola será reposicionada
     [SerializeField] private Transform SpawnPoint;
     //Tempo de espera antes do respawn
     [SerializeField] private float respawnDelay = 1f;
 
-    [Header("Referencias")]
-    // Referencia ao GameManager para controlar vidas
+    [Header("Referências")]
+    // Referência ao GameManager para controlar vidas
     [SerializeField] private GameManager GameManager;
 
     private void OnTriggerEnter(Collider other)
     {
         // Garante que apenas a bola ativa o sistema
         if (!other.CompareTag("Ball")) return;
-        // Se o jogo acabou, no faz nada
+        // Se o jogo já acabou, não faz nada
         if (GameManager.JogoAcabou()) return;
         // Informa ao GameManager que o jogador perdeu uma vida
         GameManager.PerderVida();
@@ -25,11 +25,11 @@ public class DeathZone : MonoBehaviour
         StartCoroutine(Respawn(other));
     }
 
-    //Para a bola, cria um tempo de espera antes de reposicionar para evitar problemas de fsica ou colisoes indesejadas.
+    //Para a bola, cria um tempo de espera antes de reposicionar para evitar problemas de física ou colisões indesejadas.
     private IEnumerator Respawn(Collider ball)
     {
         Rigidbody rb = ball.attachedRigidbody;
-        // SeguranÃ§a: evita erro caso exista Rigidbody
+        // Segurança: evita erro caso não exista Rigidbody
         if (rb == null) yield break;
 
         // Zera movimento antes do respawn

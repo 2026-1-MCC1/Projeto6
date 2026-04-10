@@ -1,26 +1,26 @@
 using UnityEngine;
 
-// Controla troca de cï¿½meras no pinball
+// Controla troca de câmeras no pinball
 public class CameraPinball : MonoBehaviour
 {
-    [Header("Posiï¿½ï¿½es da cï¿½mera")]
-    // Array com posiÃ§oes pra-definidas
+    [Header("Posições da câmera")]
+    // Array com posições pré-definidas
     public Transform[] cameraPositions;
 
-    [Header("Configuraï¿½ï¿½o")]
-    // Velocidade de transiÃ§ao
+    [Header("Configuração")]
+    // Velocidade de transição
     public float smoothSpeed = 5f;
 
-    // ï¿½ndice da cï¿½mera atual
+    // Índice da câmera atual
     private int currentIndex = 0;
 
-    [Header("Referï¿½ncias")]
-    // Objeto que a camera vai usar como ponto de refencia (para onde ela vai olhar)
+    [Header("Referências")]
+    // Objeto que a câmera vai usar como ponto de refencia (para onde ela vai olhar)
     public Transform ReferencePoint;
 
     void Update()
     {
-        // Troca de camera ao apertar C
+        // Troca de câmera ao apertar C
         if (Input.GetKeyDown(KeyCode.C))
         {
             currentIndex++;
@@ -36,18 +36,18 @@ public class CameraPinball : MonoBehaviour
     void LateUpdate()
     {
         if (cameraPositions.Length == 0) return;
-        // Garante que o indice no ultrapasse o tamanho do array
+        // Garante que o índice não ultrapasse o tamanho do array
         if (currentIndex >= cameraPositions.Length)
             currentIndex = 0;
-        // Define o alvo atual da camera (posiÃ§ao desejada)
+        // Define o alvo atual da câmera (posição desejada)
         Transform target = cameraPositions[currentIndex];
-        // Move a camera suavemente ate a posiÃ§ao do alvo
+        // Move a câmera suavemente até a posição do alvo
         transform.position = Vector3.Lerp(
             transform.position,
             target.position,
             smoothSpeed * Time.deltaTime
         );
-        // Move a cï¿½mera suavemente atï¿½ a posiï¿½ï¿½o do alvo
+        // Move a câmera suavemente até a posição do alvo
         if (ReferencePoint != null)
             transform.LookAt(ReferencePoint);
     }
