@@ -1,0 +1,14 @@
+C:\Users\25027975\source\repos\EntregaPI_Algoritimo\EntregaPI_Algoritimo\bin\Debug\net8.0\EntregaPI_Algoritimo.exe
+C:\Users\25027975\source\repos\EntregaPI_Algoritimo\EntregaPI_Algoritimo\bin\Debug\net8.0\EntregaPI_Algoritimo.deps.json
+C:\Users\25027975\source\repos\EntregaPI_Algoritimo\EntregaPI_Algoritimo\bin\Debug\net8.0\EntregaPI_Algoritimo.runtimeconfig.json
+C:\Users\25027975\source\repos\EntregaPI_Algoritimo\EntregaPI_Algoritimo\bin\Debug\net8.0\EntregaPI_Algoritimo.dll
+C:\Users\25027975\source\repos\EntregaPI_Algoritimo\EntregaPI_Algoritimo\bin\Debug\net8.0\EntregaPI_Algoritimo.pdb
+C:\Users\25027975\source\repos\EntregaPI_Algoritimo\EntregaPI_Algoritimo\obj\Debug\net8.0\EntregaPI_Algoritimo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\25027975\source\repos\EntregaPI_Algoritimo\EntregaPI_Algoritimo\obj\Debug\net8.0\EntregaPI_Algoritimo.AssemblyInfoInputs.cache
+C:\Users\25027975\source\repos\EntregaPI_Algoritimo\EntregaPI_Algoritimo\obj\Debug\net8.0\EntregaPI_Algoritimo.AssemblyInfo.cs
+C:\Users\25027975\source\repos\EntregaPI_Algoritimo\EntregaPI_Algoritimo\obj\Debug\net8.0\EntregaPI_Algoritimo.csproj.CoreCompileInputs.cache
+C:\Users\25027975\source\repos\EntregaPI_Algoritimo\EntregaPI_Algoritimo\obj\Debug\net8.0\EntregaPI_Algoritimo.dll
+C:\Users\25027975\source\repos\EntregaPI_Algoritimo\EntregaPI_Algoritimo\obj\Debug\net8.0\refint\EntregaPI_Algoritimo.dll
+C:\Users\25027975\source\repos\EntregaPI_Algoritimo\EntregaPI_Algoritimo\obj\Debug\net8.0\EntregaPI_Algoritimo.pdb
+C:\Users\25027975\source\repos\EntregaPI_Algoritimo\EntregaPI_Algoritimo\obj\Debug\net8.0\EntregaPI_Algoritimo.genruntimeconfig.cache
+C:\Users\25027975\source\repos\EntregaPI_Algoritimo\EntregaPI_Algoritimo\obj\Debug\net8.0\ref\EntregaPI_Algoritimo.dll
