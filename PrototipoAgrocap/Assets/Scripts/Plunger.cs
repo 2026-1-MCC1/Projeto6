@@ -19,6 +19,7 @@ public class Plungler : MonoBehaviour
     }
     void Update()
     {
+        // se a bolinha estiver no hitbox, o slider aparece, se nao tiver deixa escondido
         if ((ballReady))
         {
             powerSlider.gameObject.SetActive(true);
@@ -27,6 +28,7 @@ public class Plungler : MonoBehaviour
         {
             powerSlider.gameObject.SetActive(false);
         }
+        // slider evolui com a força acumulada
         powerSlider.value = power;
         if (balllist.Count > 0)
         {
@@ -39,7 +41,7 @@ public class Plungler : MonoBehaviour
                     power += 50 * Time.deltaTime;
                 }
             }
-            // força da bolinha ao pressionar barra de espaço, direção de impulso com base de onde ta apontado
+            // aplica força na bolinha ao pressionar barra de espaço, direção de impulso com base de onde ta apontado
             if (Input.GetKeyUp(KeyCode.Space))
             {
                 foreach (Rigidbody r in balllist)
