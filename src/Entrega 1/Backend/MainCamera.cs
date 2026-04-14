@@ -1,33 +1,34 @@
 using UnityEngine;
 
-// Controla troca de câmeras no pinball
-public class CameraPinball : MonoBehaviour
+// Controle de Cameras Pinball
+public class CameraPinball : MonoBehaviour // Define o nome do Script que Controla as cameras
 {
-    [Header("Posições da câmera")]
-    // Array com posições pré-definidas
-    public Transform[] cameraPositions;
+    [Header("PosiÃ§Ãµes da camera")]
+    // Uma lista conhecida como (array) que guarda os pontos onde a camera pode ficar
+    public Transform[] cameraPositions; 
 
-    [Header("Configuração")]
-    // Velocidade de transição
+    [Header("ConfiguraÃ§Ã£o")]
+    // Define a velocidade do movimento suave da camera.
     public float smoothSpeed = 5f;
 
-    // Índice da câmera atual
+    //Guarda a numeraÃ§Ã£o da camera que esta ativa no momento.
     private int currentIndex = 0;
 
-    [Header("Referências")]
-    // Objeto que a câmera vai usar como ponto de refencia (para onde ela vai olhar)
+    [Header("Referencias")]
+    //O objeto para onde a camera deve sempre apontar (exemplo: mesa de pinball)
+    // Ajustar futuramente possivelmente a nova mesa.
     public Transform ReferencePoint;
 
     void Update()
     {
-        // Troca de câmera ao apertar C
+        //Ao apertar a tecla "C" verifica se o jogador apertou
         if (Input.GetKeyDown(KeyCode.C))
-        {
+        { //Ã‰ o comando que diz va para a proxima posiÃ§Ã£o da lista
             currentIndex++;
 
-            // Volta para 0 se passar do limite
+            // Observa se chegamos ao fim da lista de cameras
             if (currentIndex >= cameraPositions.Length)
-            {
+            { // Se chegou ao fim, volta para a primeira camera da lista
                 currentIndex = 0;
             }
         }
@@ -36,19 +37,30 @@ public class CameraPinball : MonoBehaviour
     void LateUpdate()
     {
         if (cameraPositions.Length == 0) return;
-        // Garante que o índice não ultrapasse o tamanho do array
+            //Precisa de posiÃ§Ãµes cadastradas dentro dela
+            //Se nÃ£o houver, o script nÃ£o ira fazer nada para nÃ£o causar erros
+
         if (currentIndex >= cameraPositions.Length)
+            //Verifica se o numero final passou no final da lista
             currentIndex = 0;
-        // Define o alvo atual da câmera (posição desejada)
+            // Se passou, volta para a primeira camera novamente
+
+             // Para identificar qual Ã© a posiÃ§Ã£o que a camera deve alcanÃ§ar agora
         Transform target = cameraPositions[currentIndex];
-        // Move a câmera suavemente até a posição do alvo
+
+        // Faz o movimento de teletransporte suave entre ambas as cameras
+        // A posiÃ§Ã£o atual e a nova posiÃ§Ã£o
         transform.position = Vector3.Lerp(
             transform.position,
             target.position,
-            smoothSpeed * Time.deltaTime
+            smoothSpeed * Time.deltaTime // Garante que o movimento seja fluido
+            //Independente da velocidade
         );
-        // Move a câmera suavemente até a posição do alvo
+        // Verifica se voce colocou um ponto de referencia para a camera
         if (ReferencePoint != null)
             transform.LookAt(ReferencePoint);
+            // Faz a camera girar automaticamente para ficar sempre apontando
+            // Para a referencia
+            //Ajustar novamente futuramente para se adptar aos novos pontos
     }
 }
