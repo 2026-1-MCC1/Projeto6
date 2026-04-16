@@ -4,14 +4,12 @@ using UnityEngine;
 public class IngredientPickup : MonoBehaviour
 {
     [Header("Configuração")]
-
     // Tipo do ingrediente (definido no Inspector)
     [SerializeField] private IngredienteTipo ingrediente;
 
     [Header("Referência")]
-
-    // Referência ao ScoreManager
-    [SerializeField] private ScoreManager scoreManager;
+    // Referência ao Inventario para adicionar o ingrediente coletado
+    [SerializeField] private Inventory inventory;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -21,7 +19,7 @@ public class IngredientPickup : MonoBehaviour
         Debug.Log($"Você pegou: {ingrediente}");
 
         // Envia para o ScoreManager
-        scoreManager.AdicionarPontos(ingrediente);
+        inventory.AdicionarIngrediente(ingrediente);
 
         // Destroi o objeto após coleta
         Destroy(gameObject);
