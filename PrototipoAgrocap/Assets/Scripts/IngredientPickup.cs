@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 // Detecta quando a bola coleta um ingrediente

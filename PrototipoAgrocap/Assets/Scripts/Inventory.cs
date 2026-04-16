@@ -13,6 +13,7 @@ public class Inventory : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI textoInventario;
+    [SerializeField] private TextMeshProUGUI textoUltimoItem;
 
     void Start()
     {
@@ -45,9 +46,20 @@ public class Inventory : MonoBehaviour
                 break;
         }
 
-        Debug.Log($"Inventário → Trigo:{trigo} Ovo:{ovo} Leite:{leite} Chocolate:{chocolate}");
+        // mostra apenas o último item coletado
+        AtualizarUltimoItem(tipo);
 
+        Debug.Log($"Você pegou: {tipo}");
         AtualizarUI();
+    }
+
+    // Atualiza o texto exibindo apenas o último item coletado
+    private void AtualizarUltimoItem(IngredienteTipo tipo)
+    {
+        if (textoUltimoItem != null)
+        {
+            textoUltimoItem.text = "Último item: " + tipo;
+        }
     }
 
     //Atualiza a UI do inventário
