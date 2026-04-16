@@ -1,10 +1,13 @@
 ﻿using TMPro;
 using UnityEngine;
 
-// Armazena e controla os ingredientes coletados
+// Gerencia o inventário de ingredientes do jogador
+// Armazena os itens coletados e atualiza a interface
 public class Inventory : MonoBehaviour
 {
     [Header("Ingredientes")]
+
+    // Quantidade de cada ingrediente
     public int trigo = 0;
     public int ovo = 0;
     public int leite = 0;
@@ -12,17 +15,14 @@ public class Inventory : MonoBehaviour
     public int morango = 0;
 
     [Header("UI")]
-    [SerializeField] private TextMeshProUGUI textoInventario;
+
+    // Texto que mostra apenas o último item coletado
     [SerializeField] private TextMeshProUGUI textoUltimoItem;
 
-    void Start()
-    {
-        AtualizarUI();
-    }
-
-    // Adiciona ingrediente ao inventário
+    // Adiciona um ingrediente ao inventário
     public void AdicionarIngrediente(IngredienteTipo tipo)
     {
+        // Verifica qual ingrediente foi coletado
         switch (tipo)
         {
             case IngredienteTipo.Trigo:
@@ -46,11 +46,11 @@ public class Inventory : MonoBehaviour
                 break;
         }
 
-        // mostra apenas o último item coletado
-        AtualizarUltimoItem(tipo);
+        // Exibe no console (debug)
+        Debug.Log($"Coletado: {tipo}");
 
-        Debug.Log($"Você pegou: {tipo}");
-        AtualizarUI();
+        // Atualiza a UI do último item coletado
+        AtualizarUltimoItem(tipo);
     }
 
     // Atualiza o texto exibindo apenas o último item coletado
@@ -60,19 +60,9 @@ public class Inventory : MonoBehaviour
         {
             textoUltimoItem.text = "Último item: " + tipo;
         }
-    }
-
-    //Atualiza a UI do inventário
-    private void AtualizarUI()
-    {
-        if (textoInventario != null)
+        else
         {
-            textoInventario.text =
-             $"Trigo: {trigo}\n" +
-            $"Ovo: {ovo}\n" +
-            $"Leite: {leite}\n" +
-            $"Chocolate: {chocolate}\n" +
-            $"Morango: {morango}";
+            Debug.LogWarning("Texto do último item não está conectado!");
         }
     }
 }
