@@ -1,16 +1,29 @@
 using UnityEngine;
 
+// Detecta quando a bola coleta um ingrediente
 public class IngredientPickup : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [Header("Configuração")]
 
-    // Update is called once per frame
-    void Update()
+    // Tipo do ingrediente (definido no Inspector)
+    [SerializeField] private IngredienteTipo ingrediente;
+
+    [Header("Referência")]
+
+    // Referência ao ScoreManager
+    [SerializeField] private ScoreManager scoreManager;
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+        // Verifica se é a bola
+        if (!other.CompareTag("Ball")) return;
+
+        Debug.Log($"Você pegou: {ingrediente}");
+
+        // Envia para o ScoreManager
+        scoreManager.AdicionarPontos(ingrediente);
+
+        // Destroi o objeto após coleta
+        Destroy(gameObject);
     }
 }

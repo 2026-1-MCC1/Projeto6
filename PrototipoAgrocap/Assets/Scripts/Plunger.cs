@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Plungler : MonoBehaviour
 {
-    // força maxima da bolinha / medidor de força        ( O PLUNGER SÓ FUNCIONA COM O POWERSLIDER Q É O MEDIDOR DE FORÇA )
+    // força maxima da bolinha / medidor de força( O PLUNGER SÓ FUNCIONA COM O POWERSLIDER Q É O MEDIDOR DE FORÇA )
     float power;
     float minPower = 0f;
     public float maxPower = 100f;
