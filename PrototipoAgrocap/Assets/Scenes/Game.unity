@@ -907,8 +907,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.54379195, y: 1, z: 0.32049987}
+  m_Center: {x: -0.22810434, y: 0.0000060857556, z: 0.33974963}
 --- !u!23 &169438750
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1504,8 +1504,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.4982956, y: 1, z: 0.3726088}
+  m_Center: {x: -0.2508535, y: 0.00007593355, z: 0.3136946}
 --- !u!23 &222312364
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1607,7 +1607,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1736093124}
+  - {fileID: 1887504414}
   - {fileID: 395016673}
   - {fileID: 1827247145}
   - {fileID: 1444928880}
@@ -1776,12 +1776,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334029263}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0021724056, y: -0.010712999, z: -0.019403331, w: 0.999752}
-  m_LocalPosition: {x: -0.02, y: 0.88, z: -0}
-  m_LocalScale: {x: 1.2581142, y: 0.7281721, z: 1.4375485}
+  m_LocalRotation: {x: 0.027195295, y: -0.006929678, z: -0.016898759, w: 0.99946326}
+  m_LocalPosition: {x: -0.015982158, y: 1.3655686, z: 0.08499919}
+  m_LocalScale: {x: 0.8735973, y: 0.32124078, z: 0.9620387}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1736093124}
+  m_Father: {fileID: 1887504414}
   m_LocalEulerAnglesHint: {x: 0.225, y: -1.232, z: -2.226}
 --- !u!135 &334029265
 SphereCollider:
@@ -2459,8 +2459,8 @@ Transform:
   m_GameObject: {fileID: 453247771}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.039, y: 0.187, z: 1.395}
-  m_LocalScale: {x: 0.27, y: 0.27, z: 0.27}
+  m_LocalPosition: {x: -0.039, y: 0.217, z: 1.326}
+  m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 260838336}
@@ -3120,7 +3120,7 @@ Transform:
   m_GameObject: {fileID: 621045486}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.049999952, y: 0.2106, z: 1.385}
+  m_LocalPosition: {x: -0.049999952, y: 0.296, z: 1.281}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3204,7 +3204,7 @@ Transform:
   m_GameObject: {fileID: 663558657}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0055521727, y: -0.019181028, z: 0.0064818435, w: 0.99977964}
-  m_LocalPosition: {x: 6.08593, y: 0.4181254, z: -5.1948338}
+  m_LocalPosition: {x: 6.08, y: 0.6, z: -5.19}
   m_LocalScale: {x: 1, y: 0, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4848,7 +4848,7 @@ GameObject:
   - component: {fileID: 911518308}
   - component: {fileID: 911518307}
   m_Layer: 0
-  m_Name: TextInventory
+  m_Name: TextUltimoItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4868,9 +4868,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1069169182}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -401, y: 223}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 100, y: -77}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &911518307
@@ -4893,7 +4893,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ingredientes
+  m_text: "Voc\xEA coletou: "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4920,8 +4920,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4959,7 +4959,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -16.81691, w: -238.44441}
+  m_margin: {x: 0, y: 0, z: -205.18657, w: -2.460117}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5136,7 +5136,7 @@ Transform:
   m_GameObject: {fileID: 961772444}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.074, y: 0.096, z: 1.647}
+  m_LocalPosition: {x: 4.074, y: 0.138, z: 1.647}
   m_LocalScale: {x: 0.7, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7708,7 +7708,7 @@ Transform:
   m_GameObject: {fileID: 1510363254}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.127, y: 0.098, z: 1.654}
+  m_LocalPosition: {x: 2.127, y: 0.138, z: 1.654}
   m_LocalScale: {x: 0.7, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8986,9 +8986,8 @@ GameObject:
   - component: {fileID: 1736093127}
   - component: {fileID: 1736093126}
   - component: {fileID: 1736093125}
-  - component: {fileID: 1736093128}
   m_Layer: 0
-  m_Name: Leite
+  m_Name: Leite1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9002,15 +9001,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1736093123}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.02364209, y: 0.0034195255, z: 0.002611235, w: 0.9997112}
-  m_LocalPosition: {x: 5.09, y: 1.91, z: -7.97}
-  m_LocalScale: {x: 0.7213243, y: 0.44076183, z: 0.66921425}
+  m_LocalRotation: {x: 0.025063882, y: 0.0032883226, z: 0.002774641, w: 0.9996766}
+  m_LocalPosition: {x: 0, y: 0.97827077, z: 0.06546608}
+  m_LocalScale: {x: 0.69475275, y: 0.44076133, z: 0.6692131}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 334029264}
-  - {fileID: 1887504414}
-  - {fileID: 1882284148}
-  m_Father: {fileID: 260838336}
+  m_Children: []
+  m_Father: {fileID: 1887504414}
   m_LocalEulerAnglesHint: {x: -2.71, y: 0.385, z: 0.29}
 --- !u!136 &1736093125
 CapsuleCollider:
@@ -9031,10 +9027,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.61441267
+  m_Radius: 0.7770219
   m_Height: 5.502712
   m_Direction: 1
-  m_Center: {x: -0.11441239, y: -1.7513386, z: -0.0000028836346}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1736093126
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9092,20 +9088,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1736093123}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1736093128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736093123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf1c3829c6aa8b441b000e40ef6ab404, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::IngredientPickup
-  ingrediente: 2
-  inventory: {fileID: 1906703652}
 --- !u!1 &1790045274
 GameObject:
   m_ObjectHideFlags: 0
@@ -9611,12 +9593,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1882284147}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.025063893, y: -0.0032883233, z: -0.0027746412, w: 0.99967664}
-  m_LocalPosition: {x: -0.01, y: -2.34, z: 0.14}
-  m_LocalScale: {x: 1.0447205, y: 1.57052, z: 1.4955679}
+  m_LocalRotation: {x: -0.0000000037252899, y: -4.656613e-10, z: -5.820766e-11, w: 1}
+  m_LocalPosition: {x: -0.0007665228, y: -0.05653208, z: 0.107378006}
+  m_LocalScale: {x: 0.7258137, y: 0.6931378, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1736093124}
+  m_Father: {fileID: 1887504414}
   m_LocalEulerAnglesHint: {x: -5.582, y: 0, z: 0}
 --- !u!136 &1882284149
 CapsuleCollider:
@@ -9710,8 +9692,9 @@ GameObject:
   - component: {fileID: 1887504417}
   - component: {fileID: 1887504416}
   - component: {fileID: 1887504415}
+  - component: {fileID: 1887504418}
   m_Layer: 0
-  m_Name: Leite2
+  m_Name: Leite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9725,12 +9708,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1887504413}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.025063893, y: -0.0032883233, z: -0.0027746412, w: 0.99967664}
-  m_LocalPosition: {x: -0.007163074, y: -2.2241225, z: -0.024472142}
-  m_LocalScale: {x: 1.4393857, y: 2.265805, z: 1.4955679}
+  m_LocalRotation: {x: -0.048691995, y: 2.3283064e-10, z: 2.1827873e-10, w: 0.99881387}
+  m_LocalPosition: {x: 5.089, y: 0.946, z: -7.931}
+  m_LocalScale: {x: 1.0382488, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1736093124}
+  m_Children:
+  - {fileID: 1882284148}
+  - {fileID: 334029264}
+  - {fileID: 1736093124}
+  m_Father: {fileID: 260838336}
   m_LocalEulerAnglesHint: {x: -5.582, y: 0, z: 0}
 --- !u!136 &1887504415
 CapsuleCollider:
@@ -9747,7 +9733,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -9812,6 +9798,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1887504413}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1887504418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887504413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1c3829c6aa8b441b000e40ef6ab404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IngredientPickup
+  ingrediente: 2
+  inventory: {fileID: 1906703652}
 --- !u!1 &1906703651
 GameObject:
   m_ObjectHideFlags: 0
@@ -9846,7 +9846,7 @@ MonoBehaviour:
   leite: 0
   chocolate: 0
   morango: 0
-  textoInventario: {fileID: 911518307}
+  textoUltimoItem: {fileID: 911518307}
 --- !u!4 &1906703653
 Transform:
   m_ObjectHideFlags: 0
