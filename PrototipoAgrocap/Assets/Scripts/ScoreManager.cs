@@ -7,7 +7,8 @@ public enum IngredienteTipo
     Trigo,
     Ovo,
     Leite,
-    Chocolate
+    Chocolate,
+    Morango
 }
 
 // Gerencia a pontuação baseada nos ingredientes coletados
@@ -44,6 +45,10 @@ public class ScoreManager : MonoBehaviour
                 break;
 
             case IngredienteTipo.Chocolate:
+                score += 25;
+                break;
+
+            case IngredienteTipo.Morango:
                 score += 25;
                 break;
         }
