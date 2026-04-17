@@ -74,6 +74,7 @@ public class ScoreManager : MonoBehaviour
     public void AdicionarPontosDireto(int valor)
     {
         score += valor;
+
         AtualizarUI();
     }
 }
