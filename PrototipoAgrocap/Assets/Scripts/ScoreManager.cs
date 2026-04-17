@@ -70,4 +70,10 @@ public class ScoreManager : MonoBehaviour
             Debug.LogError("Texto de pontos NÃO está conectado!");
         }
     }
+
+    public void AdicionarPontosDireto(int valor)
+    {
+        score += valor;
+        AtualizarUI();
+    }
 }
