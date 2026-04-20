@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.Video;
+using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
 {
     public VideoPlayer videoPlayer;
-    public GameObject menuOpcoes;
+    public GameObject MenuOpcoes;
+    public RawImage imagemDoVideo;
 
     void Start()
     {
@@ -16,7 +19,11 @@ public class MenuController : MonoBehaviour
      if (videoPlayer.isPlaying && Input.anyKeyDown)
         {
             videoPlayer.Stop();
-            menuOpcoes.SetActive(true);
+            if (imagemDoVideo != null) imagemDoVideo.enabled = false; // Desliga o componente de imagem e para o video
+            videoPlayer.gameObject.SetActive(false);
+            MenuOpcoes.SetActive(true);
+
+
         }    
     }
 }
