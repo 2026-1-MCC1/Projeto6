@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class MenuController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public VideoPlayer videoPlayer;
+    public GameObject menuOpcoes;
+
     void Start()
     {
         
@@ -11,6 +13,10 @@ public class MenuController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+     if (videoPlayer.isPlaying && Input.anyKeyDown)
+        {
+            videoPlayer.Stop();
+            menuOpcoes.SetActive(true);
+        }    
     }
 }
