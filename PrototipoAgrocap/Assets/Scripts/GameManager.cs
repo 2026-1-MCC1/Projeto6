@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -75,57 +76,57 @@ public class GameManager : MonoBehaviour
         int mora = 0;
         int simples = 0;
 
-        while (inventory.trigo >= 1 &&
-               inventory.ovo >= 1 &&
-               inventory.leite >= 1 &&
-               inventory.chocolate >= 1 &&
-               inventory.morango >= 1)
+        while (inventory.Trigo >= 1 &&
+               inventory.Ovo >= 1 &&
+               inventory.Leite >= 1 &&
+               inventory.Chocolate >= 1 &&
+               inventory.Morango >= 1)
         {
-            inventory.trigo--;
-            inventory.ovo--;
-            inventory.leite--;
-            inventory.chocolate--;
-            inventory.morango--;
+            inventory.Trigo--;
+            inventory.Ovo--;
+            inventory.Leite--;
+            inventory.Chocolate--;
+            inventory.Morango--;
 
             especial++;
             pontos += 1000;
         }
 
-        while (inventory.trigo >= 1 &&
-               inventory.ovo >= 1 &&
-               inventory.leite >= 1 &&
-               inventory.chocolate >= 1)
+        while (inventory.Trigo >= 1 &&
+               inventory.Ovo >= 1 &&
+               inventory.Leite >= 1 &&
+               inventory.Chocolate >= 1)
         {
-            inventory.trigo--;
-            inventory.ovo--;
-            inventory.leite--;
-            inventory.chocolate--;
+            inventory.Trigo--;
+            inventory.Ovo--;
+            inventory.Leite--;
+            inventory.Chocolate--;
 
             choc++;
             pontos += 500;
         }
 
-        while (inventory.trigo >= 1 &&
-               inventory.ovo >= 1 &&
-               inventory.leite >= 1 &&
-               inventory.morango >= 1)
+        while (inventory.Trigo >= 1 &&
+               inventory.Ovo >= 1 &&
+               inventory.Leite >= 1 &&
+               inventory.Morango >= 1)
         {
-            inventory.trigo--;
-            inventory.ovo--;
-            inventory.leite--;
-            inventory.morango--;
+            inventory.Trigo--;
+            inventory.Ovo--;
+            inventory.Leite--;
+            inventory.Morango--;
 
             mora++;
             pontos += 500;
         }
 
-        while (inventory.trigo >= 1 &&
-               inventory.ovo >= 1 &&
-               inventory.leite >= 1)
+        while (inventory.Trigo >= 1 &&
+               inventory.Ovo >= 1 &&
+               inventory.Leite >= 1)
         {
-            inventory.trigo--;
-            inventory.ovo--;
-            inventory.leite--;
+            inventory.Trigo--;
+            inventory.Ovo--;
+            inventory.Leite--;
 
             simples++;
             pontos += 250;
@@ -151,5 +152,23 @@ public class GameManager : MonoBehaviour
         CanvaGameOver.SetActive(true);
         CalcularResultadosFinais();
         Time.timeScale = 0f;
+    }
+
+    // Calcula resultados e vai para o Scoreboard
+    public void IrParaScoreboard()
+    {
+        // Calcula tudo antes de sair da cena
+        CalcularResultadosFinais();
+        // Troca de cena
+        SceneManager.LoadScene("Scoreboard");
+    }
+
+    // Vai para o menu
+    public void ReturnMenu()
+    {
+        //despausa o jogo
+        Time.timeScale = 1f;
+        // Carrega a cena "menu"
+        SceneManager.LoadScene("Menu");
     }
 }

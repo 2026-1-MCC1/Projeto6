@@ -1,17 +1,21 @@
 using UnityEngine;
 
+// Armazena os resultados finais do jogo para serem acessados entre cenas
 public class GameResults : MonoBehaviour
 {
+    // Pontuação total final
     public static int ScoreFinal;
 
+    // Quantidade de cada tipo de bolo produzido
     public static int BoloEspecial;
     public static int BoloChocolate;
     public static int BoloMorango;
     public static int BoloSimples;
 
-    public static int trigo;
-    public static int ovo;
-    public static int leite;
-    public static int chocolate;
-    public static int morango;
+    // Quantidade de ingredientes coletados
+    public static int Trigo;
+    public static int Ovo;
+    public static int Leite;
+    public static int Chocolate;
+    public static int Morango;
 }

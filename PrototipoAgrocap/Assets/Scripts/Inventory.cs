@@ -8,11 +8,11 @@ public class Inventory : MonoBehaviour
     [Header("Ingredientes")]
 
     // Quantidade de cada ingrediente
-    public int trigo = 0;
-    public int ovo = 0;
-    public int leite = 0;
-    public int chocolate = 0;
-    public int morango = 0;
+    public int Trigo = 0;
+    public int Ovo = 0;
+    public int Leite = 0;
+    public int Chocolate = 0;
+    public int Morango = 0;
 
     [Header("UI")]
 
@@ -26,23 +26,23 @@ public class Inventory : MonoBehaviour
         switch (tipo)
         {
             case IngredienteTipo.Trigo:
-                trigo++;
+                Trigo++;
                 break;
 
             case IngredienteTipo.Ovo:
-                ovo++;
+                Ovo++;
                 break;
 
             case IngredienteTipo.Leite:
-                leite++;
+                Leite++;
                 break;
 
             case IngredienteTipo.Chocolate:
-                chocolate++;
+                Chocolate++;
                 break;
 
             case IngredienteTipo.Morango:
-                morango++;
+                Morango++;
                 break;
         }
 
