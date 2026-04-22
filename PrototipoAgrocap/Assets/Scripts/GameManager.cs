@@ -67,8 +67,24 @@ public class GameManager : MonoBehaviour
         return end;
     }
 
+    // Calcula os resultados finais com base nos ingredientes coletados
+    // e salva os valores para a cena de Scoreboard
     private void CalcularResultadosFinais()
     {
+        // Verifica se o inventário foi conectado corretamente
+        if (inventory == null)
+        {
+            Debug.LogError("ERRO: Inventory está NULL no GameManager!");
+            return;
+        }
+
+        Debug.Log("Inventory conectado com sucesso.");
+        Debug.Log("Trigo: " + inventory.Trigo);
+        Debug.Log("Ovo: " + inventory.Ovo);
+        Debug.Log("Leite: " + inventory.Leite);
+        Debug.Log("Chocolate: " + inventory.Chocolate);
+        Debug.Log("Morango: " + inventory.Morango);
+
         int pontos = 0;
 
         int especial = 0;
@@ -76,6 +92,7 @@ public class GameManager : MonoBehaviour
         int mora = 0;
         int simples = 0;
 
+        // Bolo especial: chocolate + morango
         while (inventory.Trigo >= 1 &&
                inventory.Ovo >= 1 &&
                inventory.Leite >= 1 &&
@@ -92,6 +109,7 @@ public class GameManager : MonoBehaviour
             pontos += 1000;
         }
 
+        // Bolo de chocolate
         while (inventory.Trigo >= 1 &&
                inventory.Ovo >= 1 &&
                inventory.Leite >= 1 &&
@@ -106,6 +124,7 @@ public class GameManager : MonoBehaviour
             pontos += 500;
         }
 
+        // Bolo de morango
         while (inventory.Trigo >= 1 &&
                inventory.Ovo >= 1 &&
                inventory.Leite >= 1 &&
@@ -120,6 +139,7 @@ public class GameManager : MonoBehaviour
             pontos += 500;
         }
 
+        // Bolo simples
         while (inventory.Trigo >= 1 &&
                inventory.Ovo >= 1 &&
                inventory.Leite >= 1)
@@ -132,12 +152,15 @@ public class GameManager : MonoBehaviour
             pontos += 250;
         }
 
-        GameResults.ScoreFinal = pontos;
+        Debug.Log("Antes de salvar em GameResults");
 
+        GameResults.ScoreFinal = pontos;
         GameResults.BoloEspecial = especial;
         GameResults.BoloChocolate = choc;
         GameResults.BoloMorango = mora;
         GameResults.BoloSimples = simples;
+
+        Debug.Log("Resultados salvos com sucesso!");
     }
 
     // Executado quando o jogador perde todas as vidas
@@ -150,13 +173,13 @@ public class GameManager : MonoBehaviour
         CanvaLife.SetActive(false);
         // Mostra a tela de Game Over (com botões)
         CanvaGameOver.SetActive(true);
-        CalcularResultadosFinais();
         Time.timeScale = 0f;
     }
 
     // Calcula resultados e vai para o Scoreboard
     public void IrParaScoreboard()
     {
+        Time.timeScale = 1f;
         // Calcula tudo antes de sair da cena
         CalcularResultadosFinais();
         // Troca de cena

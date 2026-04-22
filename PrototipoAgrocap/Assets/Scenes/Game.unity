@@ -3955,7 +3955,6 @@ GameObject:
   m_Component:
   - component: {fileID: 414421658}
   - component: {fileID: 414421657}
-  - component: {fileID: 414421659}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -3976,8 +3975,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   lifes: 3
-  inventory: {fileID: 0}
-  scoreManager: {fileID: 0}
+  inventory: {fileID: 1906703652}
+  scoreManager: {fileID: 386155033}
   CanvaLife: {fileID: 1069169178}
   TextLifes: {fileID: 959739795}
   CanvaGameOver: {fileID: 603193651}
@@ -3996,18 +3995,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &414421659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414421656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d4effcb862a5114fa53017efb7d1b22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SceneController
 --- !u!43 &416342693
 Mesh:
   m_ObjectHideFlags: 0
