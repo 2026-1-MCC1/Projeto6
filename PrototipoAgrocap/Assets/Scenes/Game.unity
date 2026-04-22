@@ -3955,7 +3955,6 @@ GameObject:
   m_Component:
   - component: {fileID: 414421658}
   - component: {fileID: 414421657}
-  - component: {fileID: 414421659}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -3976,8 +3975,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   lifes: 3
-  inventory: {fileID: 0}
-  scoreManager: {fileID: 0}
+  inventory: {fileID: 1906703652}
+  scoreManager: {fileID: 386155033}
   CanvaLife: {fileID: 1069169178}
   TextLifes: {fileID: 959739795}
   CanvaGameOver: {fileID: 603193651}
@@ -3996,18 +3995,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &414421659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414421656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d4effcb862a5114fa53017efb7d1b22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SceneController
 --- !u!43 &416342693
 Mesh:
   m_ObjectHideFlags: 0
@@ -11059,50 +11046,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 260838336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1186536680
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1186536682}
-  - component: {fileID: 1186536681}
-  m_Layer: 0
-  m_Name: SceneController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1186536681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1186536680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d4effcb862a5114fa53017efb7d1b22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SceneController
---- !u!4 &1186536682
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1186536680}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1194428118
 GameObject:
   m_ObjectHideFlags: 0
@@ -13686,8 +13629,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1186536681}
-        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+      - m_Target: {fileID: 414421657}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: ReturnMenu
         m_Mode: 1
         m_Arguments:
@@ -14174,9 +14117,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1186536681}
-        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
-        m_MethodName: ReturnScoreboard
+      - m_Target: {fileID: 414421657}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: IrParaScoreboard
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16898,11 +16841,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd0dc2e779d41c548839a61673d4ab09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Inventory
-  trigo: 0
-  ovo: 0
-  leite: 0
-  chocolate: 0
-  morango: 0
+  Trigo: 0
+  Ovo: 0
+  Leite: 0
+  Chocolate: 0
+  Morango: 0
   textoUltimoItem: {fileID: 911518307}
 --- !u!4 &1906703653
 Transform:
@@ -17107,7 +17050,6 @@ SceneRoots:
   - {fileID: 643046685}
   - {fileID: 705507995}
   - {fileID: 414421658}
-  - {fileID: 1186536682}
   - {fileID: 386155034}
   - {fileID: 1906703653}
   - {fileID: 260838336}

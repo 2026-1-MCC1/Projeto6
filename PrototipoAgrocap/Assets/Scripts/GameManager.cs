@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -66,8 +67,24 @@ public class GameManager : MonoBehaviour
         return end;
     }
 
+    // Calcula os resultados finais com base nos ingredientes coletados
+    // e salva os valores para a cena de Scoreboard
     private void CalcularResultadosFinais()
     {
+        // Verifica se o inventário foi conectado corretamente
+        if (inventory == null)
+        {
+            Debug.LogError("ERRO: Inventory está NULL no GameManager!");
+            return;
+        }
+
+        Debug.Log("Inventory conectado com sucesso.");
+        Debug.Log("Trigo: " + inventory.Trigo);
+        Debug.Log("Ovo: " + inventory.Ovo);
+        Debug.Log("Leite: " + inventory.Leite);
+        Debug.Log("Chocolate: " + inventory.Chocolate);
+        Debug.Log("Morango: " + inventory.Morango);
+
         int pontos = 0;
 
         int especial = 0;
@@ -75,68 +92,75 @@ public class GameManager : MonoBehaviour
         int mora = 0;
         int simples = 0;
 
-        while (inventory.trigo >= 1 &&
-               inventory.ovo >= 1 &&
-               inventory.leite >= 1 &&
-               inventory.chocolate >= 1 &&
-               inventory.morango >= 1)
+        // Bolo especial: chocolate + morango
+        while (inventory.Trigo >= 1 &&
+               inventory.Ovo >= 1 &&
+               inventory.Leite >= 1 &&
+               inventory.Chocolate >= 1 &&
+               inventory.Morango >= 1)
         {
-            inventory.trigo--;
-            inventory.ovo--;
-            inventory.leite--;
-            inventory.chocolate--;
-            inventory.morango--;
+            inventory.Trigo--;
+            inventory.Ovo--;
+            inventory.Leite--;
+            inventory.Chocolate--;
+            inventory.Morango--;
 
             especial++;
             pontos += 1000;
         }
 
-        while (inventory.trigo >= 1 &&
-               inventory.ovo >= 1 &&
-               inventory.leite >= 1 &&
-               inventory.chocolate >= 1)
+        // Bolo de chocolate
+        while (inventory.Trigo >= 1 &&
+               inventory.Ovo >= 1 &&
+               inventory.Leite >= 1 &&
+               inventory.Chocolate >= 1)
         {
-            inventory.trigo--;
-            inventory.ovo--;
-            inventory.leite--;
-            inventory.chocolate--;
+            inventory.Trigo--;
+            inventory.Ovo--;
+            inventory.Leite--;
+            inventory.Chocolate--;
 
             choc++;
             pontos += 500;
         }
 
-        while (inventory.trigo >= 1 &&
-               inventory.ovo >= 1 &&
-               inventory.leite >= 1 &&
-               inventory.morango >= 1)
+        // Bolo de morango
+        while (inventory.Trigo >= 1 &&
+               inventory.Ovo >= 1 &&
+               inventory.Leite >= 1 &&
+               inventory.Morango >= 1)
         {
-            inventory.trigo--;
-            inventory.ovo--;
-            inventory.leite--;
-            inventory.morango--;
+            inventory.Trigo--;
+            inventory.Ovo--;
+            inventory.Leite--;
+            inventory.Morango--;
 
             mora++;
             pontos += 500;
         }
 
-        while (inventory.trigo >= 1 &&
-               inventory.ovo >= 1 &&
-               inventory.leite >= 1)
+        // Bolo simples
+        while (inventory.Trigo >= 1 &&
+               inventory.Ovo >= 1 &&
+               inventory.Leite >= 1)
         {
-            inventory.trigo--;
-            inventory.ovo--;
-            inventory.leite--;
+            inventory.Trigo--;
+            inventory.Ovo--;
+            inventory.Leite--;
 
             simples++;
             pontos += 250;
         }
 
-        GameResults.ScoreFinal = pontos;
+        Debug.Log("Antes de salvar em GameResults");
 
+        GameResults.ScoreFinal = pontos;
         GameResults.BoloEspecial = especial;
         GameResults.BoloChocolate = choc;
         GameResults.BoloMorango = mora;
         GameResults.BoloSimples = simples;
+
+        Debug.Log("Resultados salvos com sucesso!");
     }
 
     // Executado quando o jogador perde todas as vidas
@@ -149,7 +173,25 @@ public class GameManager : MonoBehaviour
         CanvaLife.SetActive(false);
         // Mostra a tela de Game Over (com botões)
         CanvaGameOver.SetActive(true);
-        CalcularResultadosFinais();
         Time.timeScale = 0f;
+    }
+
+    // Calcula resultados e vai para o Scoreboard
+    public void IrParaScoreboard()
+    {
+        Time.timeScale = 1f;
+        // Calcula tudo antes de sair da cena
+        CalcularResultadosFinais();
+        // Troca de cena
+        SceneManager.LoadScene("Scoreboard");
+    }
+
+    // Vai para o menu
+    public void ReturnMenu()
+    {
+        //despausa o jogo
+        Time.timeScale = 1f;
+        // Carrega a cena "menu"
+        SceneManager.LoadScene("Menu");
     }
 }
