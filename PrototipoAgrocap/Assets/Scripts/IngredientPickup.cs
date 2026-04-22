@@ -1,28 +1,34 @@
 using TMPro;
 using UnityEngine;
 
-// Detecta quando a bola coleta um ingrediente
 public class IngredientPickup : MonoBehaviour
 {
-    [Header("Configuração")]
-    // Tipo do ingrediente (definido no Inspector)
+    [Header("ConfiguraÃ§Ã£o")]
     [SerializeField] private IngredienteTipo ingrediente;
 
-    [Header("Referência")]
-    // Referência ao Inventario para adicionar o ingrediente coletado
+    [Header("ReferÃªncia")]
     [SerializeField] private Inventory inventory;
+
+    [Header("Respawn")]
+    public ItemSpawner spawner;
 
     private void OnTriggerEnter(Collider other)
     {
-        // Verifica se é a bola
         if (!other.CompareTag("Ball")) return;
 
-        Debug.Log($"Você pegou: {ingrediente}");
+        Debug.Log($"Coletado: {ingrediente}");
 
-        // Envia para o ScoreManager
         inventory.AdicionarIngrediente(ingrediente);
 
-        // Destroi o objeto após coleta
+        if (spawner != null)
+        {
+            spawner.ItemFoiColetado();
+        }
+        else
+        {
+            Debug.LogWarning($"Spawner nÃ£o foi atribuÃ­do no objeto {gameObject.name}");
+        }
+
         Destroy(gameObject);
     }
 }
