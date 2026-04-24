@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 
 public class IngredientPickup : MonoBehaviour
@@ -6,11 +5,14 @@ public class IngredientPickup : MonoBehaviour
     [Header("Configuração")]
     [SerializeField] private IngredienteTipo ingrediente;
 
-    [Header("Referência")]
-    [SerializeField] private Inventory inventory;
+    private Inventory inventory;
+    private ItemSpawner spawner;
 
-    [Header("Respawn")]
-    public ItemSpawner spawner;
+    public void Configurar(ItemSpawner novoSpawner, Inventory novoInventory)
+    {
+        spawner = novoSpawner;
+        inventory = novoInventory;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,15 +20,18 @@ public class IngredientPickup : MonoBehaviour
 
         Debug.Log($"Coletado: {ingrediente}");
 
-        inventory.AdicionarIngrediente(ingrediente);
+        if (inventory != null)
+        {
+            inventory.AdicionarIngrediente(ingrediente);
+        }
+        else
+        {
+            Debug.LogError("Inventory não foi configurado!");
+        }
 
         if (spawner != null)
         {
             spawner.ItemFoiColetado();
-        }
-        else
-        {
-            Debug.LogWarning($"Spawner não foi atribuído no objeto {gameObject.name}");
         }
 
         Destroy(gameObject);
