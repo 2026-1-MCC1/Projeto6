@@ -27,12 +27,18 @@ public class ScoreboardUI : MonoBehaviour
         textoResultado.text =
             "=== RESULTADO FINAL ===\n\n" +
 
-            "Pontuação: " + GameResults.ScoreFinal + "\n\n" +
+        "Pontuação: " + GameResults.ScoreFinal + "\n\n" +
 
-            "Bolos Criados:\n" +
-            "- Especial: " + GameResults.BoloEspecial + "\n" +
-            "- Chocolate: " + GameResults.BoloChocolate + "\n" +
-            "- Morango: " + GameResults.BoloMorango + "\n" +
-            "- Simples: " + GameResults.BoloSimples;
+        "Bolos Criados:\n" +
+        "- Especial: " + GameResults.BoloEspecial + "\n" +
+        "- Chocolate: " + GameResults.BoloChocolate + "\n" +
+        "- Morango: " + GameResults.BoloMorango + "\n" +
+        "- Simples: " + GameResults.BoloSimples + "\n\n" +
+        "Ingredientes restantes:\n" +
+        "- Trigo: " + GameResults.TrigoRestante + "\n" +
+        "- Ovo: " + GameResults.OvoRestante + "\n" +
+        "- Leite: " + GameResults.LeiteRestante + "\n" +
+        "- Chocolate: " + GameResults.ChocolateRestante + "\n" +
+        "- Morango: " + GameResults.MorangoRestante;
     }
 }

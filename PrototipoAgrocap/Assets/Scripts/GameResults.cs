@@ -18,4 +18,11 @@ public class GameResults : MonoBehaviour
     public static int Leite;
     public static int Chocolate;
     public static int Morango;
+
+    // Quantidade de ingredientes restantes após as receitas
+    public static int TrigoRestante;
+    public static int OvoRestante;
+    public static int LeiteRestante;
+    public static int ChocolateRestante;
+    public static int MorangoRestante;
 }

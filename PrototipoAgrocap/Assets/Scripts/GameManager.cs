@@ -154,11 +154,21 @@ public class GameManager : MonoBehaviour
 
         Debug.Log("Antes de salvar em GameResults");
 
+        // Salva a pontuação final
         GameResults.ScoreFinal = pontos;
+
+        // Salva a quantidade de bolos criados
         GameResults.BoloEspecial = especial;
         GameResults.BoloChocolate = choc;
         GameResults.BoloMorango = mora;
         GameResults.BoloSimples = simples;
+
+        // Salva os ingredientes que sobraram depois das receitas
+        GameResults.TrigoRestante = inventory.Trigo;
+        GameResults.OvoRestante = inventory.Ovo;
+        GameResults.LeiteRestante = inventory.Leite;
+        GameResults.ChocolateRestante = inventory.Chocolate;
+        GameResults.MorangoRestante = inventory.Morango;
 
         Debug.Log("Resultados salvos com sucesso!");
     }
