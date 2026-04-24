@@ -3453,11 +3453,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemSpawner
   itemPrefabs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 3753405691224889969, guid: 1ded93de05e78d141b806af7793e5b06, type: 3}
+  - {fileID: 1843036071334491306, guid: 7288d26638d25cb4381487b49859a3c2, type: 3}
+  - {fileID: 7591647594165045231, guid: 1b824508fc948e84e99e789826dbda8e, type: 3}
+  - {fileID: 5103372600784286048, guid: bdfdcec34d222c3459b612cb3d9e82ba, type: 3}
+  - {fileID: 2723751557721530260, guid: c342bcbffda5af145a95398469e0008c, type: 3}
   spawnPoints:
   - {fileID: 340945224}
   respawnDelay: 5
@@ -3685,11 +3685,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemSpawner
   itemPrefabs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 5103372600784286048, guid: bdfdcec34d222c3459b612cb3d9e82ba, type: 3}
+  - {fileID: 1843036071334491306, guid: 7288d26638d25cb4381487b49859a3c2, type: 3}
+  - {fileID: 7591647594165045231, guid: 1b824508fc948e84e99e789826dbda8e, type: 3}
+  - {fileID: 2723751557721530260, guid: c342bcbffda5af145a95398469e0008c, type: 3}
+  - {fileID: 3753405691224889969, guid: 1ded93de05e78d141b806af7793e5b06, type: 3}
   spawnPoints:
   - {fileID: 375544403}
   respawnDelay: 5
@@ -4286,10 +4286,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemSpawner
   itemPrefabs:
   - {fileID: 2723751557721530260, guid: c342bcbffda5af145a95398469e0008c, type: 3}
-  - {fileID: 1843036071334491306, guid: 7288d26638d25cb4381487b49859a3c2, type: 3}
   - {fileID: 3753405691224889969, guid: 1ded93de05e78d141b806af7793e5b06, type: 3}
-  - {fileID: 7591647594165045231, guid: 1b824508fc948e84e99e789826dbda8e, type: 3}
   - {fileID: 5103372600784286048, guid: bdfdcec34d222c3459b612cb3d9e82ba, type: 3}
+  - {fileID: 1843036071334491306, guid: 7288d26638d25cb4381487b49859a3c2, type: 3}
+  - {fileID: 7591647594165045231, guid: 1b824508fc948e84e99e789826dbda8e, type: 3}
   spawnPoints:
   - {fileID: 475901732}
   respawnDelay: 5
@@ -4517,11 +4517,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemSpawner
   itemPrefabs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1843036071334491306, guid: 7288d26638d25cb4381487b49859a3c2, type: 3}
+  - {fileID: 7591647594165045231, guid: 1b824508fc948e84e99e789826dbda8e, type: 3}
+  - {fileID: 2723751557721530260, guid: c342bcbffda5af145a95398469e0008c, type: 3}
+  - {fileID: 3753405691224889969, guid: 1ded93de05e78d141b806af7793e5b06, type: 3}
+  - {fileID: 5103372600784286048, guid: bdfdcec34d222c3459b612cb3d9e82ba, type: 3}
   spawnPoints:
   - {fileID: 531920344}
   respawnDelay: 5
@@ -4571,11 +4571,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemSpawner
   itemPrefabs:
-  - {fileID: 3753405691224889969, guid: 1ded93de05e78d141b806af7793e5b06, type: 3}
   - {fileID: 5103372600784286048, guid: bdfdcec34d222c3459b612cb3d9e82ba, type: 3}
   - {fileID: 1843036071334491306, guid: 7288d26638d25cb4381487b49859a3c2, type: 3}
   - {fileID: 7591647594165045231, guid: 1b824508fc948e84e99e789826dbda8e, type: 3}
-  - {fileID: 2723751557721530260, guid: c342bcbffda5af145a95398469e0008c, type: 3}
   spawnPoints:
   - {fileID: 546599570}
   respawnDelay: 5
