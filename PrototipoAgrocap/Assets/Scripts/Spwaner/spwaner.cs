@@ -4,7 +4,7 @@ using UnityEngine;
 public class ItemSpawner : MonoBehaviour
 {
     [Header("Configuração")]
-    [SerializeField] private GameObject itemPrefab;
+    [SerializeField] private GameObject[] itemPrefabs;
     [SerializeField] private Transform[] spawnPoints;
     [SerializeField] private float respawnDelay = 5f;
 
@@ -30,8 +30,6 @@ public class ItemSpawner : MonoBehaviour
     {
         esperandoRespawn = true;
 
-        Debug.Log("Respawn em " + respawnDelay + " segundos");
-
         yield return new WaitForSeconds(respawnDelay);
 
         SpawnarItem();
@@ -47,10 +45,18 @@ public class ItemSpawner : MonoBehaviour
             return;
         }
 
-        int index = Random.Range(0, spawnPoints.Length);
-        Transform ponto = spawnPoints[index];
+        if (itemPrefabs.Length == 0)
+        {
+            Debug.LogError("Nenhum item prefab definido!");
+            return;
+        }
 
-        GameObject item = Instantiate(itemPrefab, ponto.position, ponto.rotation);
+        int spawnIndex = Random.Range(0, spawnPoints.Length);
+        int itemIndex = Random.Range(0, itemPrefabs.Length);
+
+        Transform ponto = spawnPoints[spawnIndex];
+
+        GameObject item = Instantiate(itemPrefabs[itemIndex], ponto.position, ponto.rotation);
 
         IngredientPickup pickup = item.GetComponent<IngredientPickup>();
 
