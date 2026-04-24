@@ -3,66 +3,69 @@ using UnityEngine;
 
 public class ItemSpawner : MonoBehaviour
 {
-    public GameObject itemPrefab;
-    public float tempoEntreSpawns = 10f;
+    [Header("Configuração")]
+    // Prefab do item (leite, ovo, etc)
+    [SerializeField] private GameObject itemPrefab;
+    // Pontos onde o item pode nascer
+    [SerializeField] private Transform[] spawnPoints;
+    // Tempo para respawn
+    [SerializeField] private float respawnDelay = 5f;
 
     private bool esperandoRespawn = false;
 
-    private Vector3 centroSpawn = new Vector3(4.2066f, -0.2f, -7.4849f);
-    private Vector3 tamanhoSpawn = new Vector3(3.898744f, 0.4f, 9.242114f);
-
-    void Start()
+    private void Start()
     {
-        Debug.Log("Spawner iniciado. Vai respawnar somente depois da coleta.");
+        SpawnarItem();
     }
 
+    // Chamado quando o item é coletado
     public void ItemFoiColetado()
     {
         if (!esperandoRespawn)
         {
-            StartCoroutine(RespawnDepoisDoTempo());
+            StartCoroutine(Respawn());
         }
     }
 
-    IEnumerator RespawnDepoisDoTempo()
+    // Espera e cria outro item
+    private IEnumerator Respawn()
     {
         esperandoRespawn = true;
 
-        Debug.Log("Item coletado. Respawn em " + tempoEntreSpawns + " segundos.");
+        Debug.Log("Item coletado. Respawn em " + respawnDelay + " segundos.");
 
-        yield return new WaitForSeconds(tempoEntreSpawns);
+        yield return new WaitForSeconds(respawnDelay);
 
-        Spawnar();
+        SpawnarItem();
 
         esperandoRespawn = false;
     }
 
-    void Spawnar()
-{
-    float minX = centroSpawn.x - tamanhoSpawn.x / 2f;
-    float maxX = centroSpawn.x + tamanhoSpawn.x / 2f;
-
-    float minZ = centroSpawn.z - tamanhoSpawn.z / 2f;
-    float maxZ = centroSpawn.z + tamanhoSpawn.z / 2f;
-
-    float x = Random.Range(minX, maxX);
-    float z = Random.Range(minZ, maxZ);
-    float y = centroSpawn.y + (tamanhoSpawn.y / 2f) + 0.2f;
-
-    Vector3 posicaoSpawn = new Vector3(x, y, z);
-
-    GameObject itemCriado = Instantiate(itemPrefab, posicaoSpawn, Quaternion.identity);
-
-    IngredientPickup pickup = itemCriado.GetComponent<IngredientPickup>();
-    if (pickup != null)
+    // Spawn do item em um ponto aleatório da lista
+    void SpawnarItem()
     {
-        pickup.spawner = this;
-    }
-    else
-    {
-        Debug.LogWarning("O prefab criado não tem IngredientPickup.");
-    }
+        if (spawnPoints.Length == 0)
+        {
+            Debug.LogError("Nenhum spawn point definido!");
+            return;
+        }
 
-    Debug.Log("Item criado com sucesso: " + itemCriado.name + " na posição " + posicaoSpawn);
-}
+        int index = Random.Range(0, spawnPoints.Length);
+
+        Transform ponto = spawnPoints[index];
+
+        GameObject item = Instantiate(
+            itemPrefab,
+            ponto.position,
+            ponto.rotation
+        );
+
+        // conecta o spawner no item
+        ItemColetavel coletavel = item.GetComponent<ItemColetavel>();
+
+        if (coletavel != null)
+        {
+            coletavel.DefinirSpawner(this);
+        }
+    }
 }

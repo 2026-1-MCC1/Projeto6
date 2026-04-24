@@ -4479,7 +4479,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemSpawner
   itemPrefab: {fileID: 3753405691224889969, guid: 1ded93de05e78d141b806af7793e5b06, type: 3}
-  tempoEntreSpawns: 4
+  spawnPoints:
+  - {fileID: 546599570}
+  respawnDelay: 5
 --- !u!1 &596266881
 GameObject:
   m_ObjectHideFlags: 0
@@ -16650,7 +16652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8243679487854882282, guid: 1ded93de05e78d141b806af7793e5b06, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.089
+      value: 18.43
       objectReference: {fileID: 0}
     - target: {fileID: 8243679487854882282, guid: 1ded93de05e78d141b806af7793e5b06, type: 3}
       propertyPath: m_LocalPosition.y

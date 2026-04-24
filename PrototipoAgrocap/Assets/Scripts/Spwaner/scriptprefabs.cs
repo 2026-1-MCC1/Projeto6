@@ -1,25 +1,26 @@
 using UnityEngine;
 
+// Item coletável pela bola
 public class ItemColetavel : MonoBehaviour
 {
-    public ItemSpawner spawner;
+    private ItemSpawner spawner;
+
+    public void DefinirSpawner(ItemSpawner s)
+    {
+        spawner = s;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (!other.CompareTag("Ball")) return;
+
+        Debug.Log("Item coletado: " + gameObject.name);
+
+        if (spawner != null)
         {
-            Debug.Log("Item coletado pelo Player: " + gameObject.name);
-
-            if (spawner != null)
-            {
-                spawner.ItemFoiColetado();
-            }
-            else
-            {
-                Debug.LogWarning("ItemColetavel: referência do spawner está nula.");
-            }
-
-            Destroy(gameObject);
+            spawner.ItemFoiColetado();
         }
+
+        Destroy(gameObject);
     }
 }
