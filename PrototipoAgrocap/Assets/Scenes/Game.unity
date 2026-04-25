@@ -16001,7 +16001,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9081069912088800505, guid: 1b824508fc948e84e99e789826dbda8e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.9
+      value: 322.3
       objectReference: {fileID: 0}
     - target: {fileID: 9081069912088800505, guid: 1b824508fc948e84e99e789826dbda8e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16054,7 +16054,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 57407222692502478, guid: 7288d26638d25cb4381487b49859a3c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.43
+      value: 48.1
       objectReference: {fileID: 0}
     - target: {fileID: 57407222692502478, guid: 7288d26638d25cb4381487b49859a3c2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16111,7 +16111,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3496168399343343056, guid: 9eae82e3dac120f4395d73bd7c601192, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.99
+      value: 47.94
       objectReference: {fileID: 0}
     - target: {fileID: 3496168399343343056, guid: 9eae82e3dac120f4395d73bd7c601192, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16151,7 +16151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5660167290390550872, guid: 9eae82e3dac120f4395d73bd7c601192, type: 3}
       propertyPath: m_Name
-      value: Chocolate
+      value: Morango
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16184,15 +16184,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8243679487854882282, guid: 1ded93de05e78d141b806af7793e5b06, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.78
+      value: 1844
       objectReference: {fileID: 0}
     - target: {fileID: 8243679487854882282, guid: 1ded93de05e78d141b806af7793e5b06, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.04
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8243679487854882282, guid: 1ded93de05e78d141b806af7793e5b06, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.36
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 8243679487854882282, guid: 1ded93de05e78d141b806af7793e5b06, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16237,7 +16237,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1652236951424905900, guid: bdfdcec34d222c3459b612cb3d9e82ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.02
+      value: 42.96
       objectReference: {fileID: 0}
     - target: {fileID: 1652236951424905900, guid: bdfdcec34d222c3459b612cb3d9e82ba, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16277,7 +16277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5103372600784286048, guid: bdfdcec34d222c3459b612cb3d9e82ba, type: 3}
       propertyPath: m_Name
-      value: Morango
+      value: Chocolate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
