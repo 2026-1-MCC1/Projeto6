@@ -4526,6 +4526,11 @@ MonoBehaviour:
   - {fileID: 531920344}
   respawnDelay: 5
   inventory: {fileID: 1906703652}
+--- !u!1 &541906071 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3753405691224889969, guid: 1ded93de05e78d141b806af7793e5b06, type: 3}
+  m_PrefabInstance: {fileID: 7835337745725360327}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &546599569
 GameObject:
   m_ObjectHideFlags: 0
@@ -4574,6 +4579,8 @@ MonoBehaviour:
   - {fileID: 5103372600784286048, guid: bdfdcec34d222c3459b612cb3d9e82ba, type: 3}
   - {fileID: 1843036071334491306, guid: 7288d26638d25cb4381487b49859a3c2, type: 3}
   - {fileID: 7591647594165045231, guid: 1b824508fc948e84e99e789826dbda8e, type: 3}
+  - {fileID: 1340232639}
+  - {fileID: 541906071}
   spawnPoints:
   - {fileID: 546599570}
   respawnDelay: 5
@@ -11827,6 +11834,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1329339690}
   m_Mesh: {fileID: 327705504}
+--- !u!1 &1340232639 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5660167290390550872, guid: 9eae82e3dac120f4395d73bd7c601192, type: 3}
+  m_PrefabInstance: {fileID: 3466989351286068756}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1349113915
 Mesh:
   m_ObjectHideFlags: 0
