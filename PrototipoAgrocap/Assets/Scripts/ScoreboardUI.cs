@@ -13,16 +13,24 @@ public class ScoreboardLayout : MonoBehaviour
     // Painel onde todo o layout sera criado.(Deve ser um RectTransform dentro do Canvas.)
     [SerializeField] private RectTransform panelScoreboard;
 
+    [Header("Sprites dos Cards")]
+    [SerializeField] private Sprite spriteBoloEspecial;
+    [SerializeField] private Sprite spriteBoloChocolate;
+    [SerializeField] private Sprite spriteBoloMorango;
+    [SerializeField] private Sprite spriteBoloSimples;
+    [SerializeField] private Sprite spriteChocolate;
+    [SerializeField] private Sprite spriteMorango;
+    [SerializeField] private Sprite spriteFarinha;
+    [SerializeField] private Sprite spriteLeite;
+    [SerializeField] private Sprite spriteOvo;
+
     [Header("Visual")]
-    // Sprite usado como fundo dos cards (moldura).
-    [SerializeField] private Sprite cardSprite;
-    // Cor base do card (se não quiser usar sprite)
     [SerializeField] private Color cardColor = Color.white;
 
     // Grid responsável por organizar os cards pequenos.
     private GridLayoutGroup gridCardsPequenos;
 
-    // Área (lado direito) onde o grid vive.
+    // Area (lado direito) onde o grid esta.
     // Usada para calcular tamanho disponível.
     private RectTransform areaCardsPequenos;
 
@@ -43,21 +51,21 @@ public class ScoreboardLayout : MonoBehaviour
         }
 
         // Cria o card do bolo especial (lado esquerdo)
-        CriarCardGrande("Bolo Especial", GameResults.BoloEspecial + "x");
+        CriarCardGrande("Bolo Especial", GameResults.BoloEspecial + "x", spriteBoloEspecial);
 
         // Cria a area da direita (container do grid)
         RectTransform areaDireita = CriarAreaDireita();
 
         // Cria todos os cards pequenos (ordem importa visualmente)
-        CriarCardPequeno(areaDireita, "Bolo Chocolate", GameResults.BoloChocolate + "x");
-        CriarCardPequeno(areaDireita, "Bolo Morango", GameResults.BoloMorango + "x");
-        CriarCardPequeno(areaDireita, "Bolo Simples", GameResults.BoloSimples + "x");
-        CriarCardPequeno(areaDireita, "Chocolate", GameResults.ChocolateRestante + "x");
+        CriarCardPequeno(areaDireita, "Bolo Chocolate", GameResults.BoloChocolate + "x", spriteBoloChocolate);
+        CriarCardPequeno(areaDireita, "Bolo Morango", GameResults.BoloMorango + "x", spriteBoloMorango);
+        CriarCardPequeno(areaDireita, "Bolo Simples", GameResults.BoloSimples + "x", spriteBoloSimples);
+        CriarCardPequeno(areaDireita, "Chocolate", GameResults.ChocolateRestante + "x", spriteChocolate);
 
-        CriarCardPequeno(areaDireita, "Morango", GameResults.MorangoRestante + "x");
-        CriarCardPequeno(areaDireita, "Farinha", GameResults.TrigoRestante + "x");
-        CriarCardPequeno(areaDireita, "Leite", GameResults.LeiteRestante + "x");
-        CriarCardPequeno(areaDireita, "Ovo", GameResults.OvoRestante + "x");
+        CriarCardPequeno(areaDireita, "Morango", GameResults.MorangoRestante + "x", spriteMorango);
+        CriarCardPequeno(areaDireita, "Farinha", GameResults.TrigoRestante + "x", spriteFarinha);
+        CriarCardPequeno(areaDireita, "Leite", GameResults.LeiteRestante + "x", spriteLeite);
+        CriarCardPequeno(areaDireita, "Ovo", GameResults.OvoRestante + "x", spriteOvo);
 
         // Ajusta tamanho dos cards baseado na tela atual
         ConfigurarGridResponsivo();
@@ -65,7 +73,7 @@ public class ScoreboardLayout : MonoBehaviour
 
     // Cria o card grande da esquerda.
     // Ele ocupa 32 porcento da largura da tela.
-    private void CriarCardGrande(string nome, string quantidade)
+    private void CriarCardGrande(string nome, string quantidade, Sprite spriteDoCard)
     {
         GameObject card = new GameObject("Card_" + nome);
         card.transform.SetParent(panelScoreboard, false);
@@ -85,8 +93,8 @@ public class ScoreboardLayout : MonoBehaviour
         Image img = card.AddComponent<Image>();
         img.color = cardColor;
 
-        if (cardSprite != null)
-            img.sprite = cardSprite;
+        if (spriteDoCard != null)
+            img.sprite = spriteDoCard;
 
         // Quantidade de ingredientes
         CriarTextoPosicionado(
@@ -118,17 +126,14 @@ public class ScoreboardLayout : MonoBehaviour
 
         RectTransform rect = area.AddComponent<RectTransform>();
 
-        // Começa onde o card grande termina
         rect.anchorMin = new Vector2(0.32f, 0f);
         rect.anchorMax = new Vector2(1f, 1f);
-
         rect.offsetMin = Vector2.zero;
         rect.offsetMax = Vector2.zero;
 
-        // Grid que organiza automaticamente os filhos
         gridCardsPequenos = area.AddComponent<GridLayoutGroup>();
         areaCardsPequenos = rect;
-
+            
         return rect;
     }
 
@@ -166,7 +171,7 @@ public class ScoreboardLayout : MonoBehaviour
     }
 
     // Cria um card pequeno dentro do grid.
-    private void CriarCardPequeno(RectTransform parent, string nome, string quantidade)
+    private void CriarCardPequeno(RectTransform parent, string nome, string quantidade, Sprite spriteDoCard)
     {
         GameObject card = new GameObject("Card_" + nome);
         card.transform.SetParent(parent, false);
@@ -174,8 +179,8 @@ public class ScoreboardLayout : MonoBehaviour
         Image img = card.AddComponent<Image>();
         img.color = cardColor;
 
-        if (cardSprite != null)
-            img.sprite = cardSprite;
+        if (spriteDoCard != null)
+            img.sprite = spriteDoCard;
 
         // Quantidade de ingredientes
         CriarTextoPosicionado(
@@ -230,13 +235,10 @@ public class ScoreboardLayout : MonoBehaviour
         // Define posicao relativa (0 = esquerda/baixo 1 = direita/cima)
         rect.anchorMin = anchor;
         rect.anchorMax = anchor;
-
         // Pivot centralizado para evitar deslocamentos estranhos
         rect.pivot = new Vector2(0.5f, 0.5f);
-
         // Define tamanho da caixa de texto
         rect.sizeDelta = tamanho;
-
         // Mantém exatamente no ponto do anchor
         rect.anchoredPosition = Vector2.zero;
     }
