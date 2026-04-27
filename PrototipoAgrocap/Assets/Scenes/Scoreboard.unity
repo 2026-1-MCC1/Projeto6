@@ -555,7 +555,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreboardUI
   panelScoreboard: {fileID: 489904364}
-  cardSprite: {fileID: 21300000, guid: 182aaa9b14df39343b26be8fd5d4811e, type: 3}
+  spriteBoloEspecial: {fileID: 21300000, guid: 182aaa9b14df39343b26be8fd5d4811e, type: 3}
+  spriteBoloChocolate: {fileID: 21300000, guid: 182aaa9b14df39343b26be8fd5d4811e, type: 3}
+  spriteBoloMorango: {fileID: 21300000, guid: 182aaa9b14df39343b26be8fd5d4811e, type: 3}
+  spriteBoloSimples: {fileID: 21300000, guid: 182aaa9b14df39343b26be8fd5d4811e, type: 3}
+  spriteChocolate: {fileID: 21300000, guid: 182aaa9b14df39343b26be8fd5d4811e, type: 3}
+  spriteMorango: {fileID: 21300000, guid: 182aaa9b14df39343b26be8fd5d4811e, type: 3}
+  spriteFarinha: {fileID: 21300000, guid: 182aaa9b14df39343b26be8fd5d4811e, type: 3}
+  spriteLeite: {fileID: 21300000, guid: 182aaa9b14df39343b26be8fd5d4811e, type: 3}
+  spriteOvo: {fileID: 21300000, guid: 182aaa9b14df39343b26be8fd5d4811e, type: 3}
   cardColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1407722498
 Transform:
