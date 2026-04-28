@@ -13,6 +13,9 @@ public class ScoreboardLayout : MonoBehaviour
     // Painel onde todo o layout sera criado.(Deve ser um RectTransform dentro do Canvas.)
     [SerializeField] private RectTransform panelScoreboard;
 
+    [Header("Fonte")]
+    [SerializeField] private TMP_FontAsset fontePersonalizada;
+
     [Header("Sprites dos Cards")]
     [SerializeField] private Sprite spriteBoloEspecial;
     [SerializeField] private Sprite spriteBoloChocolate;
@@ -29,9 +32,7 @@ public class ScoreboardLayout : MonoBehaviour
 
     // Grid responsável por organizar os cards pequenos.
     private GridLayoutGroup gridCardsPequenos;
-
-    // Area (lado direito) onde o grid esta.
-    // Usada para calcular tamanho disponível.
+    // Area (lado direito) onde o grid esta. Usada para calcular tamanho disponível.
     private RectTransform areaCardsPequenos;
 
     // Para quando entrar na cena montar tudo.
@@ -206,7 +207,7 @@ public class ScoreboardLayout : MonoBehaviour
     // Cria um texto com posicionamento relativo ao card.
     // IMPORTANTE:
     // anchor (0 a 1) define posição proporcional
-    // isso mantém o texto no lugar mesmo com resize
+    // isso mantém o texto no lugar mesmo se mudar o tamananho da tela ou do card.
     private void CriarTextoPosicionado(
         Transform parent,
         string conteudo,
@@ -215,31 +216,43 @@ public class ScoreboardLayout : MonoBehaviour
         Vector2 tamanho,
         int tamanhoFonte)
     {
+        // Cria um novo objeto para o texto
         GameObject obj = new GameObject("Text_" + nomeObj);
+        // Define esse objeto como filho do card
         obj.transform.SetParent(parent, false);
 
+        // Adiciona o componente de texto do TextMeshPro
         TextMeshProUGUI texto = obj.AddComponent<TextMeshProUGUI>();
-
+            
         texto.text = conteudo;
         texto.fontStyle = FontStyles.Bold;
         texto.alignment = TextAlignmentOptions.Center;
         texto.color = Color.black;
 
-        // Ajuste automatico da fonte
+        // Se existir uma fonte personalizada no Inspector,
+        // ela será aplicada automaticamente
+        if (fontePersonalizada != null)
+        {
+            texto.font = fontePersonalizada;
+        }
+
+        // Ativa o ajuste automático da fonte
         texto.enableAutoSizing = true;
+        // Define o tamanho mínimo da fonte
         texto.fontSizeMin = 6;
+        // Define o tamanho máximo da fonte
         texto.fontSizeMax = tamanhoFonte;
 
+        // Pega o RectTransform para controlar posição e tamanho
         RectTransform rect = obj.GetComponent<RectTransform>();
-
-        // Define posicao relativa (0 = esquerda/baixo 1 = direita/cima)
+        // Define a posição relativa dentro do card
         rect.anchorMin = anchor;
         rect.anchorMax = anchor;
-        // Pivot centralizado para evitar deslocamentos estranhos
+        // Mantém o pivot centralizado
         rect.pivot = new Vector2(0.5f, 0.5f);
-        // Define tamanho da caixa de texto
+        // Define o tamanho da caixa de texto
         rect.sizeDelta = tamanho;
-        // Mantém exatamente no ponto do anchor
+        // Faz o texto ficar exatamente no ponto definido
         rect.anchoredPosition = Vector2.zero;
     }
 }
