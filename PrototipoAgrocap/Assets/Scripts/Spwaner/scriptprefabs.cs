@@ -3,6 +3,8 @@ using UnityEngine;
 // Item coletável pela bola
 public class ItemColetavel : MonoBehaviour
 {
+    [SerializeField] private IngredienteTipo ingrediente;
+
     private ItemSpawner spawner;
 
     public void DefinirSpawner(ItemSpawner s)
@@ -14,11 +16,11 @@ public class ItemColetavel : MonoBehaviour
     {
         if (!other.CompareTag("Ball")) return;
 
-        Debug.Log("Item coletado: " + gameObject.name);
+        Debug.Log("Item coletado: " + ingrediente);
 
         if (spawner != null)
         {
-            spawner.ItemFoiColetado();
+            spawner.ItemFoiColetado(ingrediente);
         }
 
         Destroy(gameObject);

@@ -10,6 +10,7 @@ public class ItemSpawner : MonoBehaviour
 
     [Header("Referência")]
     [SerializeField] private Inventory inventory;
+    [SerializeField] private AnimarGif[] telasGif;
 
     private bool esperandoRespawn = false;
 
@@ -18,11 +19,26 @@ public class ItemSpawner : MonoBehaviour
         SpawnarItem();
     }
 
-    public void ItemFoiColetado()
+    public void ItemFoiColetado(IngredienteTipo ingrediente)
     {
+        TrocarGifEmTodasAsTelas(ingrediente);
+
         if (!esperandoRespawn)
         {
             StartCoroutine(Respawn());
+        }
+    }
+
+    private void TrocarGifEmTodasAsTelas(IngredienteTipo ingrediente)
+    {
+        int index = (int)ingrediente;
+
+        foreach (AnimarGif tela in telasGif)
+        {
+            if (tela != null)
+            {
+                tela.TrocarGif(index);
+            }
         }
     }
 

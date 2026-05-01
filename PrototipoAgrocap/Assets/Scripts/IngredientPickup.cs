@@ -31,7 +31,8 @@ public class IngredientPickup : MonoBehaviour
 
         if (spawner != null)
         {
-            spawner.ItemFoiColetado();
+         
+            spawner.ItemFoiColetado(ingrediente);
         }
 
         Destroy(gameObject);
