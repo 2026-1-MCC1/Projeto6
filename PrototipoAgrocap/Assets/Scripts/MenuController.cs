@@ -12,10 +12,15 @@ public class MenuController : MonoBehaviour
     public TextMeshProUGUI titulo; // titulo
     public TextMeshProUGUI subtitulo; // subtitulo
     public GameObject painelControles; // painel
+    public GameObject painelNome; // painel onde o jogador digita o nome
+    public TMP_InputField inputNome; // campo de texto do nome
 
     void Start()
     { //menu vai começar desativado
         if (MenuOpcoes != null) MenuOpcoes.SetActive(false);
+
+        // painel de nome começa desativado
+        if (painelNome != null) painelNome.SetActive(false);
     }
 
     void Update()
@@ -23,8 +28,28 @@ public class MenuController : MonoBehaviour
         // Se o vídeo estiver aparecendo e você clicar ou apertar alguma tecla
         if (videoPlayer != null && videoPlayer.isPlaying && Input.anyKeyDown)
         {
-            AtivarMenu();
+            ConfirmarNome();
         }
+    }
+    public void ConfirmarNome()
+    {
+        string nomeDigitado = inputNome.text;
+
+        // Se estiver vazio, usa nome padrão
+        if (string.IsNullOrWhiteSpace(nomeDigitado))
+        {
+            nomeDigitado = "Jogador";
+        }
+
+        // Salva o nome para usar no ranking/API
+        RankingAPI.NomeJogador = nomeDigitado;
+
+        // Fecha painel de nome
+        painelNome.SetActive(false);
+
+        // Agora sim abre o menu principal
+        if (MenuOpcoes != null)
+            MenuOpcoes.SetActive(true);
     }
 
     void AtivarMenu()
@@ -41,6 +66,7 @@ public class MenuController : MonoBehaviour
         // menu ativado 
         if (MenuOpcoes != null) MenuOpcoes.SetActive(true);
     }
+
     // Codigo dos botoes 
     public void JogarJogo()
     {
