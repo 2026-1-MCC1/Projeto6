@@ -1,8 +1,9 @@
-using UnityEngine;
-using UnityEngine.Video; // adicionacdo por conta do video
-using UnityEngine.UI; // adicionado por conta do canva
 using TMPro; // adicionado para desaparecer com o texto no menu principal
+using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI; // adicionado por conta do canva
+using UnityEngine.Video; // adicionacdo por conta do video
+using static Unity.Burst.Intrinsics.X86.Avx;
 
 public class MenuController : MonoBehaviour
 {
@@ -14,13 +15,14 @@ public class MenuController : MonoBehaviour
     public GameObject painelControles; // painel
     public GameObject painelNome; // painel onde o jogador digita o nome
     public TMP_InputField inputNome; // campo de texto do nome
+    public GameObject MenuNome;
 
     void Start()
     { //menu vai começar desativado
         if (MenuOpcoes != null) MenuOpcoes.SetActive(false);
 
         // painel de nome começa desativado
-        if (painelNome != null) painelNome.SetActive(false);
+        if (MenuNome != null) MenuNome.SetActive(false);
     }
 
     void Update()
@@ -28,31 +30,11 @@ public class MenuController : MonoBehaviour
         // Se o vídeo estiver aparecendo e você clicar ou apertar alguma tecla
         if (videoPlayer != null && videoPlayer.isPlaying && Input.anyKeyDown)
         {
-            ConfirmarNome();
+            AtivarNome();
         }
     }
-    public void ConfirmarNome()
-    {
-        string nomeDigitado = inputNome.text;
 
-        // Se estiver vazio, usa nome padrão
-        if (string.IsNullOrWhiteSpace(nomeDigitado))
-        {
-            nomeDigitado = "Jogador";
-        }
-
-        // Salva o nome para usar no ranking/API
-        RankingAPI.NomeJogador = nomeDigitado;
-
-        // Fecha painel de nome
-        painelNome.SetActive(false);
-
-        // Agora sim abre o menu principal
-        if (MenuOpcoes != null)
-            MenuOpcoes.SetActive(true);
-    }
-
-    void AtivarMenu()
+    void AtivarNome()
     {
         videoPlayer.Stop(); //o video vai parar
         // A imagem do video desaparace 
@@ -70,8 +52,17 @@ public class MenuController : MonoBehaviour
     // Codigo dos botoes 
     public void JogarJogo()
     {
-        
-        // Coloque o nome da sua cena de jogo entre as aspas
+        MenuOpcoes.SetActive(false);
+        MenuNome.SetActive(true);
+       
+    }
+
+    public void ConfirmarNome()
+    {
+        string nomeDigitado = inputNome.text;
+
+        RankingAPI.NomeJogador = nomeDigitado;
+
         SceneManager.LoadScene("Game");
     }
 
