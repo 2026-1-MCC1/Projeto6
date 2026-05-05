@@ -55,6 +55,9 @@ public class RankingManager : MonoBehaviour
     private TextMeshProUGUI[] textosNomes;
     private TextMeshProUGUI[] textosPontos;
 
+    // Evita clicar varias vezes enquanto envia/busca o ranking
+    private bool carregandoRanking = false;
+
 
     // Configuração inicial da tela
     private void Start()
@@ -78,11 +81,52 @@ public class RankingManager : MonoBehaviour
             textoPontos1, textoPontos2, textoPontos3,
             textoPontos4, textoPontos5, textoPontos6
         };
+
+        // Salva a partida no banco assim que o Scoreboard abre
+        SalvarRankingPendente();
     }
 
 
     // Chamado pelo botão "Ranking"
     public void AbrirRanking()
+    {
+        // Evita chamadas duplicadas antes da API responder
+        if (carregandoRanking)
+        {
+            return;
+        }
+
+        // Verifica se a API foi conectada no Inspector
+        if (rankingAPI == null)
+        {
+            Debug.LogError("RankingAPI não foi conectada.");
+            return;
+        }
+
+        // Troca a tela visível
+        canvasScoreboard.SetActive(false);
+        canvasRanking.SetActive(true);
+
+        // Marca que o ranking esta carregando
+        carregandoRanking = true;
+
+        // Se a partida ainda nao foi salva, envia antes de buscar a lista
+        if (GameResults.RankingEstaPendente())
+        {
+            rankingAPI.EnviarRanking((enviado) =>
+            {
+                BuscarRankingAtualizado();
+            });
+        }
+        else
+        {
+            BuscarRankingAtualizado();
+        }
+    }
+
+
+    // Envia a partida para o banco caso ela ainda esteja pendente
+    private void SalvarRankingPendente()
     {
         // Verifica se a API foi conectada no Inspector
         if (rankingAPI == null)
@@ -91,15 +135,38 @@ public class RankingManager : MonoBehaviour
             return;
         }
 
-        // Envia a pontuação atual para o banco
-        rankingAPI.EnviarRanking();
+        // Se a partida ja foi enviada, nao envia de novo
+        if (!GameResults.RankingEstaPendente())
+        {
+            return;
+        }
 
-        // Busca o ranking atualizado no banco
-        rankingAPI.BuscarRanking(MostrarRanking);
+        // Evita outro envio enquanto a API responde
+        carregandoRanking = true;
 
-        // Troca a tela visível
-        canvasScoreboard.SetActive(false);
-        canvasRanking.SetActive(true);
+        // Envia automaticamente o resultado salvo da partida
+        rankingAPI.EnviarRanking((enviado) =>
+        {
+            // Libera o botao para abrir o ranking depois do envio
+            carregandoRanking = false;
+        });
+    }
+
+
+    // Busca o ranking atualizado e libera o botao ao terminar
+    private void BuscarRankingAtualizado()
+    {
+        rankingAPI.BuscarRanking(
+            (lista) =>
+            {
+                MostrarRanking(lista);
+                carregandoRanking = false;
+            },
+            () =>
+            {
+                carregandoRanking = false;
+            }
+        );
     }
 
 

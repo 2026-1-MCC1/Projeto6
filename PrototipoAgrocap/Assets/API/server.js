@@ -46,6 +46,46 @@ app.post("/ranking", async (req, res) => {
 
         } = req.body;
 
+        // Garante que o banco receba o nome digitado ou o nome padrao
+        const nomeJogador = typeof nome === "string" && nome.trim() !== "" ? nome.trim() : "Jogador";
+
+        // Garante que a pontuacao seja tratada como numero
+        const pontosJogador = Number(pontos) || 0;
+
+        // Busca a maior pontuacao ja salva para esse nome
+        const [jogadorExistente] = await db.execute(`
+            SELECT MAX(pontos) AS maiorPontuacao
+            FROM ranking
+            WHERE nome = ?
+        `, [
+            nomeJogador
+        ]);
+
+        // Verifica se o nome ja existe no ranking
+        const nomeJaExiste = jogadorExistente[0].maiorPontuacao !== null;
+
+        // Guarda a pontuacao atual desse nome
+        const maiorPontuacao = nomeJaExiste ? Number(jogadorExistente[0].maiorPontuacao) : 0;
+
+        // Se a nova pontuacao for menor ou igual, ignora o envio
+        if (nomeJaExiste && pontosJogador <= maiorPontuacao) {
+            return res.json({
+                sucesso: true,
+                atualizado: false,
+                mensagem: "Pontuação menor ou igual. Ranking mantido."
+            });
+        }
+
+        // Se o nome ja existe e a pontuacao e maior, remove o registro antigo
+        if (nomeJaExiste) {
+            await db.execute(`
+                DELETE FROM ranking
+                WHERE nome = ?
+            `, [
+                nomeJogador
+            ]);
+        }
+
         // Inserção dos dados no banco
         await db.execute(`
             INSERT INTO ranking (
@@ -65,8 +105,8 @@ app.post("/ranking", async (req, res) => {
             )
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         `, [
-            nome,
-            pontos,
+            nomeJogador,
+            pontosJogador,
 
             boloEspecial,
             boloChocolate,
@@ -83,6 +123,7 @@ app.post("/ranking", async (req, res) => {
         // Retorno de sucesso
         res.json({
             sucesso: true,
+            atualizado: true,
             mensagem: "Ranking salvo com sucesso!"
         });
 
@@ -101,8 +142,9 @@ app.post("/ranking", async (req, res) => {
 app.get("/ranking", async (req, res) => {
     try {
         const [rows] = await db.execute(`
-            SELECT nome, pontos
+            SELECT nome, MAX(pontos) AS pontos
             FROM ranking
+            GROUP BY nome
             ORDER BY pontos DESC
             LIMIT 6
         `);

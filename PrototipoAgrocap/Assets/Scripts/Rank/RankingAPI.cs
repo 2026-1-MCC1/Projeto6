@@ -11,33 +11,85 @@ public class RankingAPI : MonoBehaviour
     // URL da rota de ranking da API
     [SerializeField] private string url = "http://localhost:3000/ranking";
 
+    // Nome padrao usado quando o jogador nao digita nada
+    private const string NomePadrao = "Jogador";
+
+    // Chave usada para guardar o nome entre as cenas
+    private const string ChaveNomeJogador = "NomeJogador";
+
+    // Controla se o nome salvo ja foi carregado
+    private static bool nomeFoiCarregado = false;
+
     // Nome do jogador atual
-    // Futuramente esse valor será definido pelo input do menu
-    public static string NomeJogador = "Jogador";
+    public static string NomeJogador = NomePadrao;
+
+
+    // Salva o nome digitado no menu para ser usado no ranking
+    public static void SalvarNomeJogador(string nome)
+    {
+        // Se nao digitar nada, usa nome padrao
+        if (string.IsNullOrWhiteSpace(nome))
+        {
+            nome = NomePadrao;
+        }
+
+        // Guarda o nome sem espacos extras
+        NomeJogador = nome.Trim();
+
+        // Marca que o nome atual ja foi carregado/salvo
+        nomeFoiCarregado = true;
+
+        // Salva o nome para continuar disponivel entre cenas
+        PlayerPrefs.SetString(ChaveNomeJogador, NomeJogador);
+        PlayerPrefs.Save();
+    }
+
+
+    // Busca o nome atual do jogador
+    public static string ObterNomeJogador()
+    {
+        // Carrega o nome salvo apenas uma vez
+        if (!nomeFoiCarregado)
+        {
+            NomeJogador = PlayerPrefs.GetString(ChaveNomeJogador, NomePadrao);
+            nomeFoiCarregado = true;
+        }
+
+        // Garante que o ranking nunca receba nome vazio
+        if (string.IsNullOrWhiteSpace(NomeJogador))
+        {
+            NomeJogador = NomePadrao;
+        }
+
+        return NomeJogador.Trim();
+    }
 
 
     // Envia os dados da partida atual para o banco
-    public void EnviarRanking()
+    public void EnviarRanking(Action<bool> aoFinalizar = null)
     {
-        StartCoroutine(EnviarDados());
+        StartCoroutine(EnviarDados(aoFinalizar));
     }
 
 
     // Busca o ranking salvo no banco
     // O Action permite devolver os dados para outro script depois que a busca terminar
-    public void BuscarRanking(Action<RankingLista> aoFinalizar)
+    public void BuscarRanking(Action<RankingLista> aoFinalizar, Action aoErro = null)
     {
-        StartCoroutine(BuscarDados(aoFinalizar));
+        StartCoroutine(BuscarDados(aoFinalizar, aoErro));
     }
 
 
     // Envia os dados da partida para a API usando POST
-    private IEnumerator EnviarDados()
+    private IEnumerator EnviarDados(Action<bool> aoFinalizar)
     {
+        // Carrega os resultados salvos antes de enviar ao banco
+        GameResults.CarregarResultados();
+
         // Monta os dados que serão enviados para o banco
         RankingData dados = new RankingData
         {
-            nome = NomeJogador,
+            nome = ObterNomeJogador(),
             pontos = GameResults.ScoreFinal,
 
             boloEspecial = GameResults.BoloEspecial,
@@ -77,16 +129,19 @@ public class RankingAPI : MonoBehaviour
         if (request.result == UnityWebRequest.Result.Success)
         {
             Debug.Log("Ranking enviado com sucesso!");
+            GameResults.MarcarRankingComoEnviado();
+            aoFinalizar?.Invoke(true);
         }
         else
         {
             Debug.LogError("Erro ao enviar ranking: " + request.error);
+            aoFinalizar?.Invoke(false);
         }
     }
 
 
     // Busca os dados do ranking na API usando GET
-    private IEnumerator BuscarDados(Action<RankingLista> aoFinalizar)
+    private IEnumerator BuscarDados(Action<RankingLista> aoFinalizar, Action aoErro)
     {
         // Cria uma requisição GET para buscar o ranking
         UnityWebRequest request = UnityWebRequest.Get(url);
@@ -110,6 +165,7 @@ public class RankingAPI : MonoBehaviour
         else
         {
             Debug.LogError("Erro ao buscar ranking: " + request.error);
+            aoErro?.Invoke();
         }
     }
 }

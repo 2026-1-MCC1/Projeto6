@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI; // adicionado por conta do canva
 using UnityEngine.Video; // adicionacdo por conta do video
-using static Unity.Burst.Intrinsics.X86.Avx;
 
 public class MenuController : MonoBehaviour
 {
@@ -61,7 +60,23 @@ public class MenuController : MonoBehaviour
     {
         string nomeDigitado = inputNome.text;
 
-        RankingAPI.NomeJogador = nomeDigitado;
+        // Se não digitar nada, usa nome padrão
+        if (string.IsNullOrWhiteSpace(nomeDigitado))
+        {
+            nomeDigitado = "Jogador";
+        }
+
+        // Remove espacos extras antes de salvar
+        nomeDigitado = nomeDigitado.Trim();
+
+        // Salva o nome para o Ranking/API
+        RankingAPI.SalvarNomeJogador(nomeDigitado);
+
+        // Limpa os valores em memoria para o novo jogador
+        GameResults.PrepararNovaPartida();
+
+        Debug.Log("Nome do jogador salvo: " + RankingAPI.NomeJogador);
+
 
         SceneManager.LoadScene("Game");
     }

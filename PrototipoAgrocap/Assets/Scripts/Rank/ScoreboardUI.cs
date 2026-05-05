@@ -1,15 +1,15 @@
-Ôªøusing TMPro;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 // Monta dinamicamente a UI do Scoreboard.
-// Decis√µes importantes:
+// Decisıes importantes:
 // Nao usei LayoutGroup nos cards pois precisamos posicionamento visual exato por conta da moldura e texto.
 // Usei GridLayoutGroup apenas para distribuicao dos cards pequenos
 // Tamanhos sao calculados em tempo real para manter responsividade
 public class ScoreboardLayout : MonoBehaviour
 {
-    [Header("Refer√™ncias")]
+    [Header("ReferÍncias")]
     // Painel onde todo o layout sera criado.(Deve ser um RectTransform dentro do Canvas.)
     [SerializeField] private RectTransform panelScoreboard;
 
@@ -30,19 +30,22 @@ public class ScoreboardLayout : MonoBehaviour
     [Header("Visual")]
     [SerializeField] private Color cardColor = Color.white;
 
-    // Grid respons√°vel por organizar os cards pequenos.
+    // Grid respons·vel por organizar os cards pequenos.
     private GridLayoutGroup gridCardsPequenos;
-    // Area (lado direito) onde o grid esta. Usada para calcular tamanho dispon√≠vel.
+    // Area (lado direito) onde o grid esta. Usada para calcular tamanho disponÌvel.
     private RectTransform areaCardsPequenos;
 
     // Para quando entrar na cena montar tudo.
     private void Start()
     {
+        // Carrega o ultimo resultado salvo antes de montar a tela
+        GameResults.CarregarResultados();
+
         MontarLayout();
     }
 
     // Limpa o painel e recria toda a UI do zero.
-    // Isso evita lixo de execu√ß√µes anteriores.
+    // Isso evita lixo de execuÁıes anteriores.
     private void MontarLayout()
     {
         // Remove qualquer elemento antigo do painel
@@ -151,14 +154,14 @@ public class ScoreboardLayout : MonoBehaviour
         gridCardsPequenos.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
         gridCardsPequenos.constraintCount = colunas;
 
-        // Deixar sem espa√ßamento entre os cards 
+        // Deixar sem espaÁamento entre os cards 
         gridCardsPequenos.spacing = Vector2.zero;
         gridCardsPequenos.padding = new RectOffset(0, 0, 0, 0);
 
-        // Garante que o layout est√° atualizado antes de medir
+        // Garante que o layout est· atualizado antes de medir
         Canvas.ForceUpdateCanvases();
 
-        // Divide o espa√ßo igualmente entre colunas e linhas
+        // Divide o espaÁo igualmente entre colunas e linhas
         float largura = areaCardsPequenos.rect.width / colunas;
         float altura = areaCardsPequenos.rect.height / linhas;
 
@@ -206,8 +209,8 @@ public class ScoreboardLayout : MonoBehaviour
 
     // Cria um texto com posicionamento relativo ao card.
     // IMPORTANTE:
-    // anchor (0 a 1) define posi√ß√£o proporcional
-    // isso mant√©m o texto no lugar mesmo se mudar o tamananho da tela ou do card.
+    // anchor (0 a 1) define posiÁ„o proporcional
+    // isso mantÈm o texto no lugar mesmo se mudar o tamananho da tela ou do card.
     private void CriarTextoPosicionado(
         Transform parent,
         string conteudo,
@@ -230,25 +233,25 @@ public class ScoreboardLayout : MonoBehaviour
         texto.color = Color.black;
 
         // Se existir uma fonte personalizada no Inspector,
-        // ela ser√° aplicada automaticamente
+        // ela ser· aplicada automaticamente
         if (fontePersonalizada != null)
         {
             texto.font = fontePersonalizada;
         }
 
-        // Ativa o ajuste autom√°tico da fonte
+        // Ativa o ajuste autom·tico da fonte
         texto.enableAutoSizing = true;
-        // Define o tamanho m√≠nimo da fonte
+        // Define o tamanho mÌnimo da fonte
         texto.fontSizeMin = 6;
-        // Define o tamanho m√°ximo da fonte
+        // Define o tamanho m·ximo da fonte
         texto.fontSizeMax = tamanhoFonte;
 
-        // Pega o RectTransform para controlar posi√ß√£o e tamanho
+        // Pega o RectTransform para controlar posiÁ„o e tamanho
         RectTransform rect = obj.GetComponent<RectTransform>();
-        // Define a posi√ß√£o relativa dentro do card
+        // Define a posiÁ„o relativa dentro do card
         rect.anchorMin = anchor;
         rect.anchorMax = anchor;
-        // Mant√©m o pivot centralizado
+        // MantÈm o pivot centralizado
         rect.pivot = new Vector2(0.5f, 0.5f);
         // Define o tamanho da caixa de texto
         rect.sizeDelta = tamanho;

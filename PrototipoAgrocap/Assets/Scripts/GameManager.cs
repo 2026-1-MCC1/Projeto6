@@ -170,6 +170,9 @@ public class GameManager : MonoBehaviour
         GameResults.ChocolateRestante = inventory.Chocolate;
         GameResults.MorangoRestante = inventory.Morango;
 
+        // Salva os resultados para manter o Scoreboard mesmo se o jogo for parado
+        GameResults.SalvarResultados();
+
         Debug.Log("Resultados salvos com sucesso!");
     }
 
