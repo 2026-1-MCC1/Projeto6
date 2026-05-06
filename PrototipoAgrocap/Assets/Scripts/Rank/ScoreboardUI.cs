@@ -3,10 +3,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // Monta dinamicamente a UI do Scoreboard.
-// Decisões importantes:
-// Nao usei LayoutGroup nos cards pois precisamos posicionamento visual exato por conta da moldura e texto.
-// Usei GridLayoutGroup apenas para distribuicao dos cards pequenos
-// Tamanhos sao calculados em tempo real para manter responsividade
+// Decisões importantes: Nao usei LayoutGroup nos cards pois precisamos posicionamento visual exato por conta da moldura e texto.
+// Usei GridLayoutGroup apenas para distribuicao dos cards pequenos.
+// Os tamanhos sao calculados com base no tamanho da tela quando inicia o scoreboard para garantir responsividade.
 public class ScoreboardLayout : MonoBehaviour
 {
     [Header("Referências")]
@@ -122,7 +121,7 @@ public class ScoreboardLayout : MonoBehaviour
     }
 
     // Cria a area da direita onde ficam os cards pequenos.
-    // Essa area ocupa o restante da tela (68%).
+    // Essa area ocupa o restante da tela 68 porcento.
     private RectTransform CriarAreaDireita()
     {
         GameObject area = new GameObject("AreaCardsPequenos");
@@ -208,9 +207,7 @@ public class ScoreboardLayout : MonoBehaviour
     }
 
     // Cria um texto com posicionamento relativo ao card.
-    // IMPORTANTE:
-    // anchor (0 a 1) define posição proporcional
-    // isso mantém o texto no lugar mesmo se mudar o tamananho da tela ou do card.
+    // IMPORTANTE: anchor (0 a 1) define posição proporcional isso mantém o texto no lugar mesmo se mudar o tamananho da tela ou do card.
     private void CriarTextoPosicionado(
         Transform parent,
         string conteudo,
@@ -232,8 +229,7 @@ public class ScoreboardLayout : MonoBehaviour
         texto.alignment = TextAlignmentOptions.Center;
         texto.color = Color.black;
 
-        // Se existir uma fonte personalizada no Inspector,
-        // ela será aplicada automaticamente
+        // Se existir uma fonte personalizada no Inspector, ela será aplicada automaticamente
         if (fontePersonalizada != null)
         {
             texto.font = fontePersonalizada;

@@ -152,9 +152,21 @@ public class GameManager : MonoBehaviour
             pontos += 250;
         }
 
+        // Calcula os pontos dos ingredientes que sobraram depois de montar os bolos
+        int pontosIngredientesRestantes =
+            (inventory.Trigo * ScoreManager.ObterValorIngrediente(IngredienteTipo.Trigo)) +
+            (inventory.Ovo * ScoreManager.ObterValorIngrediente(IngredienteTipo.Ovo)) +
+            (inventory.Leite * ScoreManager.ObterValorIngrediente(IngredienteTipo.Leite)) +
+            (inventory.Chocolate * ScoreManager.ObterValorIngrediente(IngredienteTipo.Chocolate)) +
+            (inventory.Morango * ScoreManager.ObterValorIngrediente(IngredienteTipo.Morango));
+
+        // Soma os ingredientes restantes na pontuacao final do Scoreboard
+        pontos += pontosIngredientesRestantes;
+
+        Debug.Log("Pontos dos ingredientes restantes: " + pontosIngredientesRestantes);
         Debug.Log("Antes de salvar em GameResults");
 
-        // Salva a pontuação final
+        // Salva a pontuacao final somando bolos e ingredientes restantes
         GameResults.ScoreFinal = pontos;
 
         // Salva a quantidade de bolos criados

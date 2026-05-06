@@ -14,7 +14,7 @@ public class MenuController : MonoBehaviour
     public GameObject painelControles; // painel
     public GameObject painelNome; // painel onde o jogador digita o nome
     public TMP_InputField inputNome; // campo de texto do nome
-    public GameObject MenuNome;
+    public GameObject MenuNome; // Menu do nome
 
     void Start()
     { //menu vai começar desativado

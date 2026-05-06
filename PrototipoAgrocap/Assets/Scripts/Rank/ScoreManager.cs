@@ -27,31 +27,40 @@ public class ScoreManager : MonoBehaviour
         AtualizarUI();
     }
 
-    // Adiciona pontos com base no tipo do ingrediente (pois cada ingrediente tem uma pontuação diferente)
-    public void AdicionarPontos(IngredienteTipo ingrediente)
+    // Retorna o valor de cada ingrediente
+    // Essa regra tambem e usada no Scoreboard para contar os ingredientes restantes
+    public static int ObterValorIngrediente(IngredienteTipo ingrediente)
     {
         switch (ingrediente)
         {
             case IngredienteTipo.Trigo:
-                score += 10;
-                break;
-
-            case IngredienteTipo.Ovo:
-                score += 20;
-                break;
+                return 10;
 
             case IngredienteTipo.Leite:
-                score += 15;
-                break;
+                return 15;
+
+            case IngredienteTipo.Ovo:
+                return 20;
 
             case IngredienteTipo.Chocolate:
-                score += 25;
-                break;
+                return 25;
 
             case IngredienteTipo.Morango:
-                score += 25;
-                break;
+                return 25;
+
+            default:
+                return 0;
         }
+    }
+
+    // Adiciona pontos com base no tipo do ingrediente (pois cada ingrediente tem uma pontuacao diferente)
+    public void AdicionarPontos(IngredienteTipo ingrediente)
+    {
+        // Pega o valor definido para o ingrediente coletado
+        int valorIngrediente = ObterValorIngrediente(ingrediente);
+
+        // Soma o valor do ingrediente na pontuacao atual
+        score += valorIngrediente;
 
         Debug.Log("Pontos: " + score);
 
