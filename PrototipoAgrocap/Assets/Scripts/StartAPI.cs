@@ -9,7 +9,7 @@ public class StartAPI : MonoBehaviour
 
     // Caminho da pasta onde está o arquivo server.js (deve ser a pasta da sua API Node)
     [SerializeField]
-    private string caminhoAPI = @"C:\Users\25027975\Documents\GitHub\Projeto6\PrototipoAgrocap\Assets\API";
+    private string caminhoAPI = @"C:\Users\26029305\Documents\GitHub\Projeto6\PrototipoAgrocap\Assets\API";
 
 
     private void Start()

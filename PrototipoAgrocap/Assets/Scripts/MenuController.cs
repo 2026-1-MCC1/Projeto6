@@ -6,7 +6,7 @@ using UnityEngine.Video; // adicionacdo por conta do video
 
 public class MenuController : MonoBehaviour
 {
-    public VideoPlayer videoPlayer; //vide
+    public VideoPlayer videoPlayer; //video
     public GameObject MenuOpcoes; // segundo menu
     public RawImage imagemDoVideo; // Imagem do video
     public TextMeshProUGUI titulo; // titulo
@@ -15,6 +15,7 @@ public class MenuController : MonoBehaviour
     public GameObject painelNome; // painel onde o jogador digita o nome
     public TMP_InputField inputNome; // campo de texto do nome
     public GameObject MenuNome; // Menu do nome
+   
 
     void Start()
     { //menu vai começar desativado
