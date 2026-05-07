@@ -109,15 +109,7 @@ public class ScoreboardLayout : MonoBehaviour
             28
         );
 
-        // Nome do ingrediente
-        CriarTextoPosicionado(
-            card.transform,
-            nome,
-            "Nome",
-            new Vector2(0.5f, 0.48f),
-            new Vector2(220f, 45f),
-            28
-        );
+       
     }
 
     // Cria a area da direita onde ficam os cards pequenos.
@@ -195,15 +187,7 @@ public class ScoreboardLayout : MonoBehaviour
             16
         );
 
-        // Nome do ingrediente
-        CriarTextoPosicionado(
-            card.transform,
-            nome,
-            "Nome",
-            new Vector2(0.5f, 0.48f),
-            new Vector2(140f, 28f),
-            14
-        );
+   
     }
 
     // Cria um texto com posicionamento relativo ao card.
