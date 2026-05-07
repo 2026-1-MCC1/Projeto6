@@ -1,6 +1,6 @@
 using TMPro; // adicionado para desaparecer com o texto no menu principal
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement; // Troca de cena
 using UnityEngine.UI; // adicionado por conta do canva
 using UnityEngine.Video; // adicionacdo por conta do video
 
@@ -31,6 +31,14 @@ public class MenuController : MonoBehaviour
         {
             AtivarNome();
         }
+
+        // Se a tela de nome estiver aberta e o jogador apertar Enter inicia o jogo (igual o botão)
+        if (MenuNome != null && MenuNome.activeSelf &&
+            (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)))
+        {
+            // Confirma o nome igual ao botão
+            ConfirmarNome();
+        }
     }
 
     void AtivarNome()
@@ -38,7 +46,7 @@ public class MenuController : MonoBehaviour
         videoPlayer.Stop(); //o video vai parar
         // A imagem do video desaparace 
         if (imagemDoVideo != null) imagemDoVideo.enabled = false;
-
+        // Desativa completamente o objeto do vídeo
         videoPlayer.gameObject.SetActive(false);
 
         // O video, o titulo e o subtitulo desaparecem e o menu abre
@@ -51,16 +59,20 @@ public class MenuController : MonoBehaviour
     // Codigo dos botoes 
     public void JogarJogo()
     {
+        // Esconde o menu principal
         MenuOpcoes.SetActive(false);
+        // Mostra a tela de nome
         MenuNome.SetActive(true);
        
     }
 
+    // Botão "Iniciar" da tela de nome
     public void ConfirmarNome()
     {
+        // Pega o texto digitado no InputField
         string nomeDigitado = inputNome.text;
 
-        // Se não digitar nada, usa nome padrão
+        // Se não digitar nada usa nome padrão
         if (string.IsNullOrWhiteSpace(nomeDigitado))
         {
             nomeDigitado = "Jogador";
@@ -72,12 +84,13 @@ public class MenuController : MonoBehaviour
         // Salva o nome para o Ranking/API
         RankingAPI.SalvarNomeJogador(nomeDigitado);
 
-        // Limpa os valores em memoria para o novo jogador
+        // Limpa os dados antigos para começar uma nova partida
         GameResults.PrepararNovaPartida();
 
+        // Mostra no Console para debug
         Debug.Log("Nome do jogador salvo: " + RankingAPI.NomeJogador);
 
-
+        // Carrega a cena principal do jogo
         SceneManager.LoadScene("Game");
     }
 
