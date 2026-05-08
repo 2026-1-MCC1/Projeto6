@@ -1,8 +1,3 @@
-```sh
-Utilize o site <https://www.toptal.com/developers/gitignore> para gerar seu arquivo gitignore e apague este campo.
-
-Vide tutoriais do PI.
-```
 
 # FECAP - Fundação de Comércio Álvares Penteado
 
@@ -10,13 +5,13 @@ Vide tutoriais do PI.
 <a href= "https://www.fecap.br/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhZPrRa89Kma0ZZogxm0pi-tCn_TLKeHGVxywp-LXAFGR3B1DPouAJYHgKZGV0XTEf4AE&usqp=CAU" alt="FECAP - Fundação de Comércio Álvares Penteado" border="0"></a>
 </p>
 
-# Nome do Projeto AgroCAP
+# AgroCAP
 
-## Nome do Grupo AgroCapinhos
+## AgroCapinhos
 
 ## Integrantes: <a href="https://www.linkedin.com/in/kauã-casella-da-silva-9a1135346?">Kauã Casella</a>, <a href="https://www.linkedin.com/in/otavio-sanches-pierini-0b6993306">Otavio Sanches</a>, <a href="https://www.linkedin.com/in/julia-damasio-b6531a24a/">Julia Damasio</a>, <a href="https://www.linkedin.com/in/flavio-lima-ab8989262/">Flavio Lima</a>
 
-## Professores Orientadores: <a href="https://www.linkedin.com/in/adriano-valente-534576135/">Adriano Felix Valente </a>, <a href="https://www.linkedin.com/in/aimarlopes/"> Aimar Martins Lopes</a>, <a href="https://www.linkedin.com/in/dolemes/"> David de Oliveira Lemes</a>, <a href="https://www.linkedin.com/in/edsonbarbero/"> Edson Barbero</a>, <a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/"> Eduardo Savino Gomes</a>, <a href="https://www.linkedin.com/in/fabiano-on%C3%A7a-3214a12/"> Fabiano Onça</a>, <a href="https://www.linkedin.com/in/francisco-escobar/"> Francisco de Souza Escobar</a>, <a href="https://www.linkedin.com/in/jefferson-o-silva/"> Jefferson de Oliveira Silva</a>, <a href="https://www.linkedin.com/in/j%C3%A9sus-gomes-83b769108/"> Jésus Gomes</a>, <a href="https://www.linkedin.com/in/jbuesso/"> José Carlos Buesso Jr</a>, <a href="https://www.linkedin.com/in/katia-bossi/"> Kátia Bossi</a>, <a href="https://www.linkedin.com/in/lucymari/"> Lucy Mari Tabuti</a>, <a href=""> Marco Aurélio</a>, <a href="https://www.linkedin.com/in/paula-astorino-432b5812a/"> Paula Astorino</a>, <a href="https://www.linkedin.com/in/remuniz/"> Renata Muniz do Nascimento</a>, <a href="https://www.linkedin.com/in/professorrodnil/"> Rodnil da Silva Moreira Lisbôa</a>, <a href="https://www.linkedin.com/in/ronaldo-araujo-pinto-3542811a/"> Ronaldo Araujo Pinto</a>, <a href="https://www.linkedin.com/in/victorbarq/"> Victor Bruno Alexander Rosetti de Quiroz</a>, <a href="https://www.linkedin.com/in/vheltai/"> Vinicius Heltai</a>.
+## Professores Orientadores: <a href="https://www.linkedin.com/in/adriano-valente-534576135/">Adriano Felix Valente </a>, <a href="https://www.linkedin.com/in/dolemes/"> David de Oliveira Lemes</a>, <a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/"> Eduardo Savino Gomes</a>, <a href="https://www.linkedin.com/in/remuniz/"> Renata Muniz do Nascimento</a>, <a href="https://www.linkedin.com/in/victorbarq/"> Victor Bruno Alexander Rosetti de Quiroz</a>.
 
 ## Descrição
 
@@ -89,7 +84,7 @@ Coloque código do prompt de comnando se for necessário
 ```
 
 ## 📋 Licença/License
-<a href="https://github.com/2026-1-MCC1/Projeto6">AgroCap</a> © 2026 by <a href="https://www.linkedin.com/in/kau%C3%A3-casella-da-silva-9a1135346?, https://www.linkedin.com/in/otavio-sanches-pierini-0b6993306, https://www.linkedin.com/in/julia-damasio-b6531a24a/, https://www.linkedin.com/in/flavio-lima-ab8989262/">Kauã Casella, Otavio Sanches, Julia Damasio, Flavio Lima</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+<a href="https://github.com/2026-1-MCC1/Projeto6">AgroCap</a> © 2026 by <a href="https://www.linkedin.com/in/kau%C3%A3-casella-da-silva-9a1135346?, https://www.linkedin.com/in/otavio-sanches-pierini-0b6993306, https://www.linkedin.com/in/julia-damasio-b6531a24a/, https://www.linkedin.com/in/flavio-lima-ab8989262/">Kauã Casella, Otavio Sanches, Julia Damasio, Flavio Lima, FECAP</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
 
 ## 🎓 Referências
 
