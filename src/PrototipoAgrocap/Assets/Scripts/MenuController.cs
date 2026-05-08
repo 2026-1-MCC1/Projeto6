@@ -14,23 +14,30 @@ public class MenuController : MonoBehaviour
 
     public static string NomeJogador = DefaultPlayerName;
 
-    public VideoPlayer videoPlayer;
-    public GameObject MenuOpcoes;
+    public VideoPlayer videoPlayer; //Para o video do menu inicial 
+    public GameObject MenuOpcoes; //Cria um campo dentro do inspector para atribuir o canva de MenuOpcoes
+    //Com o GameObject ( a gente criou diversos campos )
+
     public RawImage imagemDoVideo;
     public TextMeshProUGUI titulo;
     public TextMeshProUGUI subtitulo;
-    public GameObject painelControles;
+    public GameObject painelControles; //Cria um campo dentro do inspector para atribuir o canva do PainelControle
     public TMP_InputField inputNome;
     public GameObject MenuNome;
+    public GameObject painelCreditos1; //Cria um campo dentro do inspector para atribuir o canva do PainelCreditos1
+    public GameObject painelCreditos2; //Cria um campo dentro do inspector para atribuir o canva do PainelCreditos2
+    //Criei dois paineis pois não iria caber em 1 so e um volta para o outro
 
-    private void Awake()
+    private void Awake() // O wake serve para quando o objeto que carrega esse script carregar na cena, ele executar essa 
+        // função (ObterNomeJogador), buscando basicamente o banco de dados que utilizamos (PlayerPrefs) 
     {
         ObterNomeJogador();
     }
 
     private void Start()
     {
-        // A cena sempre comeca no video de abertura e so libera os paineis depois da interacao.
+        // A cena sempre comeca no video de abertura e so libera os paineis depois da interacao com qualquer tecla ou click
+        // Tambem garante que o jogo comece com apenas o video, escondendo o menu e todo o resto
         if (MenuOpcoes != null)
         {
             MenuOpcoes.SetActive(false);
@@ -44,24 +51,43 @@ public class MenuController : MonoBehaviour
         if (inputNome != null)
         {
             inputNome.text = ObterNomeJogador();
+            //Ele vai na memória do computador, pega o nome que foi usado da última vez e
+            //já deixa escrito dentro da caixinha de texto
         }
     }
 
+    
     private void Update()
+      //O private void update é uma funcao que executa o código contido nela uma vez por frame de renderização (FPS)
+      // Sendo (private) ela so é acessivel dentro da classe atual
+      // (Void) indica que ela nao vai retornar nenhum valor 
+    
     {
+        // Se (IF) o video existir, estiver rodando e voce apertar qualquer tecla
+        // Logo em seguida chama a funcao (Ativar Nome)l
         if (videoPlayer != null && videoPlayer.isPlaying && Input.anyKeyDown)
         {
+            //Chama a funcao que desliga o video e faz aparecer o menu
             AtivarNome();
         }
-
+        //Se (IF) o painel de digitar o nome estiver aberto e voce apertar a tecla ENTER
+        // A tecla ENTER chama a funca (ConfirmarNome)
         if (MenuNome != null && MenuNome.activeSelf &&
             (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)))
         {
+            //Chama a funcao que salva o nome e começa o jogo 
             ConfirmarNome();
         }
     }
 
     public static void SalvarNomeJogador(string nome)
+        //Metodo principal de Java
+        //Funcao que pode ser chamada de qualquer lugar para salvar o nome
+        //Public garante que o metodo seja acessivel por qualquer classe 
+        //Static permite que seja chamado diretamente pelo nome da classe,
+        //sem precisar criar um objeto (novo)   
+        // (String [] args) Permite receber argumentos de entrada via linha de comando
+
     {
         // Mantem o ultimo nome digitado salvo para reaproveitar nas proximas partidas.
         if (string.IsNullOrWhiteSpace(nome))
@@ -164,6 +190,68 @@ public class MenuController : MonoBehaviour
         if (painelControles != null)
         {
             painelControles.SetActive(true);
+        }
+    }
+
+    public void VoltarDosControles()
+    {
+        if (painelControles != null)
+        {
+            painelControles.SetActive(false); // Esconde os controles
+        }
+
+        if (MenuOpcoes != null)
+        {
+            MenuOpcoes.SetActive(true); // Mostra o menu de opções novamente
+        }
+    }
+
+    public void AbrirCreditos1()
+    {
+        if (MenuOpcoes != null)
+        {
+            MenuOpcoes.SetActive(false);
+        }
+
+        if (painelCreditos1!= null)
+        {
+            painelCreditos1.SetActive(true);
+        }
+    }
+    public void AbrirCreditos2()
+    {
+        if (painelCreditos1 != null)
+        {
+            painelCreditos1.SetActive(false);
+        }
+
+        if (painelCreditos2 != null)
+        {
+            painelCreditos2.SetActive(true);
+        }
+    }
+    public void VoltarAbrirCreditos()
+    {
+        if (painelCreditos2 != null)
+        {
+            painelCreditos2.SetActive(false);
+        }
+
+        if (painelCreditos1 != null)
+        {
+            painelCreditos1.SetActive(true);
+        }
+    }
+    public void VoltarCreditosMenu()
+    {
+        if (painelCreditos1 != null)
+        {
+            painelCreditos1.SetActive(false);
+        }
+
+        if (MenuOpcoes != null)
+        {
+            MenuOpcoes.SetActive(true);
         }
     }
 }
