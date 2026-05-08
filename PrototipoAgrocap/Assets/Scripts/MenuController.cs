@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
+// Controla o fluxo de entrada do jogador no menu principal.
 public class MenuController : MonoBehaviour
 {
     private const string DefaultPlayerName = "Jogador";
@@ -29,6 +30,7 @@ public class MenuController : MonoBehaviour
 
     private void Start()
     {
+        // A cena sempre comeca no video de abertura e so libera os paineis depois da interacao.
         if (MenuOpcoes != null)
         {
             MenuOpcoes.SetActive(false);
@@ -61,6 +63,7 @@ public class MenuController : MonoBehaviour
 
     public static void SalvarNomeJogador(string nome)
     {
+        // Mantem o ultimo nome digitado salvo para reaproveitar nas proximas partidas.
         if (string.IsNullOrWhiteSpace(nome))
         {
             nome = DefaultPlayerName;
@@ -91,6 +94,7 @@ public class MenuController : MonoBehaviour
 
     private void AtivarNome()
     {
+        // Troca do video inicial para o menu jogavel.
         if (videoPlayer != null)
         {
             videoPlayer.Stop();
@@ -136,6 +140,7 @@ public class MenuController : MonoBehaviour
         string nomeDigitado = inputNome != null ? inputNome.text : DefaultPlayerName;
         SalvarNomeJogador(nomeDigitado);
 
+        // A partida nova sempre comeca com um estado limpo e com o nome confirmado no menu.
         GameResults.PrepararNovaPartida();
         GameResults.DefinirNomeJogador(NomeJogador);
 

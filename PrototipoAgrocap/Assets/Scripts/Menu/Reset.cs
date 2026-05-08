@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;  //Nescessario para gerenciar as cenas
 
+// Recarrega a cena atual por tecla para facilitar testes durante a partida.
 public class ReseT : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created

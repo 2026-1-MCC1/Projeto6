@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Monta dinamicamente os cards da tela de resultados.
 public class ScoreboardUI : MonoBehaviour
 {
     [Header("Referencias")]
@@ -29,12 +30,14 @@ public class ScoreboardUI : MonoBehaviour
 
     private void Start()
     {
+        // Usa o ultimo snapshot salvo ao fim da partida para reconstruir a tela.
         GameResults.CarregarResultados();
         MontarLayout();
     }
 
     private void MontarLayout()
     {
+        // Limpa o painel antes de recriar os cards para evitar duplicidade ao reabrir a tela.
         foreach (Transform child in panelScoreboard)
         {
             Destroy(child.gameObject);
@@ -102,6 +105,7 @@ public class ScoreboardUI : MonoBehaviour
             return;
         }
 
+        // Divide a area direita em quatro colunas por duas linhas para acomodar os oito cards.
         const int colunas = 4;
         const int linhas = 2;
 
@@ -140,6 +144,7 @@ public class ScoreboardUI : MonoBehaviour
 
     private void CriarTextoPosicionado(Transform parent, string conteudo, string nomeObj, Vector2 anchor, Vector2 tamanho, int tamanhoFonte)
     {
+        // Centraliza o texto dentro do card e deixa o auto-size ajustar diferentes quantidades.
         GameObject obj = new GameObject("Text_" + nomeObj);
         obj.transform.SetParent(parent, false);
 

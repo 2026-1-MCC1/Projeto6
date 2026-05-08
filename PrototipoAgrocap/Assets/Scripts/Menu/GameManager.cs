@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Controla vidas, fim de jogo e consolidacao dos resultados finais.
 public class GameManager : MonoBehaviour
 {
     [Header("Configuracao")]
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
 
     public void PerderVida()
     {
+        // Depois do game over nenhuma outra perda de vida deve ser processada.
         if (end)
         {
             return;
@@ -77,6 +79,7 @@ public class GameManager : MonoBehaviour
         int mora = 0;
         int simples = 0;
 
+        // Prioriza receitas mais valiosas antes de calcular os itens restantes.
         while (inventory.Trigo >= 1 &&
                inventory.Ovo >= 1 &&
                inventory.Leite >= 1 &&
@@ -140,6 +143,7 @@ public class GameManager : MonoBehaviour
             (inventory.Chocolate * ScoreManager.ObterValorIngrediente(IngredienteTipo.Chocolate)) +
             (inventory.Morango * ScoreManager.ObterValorIngrediente(IngredienteTipo.Morango));
 
+        // O placar final soma os bolos montados e os ingredientes que sobraram no inventario.
         pontos += pontosIngredientesRestantes;
 
         GameResults.DefinirNomeJogador(MenuController.ObterNomeJogador());
@@ -168,6 +172,7 @@ public class GameManager : MonoBehaviour
 
     private void GameOver()
     {
+        // Congela a mesa e exibe a UI de derrota.
         end = true;
         CanvaLife.SetActive(false);
         CanvaGameOver.SetActive(true);
@@ -176,6 +181,7 @@ public class GameManager : MonoBehaviour
 
     public void IrParaScoreboard()
     {
+        // Garante que o tempo volte ao normal antes de trocar de cena.
         Time.timeScale = 1f;
         CalcularResultadosFinais();
         SceneManager.LoadScene("Scoreboard");

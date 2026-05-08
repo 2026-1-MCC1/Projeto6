@@ -11,6 +11,7 @@ Fluxo atual:
 2. `GameManager` calcula os resultados finais e persiste tudo em `GameResults`.
 3. `FirebaseRanking` envia a partida pendente para a colecao `ranking`.
 4. `RankingManager` busca o top 6 e preenche a UI da cena `Scoreboard`.
+5. Se um jogador repetir o mesmo nome, o documento dele e atualizado em vez de criar duplicata.
 
 ## O que foi alterado
 
@@ -88,6 +89,7 @@ Cada documento da colecao `ranking` agora envia:
 
 - `nome`
 - `pontos`
+- `nomeNormalizado`
 - `boloEspecial`
 - `boloChocolate`
 - `boloMorango`

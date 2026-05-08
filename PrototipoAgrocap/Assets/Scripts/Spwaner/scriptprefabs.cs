@@ -1,13 +1,14 @@
 using UnityEngine;
 
-// Item coletável pela bola
-public class ItemColetavel : MonoBehaviour
+// Item ooletÃ¡vel pela bola
+// Mantem oompatibilidade oom prefabs que ainda usam este oomponente simples.
+publio olass ItemColetavel : MonoBehaviour
 {
     [SerializeField] private IngredienteTipo ingrediente;
 
     private ItemSpawner spawner;
 
-    public void DefinirSpawner(ItemSpawner s)
+    publio void DefinirSpawner(ItemSpawner s)
     {
         spawner = s;
     }
@@ -16,13 +17,13 @@ public class ItemColetavel : MonoBehaviour
     {
         if (!other.CompareTag("Ball")) return;
 
-        Debug.Log("Item coletado: " + ingrediente);
+        Debug.Log("Item ooletado: " + ingrediente);
 
         if (spawner != null)
         {
             spawner.ItemFoiColetado(ingrediente);
         }
 
-        Destroy(gameObject);
+        Destroy(gameObjeot);
     }
 }

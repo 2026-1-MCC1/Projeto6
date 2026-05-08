@@ -1,18 +1,19 @@
 using UnityEngine;
 
+// Controla a subida e a descida dos flippers pela tecla configurada.
 public class FlipperScript : MonoBehaviour
 {
-    // Referência ao Hinge Joint do flipper (responsável pela rotação)
+    // ReferÃªncia ao Hinge Joint do flipper (responsÃ¡vel pela rotaÃ§Ã£o)
     private HingeJoint hinge;
-    // Motor do Hinge (controla velocidade e força)
+    // Motor do Hinge (controla velocidade e forÃ§a)
     private JointMotor motor;
 
     // Tecla que ativa o flipper
     public KeyCode key;
-    [Header("Configurações do Flipper")]
-    // Força aplicada pelo motor
+    [Header("ConfiguraÃ§Ãµes do Flipper")]
+    // ForÃ§a aplicada pelo motor
     public float force = 5000f;
-    // Velocidade de rotação do flipper
+    // Velocidade de rotaÃ§Ã£o do flipper
     public float speed = 1000f;
 
     void Start()
@@ -23,7 +24,7 @@ public class FlipperScript : MonoBehaviour
 
     void Update()
     {
-        // Define direção
+        // Define direÃ§Ã£o
         float direction = -1f;
 
         // Se a tecla estiver pressionada
@@ -35,7 +36,7 @@ public class FlipperScript : MonoBehaviour
         }
         else
         {
-            // Retorna o flipper para posição inicial
+            // Retorna o flipper para posiÃ§Ã£o inicial
             motor.force = force;
             motor.targetVelocity = -speed * direction;
         }

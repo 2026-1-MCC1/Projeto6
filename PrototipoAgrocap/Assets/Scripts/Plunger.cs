@@ -2,9 +2,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
+// Controla o lancamento da bola pelo plunger e o medidor de forca.
 public class Plungler : MonoBehaviour
 {
-    // força maxima da bolinha / medidor de força( O PLUNGER SÓ FUNCIONA COM O POWERSLIDER Q É O MEDIDOR DE FORÇA )
+    // forÃ§a maxima da bolinha / medidor de forÃ§a( O PLUNGER SÃ“ FUNCIONA COM O POWERSLIDER Q Ã‰ O MEDIDOR DE FORÃ‡A )
     float power;
     float minPower = 0f;
     public float maxPower = 100f;
@@ -28,20 +29,20 @@ public class Plungler : MonoBehaviour
         {
             powerSlider.gameObject.SetActive(false);
         }
-        // slider evolui com a força acumulada
+        // slider evolui com a forÃ§a acumulada
         powerSlider.value = power;
         if (balllist.Count > 0)
         {
             ballReady = true;
             if (Input.GetKey(KeyCode.Space))
             {
-                //velocidade do medidor da barrinha encher (é proporcional a força tambem)
+                //velocidade do medidor da barrinha encher (Ã© proporcional a forÃ§a tambem)
                 if (power <= maxPower)
                 {
                     power += 50 * Time.deltaTime;
                 }
             }
-            // aplica força na bolinha ao pressionar barra de espaço, direção de impulso com base de onde ta apontado
+            // aplica forÃ§a na bolinha ao pressionar barra de espaÃ§o, direÃ§Ã£o de impulso com base de onde ta apontado
             if (Input.GetKeyUp(KeyCode.Space))
             {
                 foreach (Rigidbody r in balllist)

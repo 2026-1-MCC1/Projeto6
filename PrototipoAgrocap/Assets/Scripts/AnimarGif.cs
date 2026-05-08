@@ -6,6 +6,7 @@ public class Gif
     public Texture2D[] frames;
 }
 
+// Anima as telas da mesa trocando os frames das texturas ao longo do tempo.
 public class AnimarGif : MonoBehaviour
 {
     public Gif[] gifs;
@@ -30,6 +31,7 @@ public class AnimarGif : MonoBehaviour
 
         if (frames == null || frames.Length == 0) return;
 
+        // Calcula o frame atual com base no tempo para criar a animacao em loop.
         int index = (int)(Time.time * framesPorSegundo) % frames.Length;
         renderizador.material.mainTexture = frames[index];
     }

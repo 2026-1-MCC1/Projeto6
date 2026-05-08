@@ -1,26 +1,27 @@
 using UnityEngine;
 
-// Controla troca de c‚meras no pinball
+// Controla troca de c√¢meras no pinball
+// Mantem a transicao suave entre os pontos de vista da mesa.
 public class CameraPinball : MonoBehaviour
 {
-    [Header("PosiÁıes da c‚mera")]
-    // Array com posiÁıes prÈ-definidas
+    [Header("Posi√ß√µes da c√¢mera")]
+    // Array com posi√ß√µes pr√©-definidas
     public Transform[] cameraPositions;
 
-    [Header("ConfiguraÁ„o")]
-    // Velocidade de transiÁ„o
+    [Header("Configura√ß√£o")]
+    // Velocidade de transi√ß√£o
     public float smoothSpeed = 5f;
 
-    // Õndice da c‚mera atual
+    // √çndice da c√¢mera atual
     private int currentIndex = 0;
 
-    [Header("ReferÍncias")]
-    // Objeto que a c‚mera vai usar como ponto de refencia (para onde ela vai olhar)
+    [Header("Refer√™ncias")]
+    // Objeto que a c√¢mera vai usar como ponto de refencia (para onde ela vai olhar)
     public Transform ReferencePoint;
 
     void Update()
     {
-        // Troca de c‚mera ao apertar C
+        // Troca de c√¢mera ao apertar C
         if (Input.GetKeyDown(KeyCode.C))
         {
             currentIndex++;
@@ -36,18 +37,18 @@ public class CameraPinball : MonoBehaviour
     void LateUpdate()
     {
         if (cameraPositions.Length == 0) return;
-        // Garante que o Ìndice n„o ultrapasse o tamanho do array
+        // Garante que o √≠ndice n√£o ultrapasse o tamanho do array
         if (currentIndex >= cameraPositions.Length)
             currentIndex = 0;
-        // Define o alvo atual da c‚mera (posiÁ„o desejada)
+        // Define o alvo atual da c√¢mera (posi√ß√£o desejada)
         Transform target = cameraPositions[currentIndex];
-        // Move a c‚mera suavemente atÈ a posiÁ„o do alvo
+        // Move a c√¢mera suavemente at√© a posi√ß√£o do alvo
         transform.position = Vector3.Lerp(
             transform.position,
             target.position,
             smoothSpeed * Time.deltaTime
         );
-        // Move a c‚mera suavemente atÈ a posiÁ„o do alvo
+        // Move a c√¢mera suavemente at√© a posi√ß√£o do alvo
         if (ReferencePoint != null)
             transform.LookAt(ReferencePoint);
     }

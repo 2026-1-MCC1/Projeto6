@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-// Tipos de ingredientes disponÌveis no jogo
+// Tipos de ingredientes dispon√≠veis no jogo
 public enum IngredienteTipo
 {
     Trigo,
@@ -11,15 +11,16 @@ public enum IngredienteTipo
     Morango
 }
 
-// Gerencia a pontuaÁ„o baseada nos ingredientes coletados
+// Gerencia a pontua√ß√£o baseada nos ingredientes coletados
+// Centraliza a regra de valor de cada ingrediente para o jogo e para o scoreboard.
 public class ScoreManager : MonoBehaviour
 {
-    [Header("PontuaÁ„o")]
-    // Armazena a pontuaÁ„o atual do jogador
+    [Header("Pontua√ß√£o")]
+    // Armazena a pontua√ß√£o atual do jogador
     private int score = 0;
 
     [Header("UI")]
-    // Texto que exibe a pontuaÁ„o na tela
+    // Texto que exibe a pontua√ß√£o na tela
     [SerializeField] private TextMeshProUGUI textoPontos;
 
     void Start()
@@ -76,7 +77,7 @@ public class ScoreManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Texto de pontos N√O est· conectado!");
+            Debug.LogError("Texto de pontos N√ÉO est√° conectado!");
         }
     }
 

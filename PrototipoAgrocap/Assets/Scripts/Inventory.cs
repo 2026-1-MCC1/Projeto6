@@ -1,8 +1,9 @@
-﻿using TMPro;
+using TMPro;
 using UnityEngine;
 
 // Gerencia o inventário de ingredientes do jogador
 // Armazena os itens coletados e atualiza a interface
+// Tambem controla o feedback visual imediato da coleta na mesa.
 public class Inventory : MonoBehaviour
 {
     [Header("Ingredientes")]

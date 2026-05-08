@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Liga grupos de luzes diferentes conforme o ultimo ingrediente coletado.
 public class Luzes : MonoBehaviour
 {
     [SerializeField] private Inventory inventory;
@@ -10,12 +11,12 @@ public class Luzes : MonoBehaviour
     public GameObject[] luzesMarrons;   // As luzes marrons vao ser adicionadas nesse local
     public GameObject[] luzesBrancas;   // As luzes brancas vao ser adicionadas nesse local
 
-    // Variáveis para rastrear a quantidade anterior e detectar a coleta
-    private int qtdMorangoAnt; // Variável para rastrear a quantidade anterior e detectar a coleta
-    private int qtdLeiteAnt;   // Variável para rastrear a quantidade anterior e detectar a coleta
-    private int qtdTrigoAnt;   // Variável para rastrear a quantidade anterior e detectar a coleta
-    private int qtdOvoAnt;   // Variável para rastrear a quantidade anterior e detectar a coleta
-    private int qtdChocolateAnt;   // Variável para rastrear a quantidade anterior e detectar a coleta
+    // VariÃ¡veis para rastrear a quantidade anterior e detectar a coleta
+    private int qtdMorangoAnt; // VariÃ¡vel para rastrear a quantidade anterior e detectar a coleta
+    private int qtdLeiteAnt;   // VariÃ¡vel para rastrear a quantidade anterior e detectar a coleta
+    private int qtdTrigoAnt;   // VariÃ¡vel para rastrear a quantidade anterior e detectar a coleta
+    private int qtdOvoAnt;   // VariÃ¡vel para rastrear a quantidade anterior e detectar a coleta
+    private int qtdChocolateAnt;   // VariÃ¡vel para rastrear a quantidade anterior e detectar a coleta
 
     void Start()
     {
@@ -73,7 +74,7 @@ public class Luzes : MonoBehaviour
         }
     }
 
-    // Função que apaga tudo e liga apenas o grupo necessário
+    // FunÃ§Ã£o que apaga tudo e liga apenas o grupo necessÃ¡rio
     void TrocarLuz(GameObject[] grupo)
     {
         ResetarTodas();
@@ -91,9 +92,9 @@ public class Luzes : MonoBehaviour
 
     }
 
-    // Função auxiliar para ligar/desligar um array de objetos
-    // Essa parte do código é o que chamamos de função utilitária. 
-    // Ela serve para você não ter que escrever o mesmo comando repetidas vezes para cada uma das 
+    // FunÃ§Ã£o auxiliar para ligar/desligar um array de objetos
+    // Essa parte do cÃ³digo Ã© o que chamamos de funÃ§Ã£o utilitÃ¡ria. 
+    // Ela serve para vocÃª nÃ£o ter que escrever o mesmo comando repetidas vezes para cada uma das 
     // 18 luzes (6 vermelhas, 6 azuis, 6 amarelas).
     void SetLuzes(GameObject[] grupo, bool estado)
     {

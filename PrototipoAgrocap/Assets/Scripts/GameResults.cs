@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 
+// Guarda os dados finais da partida entre a cena do jogo e a tela de resultados.
 public class GameResults : MonoBehaviour
 {
     private const string Prefixo = "GameResults_";
@@ -35,6 +36,7 @@ public class GameResults : MonoBehaviour
 
     public static void PrepararNovaPartida()
     {
+        // Limpa o estado anterior para impedir que uma nova partida herde resultados antigos.
         PartidaAtual = 0;
         NomeJogador = DefaultPlayerName;
         DataPartidaUtcTicks = 0;
@@ -81,6 +83,7 @@ public class GameResults : MonoBehaviour
 
     public static void SalvarResultados()
     {
+        // Gera um identificador simples para rastrear se a ultima partida ja foi enviada ao ranking.
         PartidaAtual = PlayerPrefs.GetInt(ChaveUltimaPartidaSalva, 0) + 1;
         DataPartidaUtcTicks = DateTime.UtcNow.Ticks;
 
@@ -113,6 +116,7 @@ public class GameResults : MonoBehaviour
 
     public static void CarregarResultados()
     {
+        // Reconstroi o ultimo snapshot salvo para o Scoreboard e para o envio ao Firebase.
         PartidaAtual = PlayerPrefs.GetInt(ChaveUltimaPartidaSalva, PartidaAtual);
         NomeJogador = PlayerPrefs.GetString(Prefixo + "NomeJogador", NomeJogador);
         long.TryParse(PlayerPrefs.GetString(Prefixo + "DataPartidaUtcTicks", DataPartidaUtcTicks.ToString()), out DataPartidaUtcTicks);
@@ -138,6 +142,7 @@ public class GameResults : MonoBehaviour
 
     public static bool RankingEstaPendente()
     {
+        // O ranking fica pendente enquanto a ultima partida salva ainda nao foi confirmada no Firebase.
         int ultimaPartidaSalva = PlayerPrefs.GetInt(ChaveUltimaPartidaSalva, 0);
         int ultimaPartidaEnviada = PlayerPrefs.GetInt(ChaveUltimaPartidaEnviada, 0);
 
@@ -146,6 +151,7 @@ public class GameResults : MonoBehaviour
 
     public static void MarcarRankingComoEnviado()
     {
+        // Marca a ultima partida persistida como sincronizada para evitar reenvio em loop.
         int ultimaPartidaSalva = PlayerPrefs.GetInt(ChaveUltimaPartidaSalva, PartidaAtual);
 
         PlayerPrefs.SetInt(ChaveUltimaPartidaEnviada, ultimaPartidaSalva);

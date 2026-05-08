@@ -5,6 +5,7 @@ using Firebase.Firestore;
 using UnityEngine;
 
 [DefaultExecutionOrder(-1000)]
+// Inicializa o Firebase antes dos outros sistemas que dependem dele.
 public class FirebaseBootstrap : MonoBehaviour
 {
     private const string DefaultObjectName = "FirebaseBootstrap";
@@ -19,6 +20,7 @@ public class FirebaseBootstrap : MonoBehaviour
 
     private void Awake()
     {
+        // Evita duplicar o bootstrap quando a cena for carregada novamente.
         if (instance != null && instance != this)
         {
             Destroy(gameObject);
@@ -34,6 +36,7 @@ public class FirebaseBootstrap : MonoBehaviour
 
     public static FirebaseBootstrap EnsureInstance()
     {
+        // Reaproveita a instancia existente ou cria uma nova quando a cena ainda nao tem o objeto.
         if (instance != null)
         {
             return instance;
@@ -61,6 +64,7 @@ public class FirebaseBootstrap : MonoBehaviour
     {
         EnsureInstance();
 
+        // Reusa a mesma task para impedir multiplas inicializacoes concorrentes.
         if (initializationTask != null)
         {
             return initializationTask;

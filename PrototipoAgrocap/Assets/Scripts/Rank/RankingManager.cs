@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 
+// Alterna entre o Scoreboard local e o ranking online carregado do Firebase.
 public class RankingManager : MonoBehaviour
 {
     [Header("Canvas")]
@@ -54,6 +55,7 @@ public class RankingManager : MonoBehaviour
         canvasScoreboard.SetActive(true);
         canvasRanking.SetActive(false);
 
+        // Agrupa os textos em arrays para preencher o top 6 com menos codigo repetido.
         textosNomes = new[]
         {
             textoNome1, textoNome2, textoNome3,
@@ -86,6 +88,7 @@ public class RankingManager : MonoBehaviour
         canvasRanking.SetActive(true);
         carregandoRanking = true;
 
+        // Primeiro tenta sincronizar a partida atual e so depois consulta o top 6.
         firebaseRanking.SalvarRanking(salvou =>
         {
             if (!salvou)
@@ -128,6 +131,7 @@ public class RankingManager : MonoBehaviour
             index++;
         }
 
+        // Preenche o restante com placeholders quando houver menos de seis jogadores.
         for (int i = index; i < textosNomes.Length; i++)
         {
             textosNomes[i].text = (i + 1) + "o  ---";
