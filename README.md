@@ -89,7 +89,7 @@ Coloque código do prompt de comnando se for necessário
 ```
 
 ## 📋 Licença/License
-<a href="https://github.com/2026-1-MCC1/Projeto6">AgroCap</a> © 2026 by <a href="https://www.linkedin.com/in/kau%C3%A3-casella-da-silva-9a1135346?, https://www.linkedin.com/in/otavio-sanches-pierini-0b6993306, https://www.linkedin.com/in/julia-damasio-b6531a24a/, https://www.linkedin.com/in/flavio-lima-ab8989262/">Kauã Casella, Otavio Sanches, Julia Damasio, Flavio Lima</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+<a href="https://github.com/2026-1-MCC1/Projeto6">AgroCap</a> © 2026 by <a href="https://www.linkedin.com/in/kau%C3%A3-casella-da-silva-9a1135346?, https://www.linkedin.com/in/otavio-sanches-pierini-0b6993306, https://www.linkedin.com/in/julia-damasio-b6531a24a/, https://www.linkedin.com/in/flavio-lima-ab8989262/">Kauã Casella, Otavio Sanches, Julia Damasio, Flavio Lima, FECAP</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
 
 ## 🎓 Referências
 
