@@ -33,12 +33,19 @@ Teste sua precisão, agilidade e estratégia enquanto coleta itens necessários 
 |<br>
 |-->documentos<br>
   &emsp;|-->Entrega 1<br>
+    &emsp;|Calculo 1.docx<br>
+    &emsp;|Jogos Digitais.docx<br>
+    &emsp;|Projeto Interdisciplinar.docx<br>
+    &emsp;|Etica e Pensamento Computacional.docx<br>
     &emsp;|Algoritmos e Logica de Programação.docx<br>
+  &emsp;|-->Entrega 1<br>
     &emsp;|Calculo 1.docx<br>
-    &emsp;|Calculo 1.docx<br>
+    &emsp;|Jogos Digitais.docx<br>
+    &emsp;|Projeto Interdisciplinar.docx<br>
+    &emsp;|Etica e Pensamento Computacional.docx<br>
+    &emsp;|Algoritmos e Logica de Programação.docx<br>
 |-->executáveis<br>
   &emsp;|-->windows<br>
-  &emsp;|-->android<br>
   &emsp;|-->HTML<br>
 |-->imagens<br>
 |-->src<br>
