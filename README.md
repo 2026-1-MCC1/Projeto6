@@ -11,7 +11,7 @@
 
 ## Integrantes: <a href="https://www.linkedin.com/in/kauã-casella-da-silva-9a1135346?">Kauã Casella</a>, <a href="https://www.linkedin.com/in/otavio-sanches-pierini-0b6993306">Otavio Sanches</a>, <a href="https://www.linkedin.com/in/julia-damasio-b6531a24a/">Julia Damasio</a>, <a href="https://www.linkedin.com/in/flavio-lima-ab8989262/">Flavio Lima</a>
 
-## Professores Orientadores: <a href="https://www.linkedin.com/in/adriano-valente-534576135/">Adriano Felix Valente </a>, <a href="https://www.linkedin.com/in/dolemes/"> David de Oliveira Lemes</a>, <a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/"> Eduardo Savino Gomes</a>, <a href="https://www.linkedin.com/in/remuniz/"> Renata Muniz do Nascimento</a>, <a href="https://www.linkedin.com/in/victorbarq/"> Victor Bruno Alexander Rosetti de Quiroz</a>.
+## Professores Orientadores: <a href="https://www.linkedin.com/in/adriano-valente-534576135/">Adriano Felix Valente </a>, <a href="https://www.linkedin.com/in/dolemes/"> David de Oliveira Lemes</a>, <a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/"> Eduardo Savino Gomes</a>, <a href="https://www.linkedin.com/in/remuniz/"> Renata Muniz do Nascimento</a>, <a href="https://www.linkedin.com/in/victorbarq/"> Victor Bruno Alexander Rosetti de Quiroz</a>, <a href="https://www.linkedin.com/in/luisspires/"> Luis Pires</a>.
 
 ## Descrição
 
