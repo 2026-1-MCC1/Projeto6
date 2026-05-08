@@ -22,6 +22,15 @@ public class Inventory : MonoBehaviour
 
     // Texto que mostra apenas o último item coletado
     [SerializeField] private TextMeshProUGUI textoUltimoItem;
+    [SerializeField] private ScoreManager scoreManager;
+
+    private void Awake()
+    {
+        if (scoreManager == null)
+        {
+            scoreManager = FindAnyObjectByType<ScoreManager>();
+        }
+    }
 
     // Adiciona um ingrediente ao inventário
     public void AdicionarIngrediente(IngredienteTipo tipo)
@@ -77,6 +86,11 @@ public class Inventory : MonoBehaviour
 
         // Atualiza a UI do último item coletado
         AtualizarUltimoItem(tipo);
+
+        if (scoreManager != null)
+        {
+            scoreManager.AdicionarPontos(tipo);
+        }
     }
 
     // Atualiza o texto exibindo apenas o último item coletado
@@ -84,7 +98,7 @@ public class Inventory : MonoBehaviour
     {
         if (textoUltimoItem != null)
         {
-            textoUltimoItem.text = "Último item: " + tipo;
+            textoUltimoItem.text = "Ultimo item: " + tipo;
         }
         else
         {

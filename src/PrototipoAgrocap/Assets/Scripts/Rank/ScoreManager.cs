@@ -63,7 +63,7 @@ public class ScoreManager : MonoBehaviour
         // Soma o valor do ingrediente na pontuacao atual
         score += valorIngrediente;
 
-        Debug.Log("Pontos: " + score);
+        Debug.Log("Pontos" + score);
 
         AtualizarUI();
     }
@@ -73,7 +73,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (textoPontos != null)
         {
-            textoPontos.text = "Pontos: " + score;
+            textoPontos.text = "" + score;
         }
         else
         {
