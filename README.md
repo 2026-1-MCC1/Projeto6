@@ -32,8 +32,10 @@ Teste sua precisão, agilidade e estratégia enquanto coleta itens necessários 
 -Raiz<br>
 |<br>
 |-->documentos<br>
-  &emsp;|-->antigos<br>
-  &emsp;|Documentação.docx<br>
+  &emsp;|-->Entrega 1<br>
+    &emsp;|Algoritmos e Logica de Programação.docx<br>
+    &emsp;|Calculo 1.docx<br>
+    &emsp;|Calculo 1.docx<br>
 |-->executáveis<br>
   &emsp;|-->windows<br>
   &emsp;|-->android<br>
