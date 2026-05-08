@@ -18,6 +18,12 @@ public class DeathZone : MonoBehaviour
     {
         // Garante que apenas a bola ativa o sistema
         if (!other.CompareTag("Ball")) return;
+        // Bolinhas extras do power up continuam coletando itens, mas nao custam vida ao cair.
+        if (other.GetComponentInParent<PowerUpBall>() != null)
+        {
+            Destroy(other.attachedRigidbody != null ? other.attachedRigidbody.gameObject : other.gameObject);
+            return;
+        }
         // Se o jogo já acabou, não faz nada
         if (GameManager.JogoAcabou()) return;
         // Informa ao GameManager que o jogador perdeu uma vida
