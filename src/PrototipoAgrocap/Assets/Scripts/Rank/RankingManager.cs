@@ -9,7 +9,6 @@ public class RankingManager : MonoBehaviour
     [Header("Canvas")]
     [SerializeField] private GameObject canvasScoreboard;
     [SerializeField] private GameObject canvasRanking;
-    [SerializeField] private GameObject canvasMenu;
 
     [Header("Integracao com Firebase")]
     [FormerlySerializedAs("rankingAPI")]
@@ -148,10 +147,4 @@ public class RankingManager : MonoBehaviour
             textosPontos[i].text = "---";
         }
     }
-    public void VoltarMenu()
-    {
-        canvasRanking.SetActive(false);
-        canvasMenu.SetActive(true);
-    }
-
 }

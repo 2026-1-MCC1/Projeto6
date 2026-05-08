@@ -22,7 +22,6 @@ public class MenuController : MonoBehaviour
     public GameObject painelControles;
     public TMP_InputField inputNome;
     public GameObject MenuNome;
-    public GameObject painelCreditos;
 
     private void Awake()
     {
@@ -167,44 +166,4 @@ public class MenuController : MonoBehaviour
             painelControles.SetActive(true);
         }
     }
-
-    // NOVA FUNÇÃO AQUI:
-    public void VoltarDosControles()
-    {
-        if (painelControles != null)
-        {
-            painelControles.SetActive(false); // Esconde os controles
-        }
-
-        if (MenuOpcoes != null)
-        {
-            MenuOpcoes.SetActive(true); // Mostra o menu de opções novamente
-        }
-    }
-
-    public void AbrirCreditos()
-    { 
-        if (MenuOpcoes != null)
-        {
-            MenuOpcoes.SetActive(false);
-        }
-            if (painelCreditos != null)
-            {
-                painelCreditos.SetActive(true);
-        }
-    }
-    public void VoltarDosCreditos()
-    {
-        if (painelCreditos != null)
-        {
-            painelCreditos.SetActive(false); // Esconde os creditos
-        }
-
-        if (MenuOpcoes != null)
-        {
-            MenuOpcoes.SetActive(true); // Mostra o menu de opções novamente
-        }
-    }
-
-
 }
