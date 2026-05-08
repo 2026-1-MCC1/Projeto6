@@ -1,109 +1,164 @@
-using TMPro; // adicionado para desaparecer com o texto no menu principal
+using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement; // Troca de cena
-using UnityEngine.UI; // adicionado por conta do canva
-using UnityEngine.Video; // adicionacdo por conta do video
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class MenuController : MonoBehaviour
 {
-    public VideoPlayer videoPlayer; //video
-    public GameObject MenuOpcoes; // segundo menu
-    public RawImage imagemDoVideo; // Imagem do video
-    public TextMeshProUGUI titulo; // titulo
-    public TextMeshProUGUI subtitulo; // subtitulo
-    public GameObject painelControles; // painel
-    public GameObject painelNome; // painel onde o jogador digita o nome
-    public TMP_InputField inputNome; // campo de texto do nome
-    public GameObject MenuNome; // Menu do nome
-   
+    private const string DefaultPlayerName = "Jogador";
+    private const string PlayerNameKey = "MenuController_NomeJogador";
 
-    void Start()
-    { //menu vai começar desativado
-        if (MenuOpcoes != null) MenuOpcoes.SetActive(false);
+    private static bool playerNameLoaded;
 
-        // painel de nome começa desativado
-        if (MenuNome != null) MenuNome.SetActive(false);
+    public static string NomeJogador = DefaultPlayerName;
+
+    public VideoPlayer videoPlayer;
+    public GameObject MenuOpcoes;
+    public RawImage imagemDoVideo;
+    public TextMeshProUGUI titulo;
+    public TextMeshProUGUI subtitulo;
+    public GameObject painelControles;
+    public TMP_InputField inputNome;
+    public GameObject MenuNome;
+
+    private void Awake()
+    {
+        ObterNomeJogador();
     }
 
-    void Update()
+    private void Start()
     {
-        // Se o vídeo estiver aparecendo e você clicar ou apertar alguma tecla
+        if (MenuOpcoes != null)
+        {
+            MenuOpcoes.SetActive(false);
+        }
+
+        if (MenuNome != null)
+        {
+            MenuNome.SetActive(false);
+        }
+
+        if (inputNome != null)
+        {
+            inputNome.text = ObterNomeJogador();
+        }
+    }
+
+    private void Update()
+    {
         if (videoPlayer != null && videoPlayer.isPlaying && Input.anyKeyDown)
         {
             AtivarNome();
         }
 
-        // Se a tela de nome estiver aberta e o jogador apertar Enter inicia o jogo (igual o botão)
         if (MenuNome != null && MenuNome.activeSelf &&
             (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)))
         {
-            // Confirma o nome igual ao botão
             ConfirmarNome();
         }
     }
 
-    void AtivarNome()
+    public static void SalvarNomeJogador(string nome)
     {
-        videoPlayer.Stop(); //o video vai parar
-        // A imagem do video desaparace 
-        if (imagemDoVideo != null) imagemDoVideo.enabled = false;
-        // Desativa completamente o objeto do vídeo
-        videoPlayer.gameObject.SetActive(false);
-
-        // O video, o titulo e o subtitulo desaparecem e o menu abre
-        if (titulo != null) titulo.gameObject.SetActive(false);
-        if (subtitulo != null) subtitulo.gameObject.SetActive(false);
-        // menu ativado 
-        if (MenuOpcoes != null) MenuOpcoes.SetActive(true);
-    }
-
-    // Codigo dos botoes 
-    public void JogarJogo()
-    {
-        // Esconde o menu principal
-        MenuOpcoes.SetActive(false);
-        // Mostra a tela de nome
-        MenuNome.SetActive(true);
-       
-    }
-
-    // Botão "Iniciar" da tela de nome
-    public void ConfirmarNome()
-    {
-        // Pega o texto digitado no InputField
-        string nomeDigitado = inputNome.text;
-
-        // Se não digitar nada usa nome padrão
-        if (string.IsNullOrWhiteSpace(nomeDigitado))
+        if (string.IsNullOrWhiteSpace(nome))
         {
-            nomeDigitado = "Jogador";
+            nome = DefaultPlayerName;
         }
 
-        // Remove espacos extras antes de salvar
-        nomeDigitado = nomeDigitado.Trim();
+        NomeJogador = nome.Trim();
+        playerNameLoaded = true;
 
-        // Salva o nome para o Ranking/API
-        RankingAPI.SalvarNomeJogador(nomeDigitado);
+        PlayerPrefs.SetString(PlayerNameKey, NomeJogador);
+        PlayerPrefs.Save();
+    }
 
-        // Limpa os dados antigos para começar uma nova partida
+    public static string ObterNomeJogador()
+    {
+        if (!playerNameLoaded)
+        {
+            NomeJogador = PlayerPrefs.GetString(PlayerNameKey, DefaultPlayerName);
+            playerNameLoaded = true;
+        }
+
+        if (string.IsNullOrWhiteSpace(NomeJogador))
+        {
+            NomeJogador = DefaultPlayerName;
+        }
+
+        return NomeJogador.Trim();
+    }
+
+    private void AtivarNome()
+    {
+        if (videoPlayer != null)
+        {
+            videoPlayer.Stop();
+            videoPlayer.gameObject.SetActive(false);
+        }
+
+        if (imagemDoVideo != null)
+        {
+            imagemDoVideo.enabled = false;
+        }
+
+        if (titulo != null)
+        {
+            titulo.gameObject.SetActive(false);
+        }
+
+        if (subtitulo != null)
+        {
+            subtitulo.gameObject.SetActive(false);
+        }
+
+        if (MenuOpcoes != null)
+        {
+            MenuOpcoes.SetActive(true);
+        }
+    }
+
+    public void JogarJogo()
+    {
+        if (MenuOpcoes != null)
+        {
+            MenuOpcoes.SetActive(false);
+        }
+
+        if (MenuNome != null)
+        {
+            MenuNome.SetActive(true);
+        }
+    }
+
+    public void ConfirmarNome()
+    {
+        string nomeDigitado = inputNome != null ? inputNome.text : DefaultPlayerName;
+        SalvarNomeJogador(nomeDigitado);
+
         GameResults.PrepararNovaPartida();
+        GameResults.DefinirNomeJogador(NomeJogador);
 
-        // Mostra no Console para debug
-        Debug.Log("Nome do jogador salvo: " + RankingAPI.NomeJogador);
-
-        // Carrega a cena principal do jogo
+        Debug.Log("Nome do jogador salvo: " + NomeJogador);
         SceneManager.LoadScene("Game");
     }
 
     public void SairDoJogo()
     {
-        Debug.Log("Botão Sair clicado!");
-        Application.Quit(); // Fecha o jogo
-    }
-    public void AbrirControles()
-    {
-        MenuOpcoes.SetActive(false);
-        painelControles.SetActive(true);
+        Debug.Log("Botao Sair clicado.");
+        Application.Quit();
     }
 
+    public void AbrirControles()
+    {
+        if (MenuOpcoes != null)
+        {
+            MenuOpcoes.SetActive(false);
+        }
+
+        if (painelControles != null)
+        {
+            painelControles.SetActive(true);
+        }
+    }
 }

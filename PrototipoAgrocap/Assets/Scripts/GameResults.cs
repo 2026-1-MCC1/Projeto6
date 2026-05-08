@@ -1,51 +1,43 @@
+using System;
 using UnityEngine;
 
-// Armazena os resultados finais do jogo para serem acessados entre cenas
 public class GameResults : MonoBehaviour
 {
-    // Prefixo usado para salvar os resultados no PlayerPrefs
     private const string Prefixo = "GameResults_";
+    private const string DefaultPlayerName = "Jogador";
 
-    // Chave antiga mantida para nao perder partida pendente de versoes anteriores
     private const string ChaveRankingPendente = Prefixo + "RankingPendente";
-
-    // Chave que guarda o numero da ultima partida salva
     private const string ChaveUltimaPartidaSalva = Prefixo + "UltimaPartidaSalva";
-
-    // Chave que guarda o numero da ultima partida enviada ao banco
     private const string ChaveUltimaPartidaEnviada = Prefixo + "UltimaPartidaEnviada";
 
-    // Numero da partida atual
     public static int PartidaAtual;
+    public static string NomeJogador = DefaultPlayerName;
+    public static long DataPartidaUtcTicks;
 
-    // Pontuação total final
     public static int ScoreFinal;
 
-    // Quantidade de cada tipo de bolo produzido
     public static int BoloEspecial;
     public static int BoloChocolate;
     public static int BoloMorango;
     public static int BoloSimples;
 
-    // Quantidade de ingredientes coletados
     public static int Trigo;
     public static int Ovo;
     public static int Leite;
     public static int Chocolate;
     public static int Morango;
 
-    // Quantidade de ingredientes restantes após as receitas
     public static int TrigoRestante;
     public static int OvoRestante;
     public static int LeiteRestante;
     public static int ChocolateRestante;
     public static int MorangoRestante;
 
-
-    // Prepara os valores em memoria para um novo jogador
     public static void PrepararNovaPartida()
     {
         PartidaAtual = 0;
+        NomeJogador = DefaultPlayerName;
+        DataPartidaUtcTicks = 0;
         ScoreFinal = 0;
 
         BoloEspecial = 0;
@@ -66,13 +58,35 @@ public class GameResults : MonoBehaviour
         MorangoRestante = 0;
     }
 
+    public static void DefinirNomeJogador(string nomeJogador)
+    {
+        if (string.IsNullOrWhiteSpace(nomeJogador))
+        {
+            NomeJogador = DefaultPlayerName;
+            return;
+        }
 
-    // Salva os resultados para nao sumirem quando o jogo for parado
+        NomeJogador = nomeJogador.Trim();
+    }
+
+    public static DateTime ObterDataPartidaUtc()
+    {
+        if (DataPartidaUtcTicks <= 0)
+        {
+            return DateTime.UtcNow;
+        }
+
+        return new DateTime(DataPartidaUtcTicks, DateTimeKind.Utc);
+    }
+
     public static void SalvarResultados()
     {
-        // Cada resultado final vira uma nova partida
         PartidaAtual = PlayerPrefs.GetInt(ChaveUltimaPartidaSalva, 0) + 1;
+        DataPartidaUtcTicks = DateTime.UtcNow.Ticks;
+
         PlayerPrefs.SetInt(ChaveUltimaPartidaSalva, PartidaAtual);
+        PlayerPrefs.SetString(Prefixo + "NomeJogador", NomeJogador);
+        PlayerPrefs.SetString(Prefixo + "DataPartidaUtcTicks", DataPartidaUtcTicks.ToString());
 
         PlayerPrefs.SetInt(Prefixo + "ScoreFinal", ScoreFinal);
 
@@ -93,17 +107,15 @@ public class GameResults : MonoBehaviour
         PlayerPrefs.SetInt(Prefixo + "ChocolateRestante", ChocolateRestante);
         PlayerPrefs.SetInt(Prefixo + "MorangoRestante", MorangoRestante);
 
-        // Marca que essa partida ainda precisa entrar no banco
         PlayerPrefs.SetInt(ChaveRankingPendente, 1);
-
         PlayerPrefs.Save();
     }
 
-
-    // Carrega os resultados salvos para montar o Scoreboard
     public static void CarregarResultados()
     {
         PartidaAtual = PlayerPrefs.GetInt(ChaveUltimaPartidaSalva, PartidaAtual);
+        NomeJogador = PlayerPrefs.GetString(Prefixo + "NomeJogador", NomeJogador);
+        long.TryParse(PlayerPrefs.GetString(Prefixo + "DataPartidaUtcTicks", DataPartidaUtcTicks.ToString()), out DataPartidaUtcTicks);
         ScoreFinal = PlayerPrefs.GetInt(Prefixo + "ScoreFinal", ScoreFinal);
 
         BoloEspecial = PlayerPrefs.GetInt(Prefixo + "BoloEspecial", BoloEspecial);
@@ -124,19 +136,14 @@ public class GameResults : MonoBehaviour
         MorangoRestante = PlayerPrefs.GetInt(Prefixo + "MorangoRestante", MorangoRestante);
     }
 
-
-    // Verifica se existe uma partida salva esperando envio ao ranking
     public static bool RankingEstaPendente()
     {
         int ultimaPartidaSalva = PlayerPrefs.GetInt(ChaveUltimaPartidaSalva, 0);
         int ultimaPartidaEnviada = PlayerPrefs.GetInt(ChaveUltimaPartidaEnviada, 0);
 
-        // A partida e pendente quando a salva for mais nova que a enviada
         return ultimaPartidaSalva > ultimaPartidaEnviada || PlayerPrefs.GetInt(ChaveRankingPendente, 0) == 1;
     }
 
-
-    // Marca que a partida salva ja foi enviada para o banco
     public static void MarcarRankingComoEnviado()
     {
         int ultimaPartidaSalva = PlayerPrefs.GetInt(ChaveUltimaPartidaSalva, PartidaAtual);

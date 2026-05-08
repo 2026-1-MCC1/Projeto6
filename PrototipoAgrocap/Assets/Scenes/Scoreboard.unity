@@ -1416,7 +1416,7 @@ GameObject:
   - component: {fileID: 771747565}
   - component: {fileID: 771747564}
   m_Layer: 0
-  m_Name: RankingAPI
+  m_Name: FirebaseRanking
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1431,10 +1431,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 771747563}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47fa38394fa10494eb22c257a7479931, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a57a86c0ef52ba42a15b23783cc6884, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RankingAPI
-  url: http://localhost:3000/ranking
+  m_EditorClassIdentifier: Assembly-CSharp::FirebaseRanking
 --- !u!4 &771747565
 Transform:
   m_ObjectHideFlags: 0
@@ -2247,7 +2246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RankingManager
   canvasScoreboard: {fileID: 889615665}
   canvasRanking: {fileID: 698872806}
-  rankingAPI: {fileID: 771747564}
+  firebaseRanking: {fileID: 771747564}
   textoNome1: {fileID: 1573219047}
   textoPontos1: {fileID: 1022160247}
   textoNome2: {fileID: 703324018}
