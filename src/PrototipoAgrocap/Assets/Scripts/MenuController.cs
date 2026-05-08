@@ -166,4 +166,17 @@ public class MenuController : MonoBehaviour
             painelControles.SetActive(true);
         }
     }
+
+    public void VoltarDosControles()
+    {
+        if (painelControles != null)
+        {
+            painelControles.SetActive(false); // Esconde os controles
+        }
+
+        if (MenuOpcoes != null)
+        {
+            MenuOpcoes.SetActive(true); // Mostra o menu de opções novamente
+        }
+    }
 }
