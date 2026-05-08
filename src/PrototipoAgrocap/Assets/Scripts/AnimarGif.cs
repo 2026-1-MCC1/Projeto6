@@ -1,5 +1,6 @@
 using UnityEngine;
-
+// Classe serializável usada para armazenar
+// os frames de uma animação estilo GIF.
 [System.Serializable]
 public class Gif
 {

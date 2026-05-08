@@ -1,9 +1,11 @@
 using System.Collections;
 using UnityEngine;
 
-// Controla o ciclo de spawn dos ingredientes coletaveis pela mesa.
+// Controla o ciclo de criação (spawn) dos ingredientes coletáveis.
+// Responsável por gerar itens, aguardar respawn e atualizar as telas da mesa.
 public class ItemSpawner : MonoBehaviour
 {
+    //Lista de prefabs que podem ser spawnados.
     [Header("Configuração")]
     [SerializeField] private GameObject[] itemPrefabs;
     [SerializeField] private Transform[] spawnPoints;
@@ -30,7 +32,7 @@ public class ItemSpawner : MonoBehaviour
             StartCoroutine(Respawn());
         }
     }
-
+    // Chamado quando um item é coletado.
     private void TrocarGifEmTodasAsTelas(IngredienteTipo ingrediente)
     {
         int index = (int)ingrediente;
@@ -54,8 +56,9 @@ public class ItemSpawner : MonoBehaviour
         SpawnarItem();
 
         esperandoRespawn = false;
-    }
 
+    }
+    // Responsável por escolher e instanciar um item aleatório.
     private void SpawnarItem()
     {
         if (spawnPoints.Length == 0)
