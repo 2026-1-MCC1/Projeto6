@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6090139154680291192}
   - component: {fileID: 4470438667936424679}
   - component: {fileID: 6965424358452624420}
+  - component: {fileID: 7465780970389944592}
   - component: {fileID: 6968366879883775312}
   m_Layer: 6
   m_Name: Trigo
@@ -107,6 +108,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IngredientPickup
   ingrediente: 0
+--- !u!64 &7465780970389944592
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5120803449275099482}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 1f2c1a877c7ba9f498dd5a5cf2291199, type: 2}
 --- !u!64 &6968366879883775312
 MeshCollider:
   m_ObjectHideFlags: 0
