@@ -13,6 +13,8 @@ public class DeathZone : MonoBehaviour
     [Header("Referências")]
     // Referência ao GameManager para controlar vidas
     [SerializeField] private GameManager GameManager;
+    // Referencia ao bloqueador da saida para reabrir o corredor no respawn
+    [SerializeField] private Bloqueador bloqueadorSaida;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -45,6 +47,13 @@ public class DeathZone : MonoBehaviour
 
         // Espera antes de reposicionar
         yield return new WaitForSeconds(respawnDelay);
+
+        // Reabre o SaidaBola antes de devolver a bola para a area de lancamento
+        if (bloqueadorSaida != null)
+        {
+            bloqueadorSaida.ResetarPassagem();
+        }
+
         // Move a bola para o SpawnPoint
         rb.position = SpawnPoint.position;
     }

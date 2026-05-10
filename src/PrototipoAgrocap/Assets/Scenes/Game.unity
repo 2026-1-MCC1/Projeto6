@@ -2081,7 +2081,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4f5e7f91c1f299418a4417b20336f19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bloqueador
-  paredeFisica: {fileID: 174543965}
+  sensorSaida: {fileID: 174543965}
+  paredeFisica: {fileID: 7640888971642773122}
 --- !u!1 &186362737
 GameObject:
   m_ObjectHideFlags: 0
@@ -4673,7 +4674,7 @@ GameObject:
   m_Component:
   - component: {fileID: 415950789}
   - component: {fileID: 415950790}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Farol1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4770,7 +4771,7 @@ GameObject:
   m_Component:
   - component: {fileID: 421916448}
   - component: {fileID: 421916449}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Farol2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6275,6 +6276,7 @@ MonoBehaviour:
   SpawnPoint: {fileID: 621045487}
   respawnDelay: 1
   GameManager: {fileID: 414421657}
+  bloqueadorSaida: {fileID: 174543971}
 --- !u!65 &596266884
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21364,7 +21366,7 @@ GameObject:
   - component: {fileID: 6188392733598213069}
   - component: {fileID: 6280876011736247028}
   - component: {fileID: 6280876011736247029}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: trucktorus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21913,7 +21915,7 @@ GameObject:
   - component: {fileID: 5871446629612294512}
   - component: {fileID: 6011445457046661205}
   - component: {fileID: 6011445457046661204}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: truck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22136,7 +22138,7 @@ GameObject:
   - component: {fileID: 6451915599398748779}
   - component: {fileID: 9002273606125264119}
   - component: {fileID: 9002273606125264120}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: truckwheel.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22838,6 +22840,7 @@ GameObject:
   - component: {fileID: 8208595290972454808}
   - component: {fileID: 5500396392520326608}
   - component: {fileID: 1754286522688205595}
+  - component: {fileID: 7640888971642773122}
   m_Layer: 0
   m_Name: SaidaBola
   m_TagString: Untagged
@@ -22845,6 +22848,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &7640888971642773122
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7640888971642773121}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &8188764911046515174
 Transform:
   m_ObjectHideFlags: 0
@@ -22888,7 +22912,7 @@ GameObject:
   - component: {fileID: 1749389193789908294}
   - component: {fileID: 8983758268044572876}
   - component: {fileID: 8983758268044572877}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: truckwheel.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23011,7 +23035,7 @@ GameObject:
   - component: {fileID: 3226841402798118862}
   - component: {fileID: 840120869354682127}
   - component: {fileID: 9082705200659902326}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: truckwheel.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
