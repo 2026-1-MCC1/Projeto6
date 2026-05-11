@@ -30,36 +30,36 @@ Teste sua precisão, agilidade e estratégia enquanto coleta itens necessários 
 ## 🛠 Estrutura de pastas
 
 -Raiz<br>
-Raiz/
-├── documentos/
-│   ├── Entrega 1/
-│   │   ├── Algoritmos e Lógica da Programação
-│   │   ├── Cálculo I
-│   │   ├── Jogos Digitais e Sistemas Digitais Interativos
-│   │   ├── Projeto Interdisciplinar - Jogos Digitais
-│   │   └── Ética e Pensamento Computacional
-│   └── Entrega 2/
-│       ├── Algoritmos e Lógica da Programação
-│       ├── Cálculo I
-│       ├── Jogos Digitais e Sistemas Digitais Interativos
-│       ├── Projeto Interdisciplinar - Jogos Digitais
-│       └── Ética e Pensamento Computacional [cite: 365, 370]
-├── imagens/
-│   ├── icon do jogo
-│   ├── imagem de final
-│   └── imagem do menu
-├── executáveis/
+|<br>
+├── documentos<br>
+│   ├── &emsp;Entrega 1<br>
+│   │   ├── &emsp;Algoritmos e Lógica da Programação<br>
+│   │   ├── &emsp;Cálculo I<br>
+│   │   ├── &emsp;Jogos Digitais e Sistemas Digitais Interativos<br>
+│   │   ├── &emsp;Projeto Interdisciplinar<br>
+│   │   └── &emsp;Ética e Pensamento Computacional<br>
+│   └── Entrega 2<br>
+│       ├── &emsp;Algoritmos e Lógica da Programação<br>
+│       ├── &emsp;Cálculo I<br>
+│       ├── &emsp;Jogos Digitais e Sistemas Digitais Interativos<br>
+│       ├── &emsp;Projeto Interdisciplinar<br>
+│       └── &emsp;Ética e Pensamento Computacional<br>
+├── imagens<br>
+│   ├── &emsp;icon do jogo<br>
+│   ├── &emsp;imagem de final<br>
+│   └── &emsp;imagem do menu<br>
+├── executáveis<br>
 │   └── link para o arquivo do exexutável
-├── src/
-│   ├── Entrega 1/
-│   │   ├── BackEnd
-│   │   └── FrontEnd
-│   ├── Entrega 2/
-│   │   ├── BackEnd
-│   │   └── FrontEnd
-│   └── arquivos do projeto
-├── .gitignore
-└── readme.md
+├── src<br>
+│   ├── Entrega 1<br>
+│   │   ├── &emsp;BackEnd<br>
+│   │   └── &emsp;FrontEnd<br>
+│   ├── Entrega 2<br>
+│   │   ├── &emsp;BackEnd<br>
+│   │   └── &emsp;FrontEnd<br>
+│   └── arquivos do projeto<br>
+├── .gitignore<br>
+└── readme.md<br>
 
 ## 🛠 Instalação
 
