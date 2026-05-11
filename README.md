@@ -32,7 +32,7 @@ Teste sua precisão, agilidade e estratégia enquanto coleta itens necessários 
 -Raiz<br>
 |<br>
 ├── documentos<br>
-│   ├── &emsp;Entrega 1<br>
+│   ├── Entrega 1<br>
 │   │   ├── &emsp;Algoritmos e Lógica da Programação<br>
 │   │   ├── &emsp;Cálculo I<br>
 │   │   ├── &emsp;Jogos Digitais e Sistemas Digitais Interativos<br>
@@ -57,7 +57,6 @@ Teste sua precisão, agilidade e estratégia enquanto coleta itens necessários 
 │   ├── Entrega 2<br>
 │   │   ├── &emsp;BackEnd<br>
 │   │   └── &emsp;FrontEnd<br>
-│   └── arquivos do projeto<br>
 ├── .gitignore<br>
 └── readme.md<br>
 
