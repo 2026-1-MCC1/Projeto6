@@ -30,42 +30,36 @@ Teste sua precisão, agilidade e estratégia enquanto coleta itens necessários 
 ## 🛠 Estrutura de pastas
 
 -Raiz<br>
-O projeto tem como objetivo oferecer uma experiência interativa e desafiadora que combina entretenimento acessível com objetivos claros, como a coleta de ingredientes para completar receitas de bolo. O jogo busca estimular habilidades como coordenação motora, agilidade e raciocínio, incentivando o jogador a melhorar seu desempenho através de estratégia e precisão.
-
-<br><br>
-
-## 🛠 Estrutura de pastas
-
--Raiz
-|-->documentos
- |-->Entrega 1
-   |-Algoritmos e Lógica da Programação
-   |-Cálculo I
-   |-Jogos Digitais e Sistemas Digitais Interativos
-   |-Projeto Interdisciplinar - Jogos Digitais
-   |-Ética e Pensamento Computacional
- |-->Entrega 2
-   |-Algoritmos e Lógica da Programação
-   |-Cálculo I
-   |-Jogos Digitais e Sistemas Digitais Interativos
-   |-Projeto Interdisciplinar - Jogos Digitais
-   |-Ética e Pensamento Computacional
-|-->imagens
- |-icon do jogo
- |-imagem de final
- |-imagem do menu
-|-->executáveis
- |-link para o arquivo do exexutável
-|-->src
-|-->Entrega 1
-|-BackEnd
-|-FrontEnd
-|-->Entrega 2
-|-BackEnd
-|-FrontEnd
- |-arquivos do projeto
-|-.gitignore
-|-readme.md
+Raiz/
+├── documentos/
+│   ├── Entrega 1/
+│   │   ├── Algoritmos e Lógica da Programação
+│   │   ├── Cálculo I
+│   │   ├── Jogos Digitais e Sistemas Digitais Interativos
+│   │   ├── Projeto Interdisciplinar - Jogos Digitais
+│   │   └── Ética e Pensamento Computacional
+│   └── Entrega 2/
+│       ├── Algoritmos e Lógica da Programação
+│       ├── Cálculo I
+│       ├── Jogos Digitais e Sistemas Digitais Interativos
+│       ├── Projeto Interdisciplinar - Jogos Digitais
+│       └── Ética e Pensamento Computacional [cite: 365, 370]
+├── imagens/
+│   ├── icon do jogo
+│   ├── imagem de final
+│   └── imagem do menu
+├── executáveis/
+│   └── link para o arquivo do exexutável
+├── src/
+│   ├── Entrega 1/
+│   │   ├── BackEnd
+│   │   └── FrontEnd
+│   ├── Entrega 2/
+│   │   ├── BackEnd
+│   │   └── FrontEnd
+│   └── arquivos do projeto
+├── .gitignore
+└── readme.md
 
 ## 🛠 Instalação
 
