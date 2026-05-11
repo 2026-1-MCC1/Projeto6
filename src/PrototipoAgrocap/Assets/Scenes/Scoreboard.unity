@@ -386,7 +386,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.021000002, y: 0.88000005}
   m_AnchorMax: {x: 0.21900001, y: 0.96444666}
-  m_AnchoredPosition: {x: 0.651001, y: -0.4000702}
+  m_AnchoredPosition: {x: 0.651001, y: -0.40008545}
   m_SizeDelta: {x: 1.9062958, y: -0.9991989}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &297359384
@@ -458,7 +458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.87176263, b: 0.56078434, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2331,9 +2331,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ranking
-
-'
+  m_text: Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 140dc99ecdca9624eb73aae06e0fbaa8, type: 2}
   m_sharedMaterial: {fileID: 7871794445376196488, guid: 140dc99ecdca9624eb73aae06e0fbaa8, type: 2}
@@ -2521,7 +2519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.93980044, b: 0.6862745, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2811,15 +2809,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScoreboardUI
   panelScoreboard: {fileID: 489904364}
   fontePersonalizada: {fileID: 11400000, guid: 140dc99ecdca9624eb73aae06e0fbaa8, type: 2}
-  spriteBoloEspecial: {fileID: 21300000, guid: 6744ac92932f9c54b81ff280752c49aa, type: 3}
-  spriteBoloChocolate: {fileID: 21300000, guid: ad5e8d45451c9304580b5ea11f46fcce, type: 3}
-  spriteBoloMorango: {fileID: 21300000, guid: 0ca0f4104dd5e8b46b0ca1b4ed95d593, type: 3}
-  spriteBoloSimples: {fileID: 21300000, guid: 9eeaff302cacad74a8fdd1d08e4dfc71, type: 3}
-  spriteChocolate: {fileID: 21300000, guid: 49d0eb8cc966d2244ae4892baa20e82e, type: 3}
-  spriteMorango: {fileID: 21300000, guid: 695babe2c2ec3004fa9685f6ba71f941, type: 3}
-  spriteFarinha: {fileID: 21300000, guid: 0788cb282d52b0546b742e24407032f2, type: 3}
-  spriteLeite: {fileID: 21300000, guid: 44c378bb2db884b4dbe06d00fd664832, type: 3}
-  spriteOvo: {fileID: 21300000, guid: c34b7a124a3b65a40ac8115bdc33d186, type: 3}
+  spriteBoloEspecial: {fileID: 21300000, guid: 57d3486ca66af4743be60389837b5c41, type: 3}
+  spriteBoloChocolate: {fileID: 21300000, guid: 5312d500297b3e740bb85f8554d9fa3d, type: 3}
+  spriteBoloMorango: {fileID: 21300000, guid: 91d4139d44f5ad24380dee4093391dc8, type: 3}
+  spriteBoloSimples: {fileID: 21300000, guid: c9d9baf0487e3f24d80bd76d25260cfc, type: 3}
+  spriteChocolate: {fileID: 21300000, guid: 1e8d1854cd8e5d647b5127e2db99b85b, type: 3}
+  spriteMorango: {fileID: 21300000, guid: d8bc04b621f9b3a4eac93f2944f5ce63, type: 3}
+  spriteFarinha: {fileID: 21300000, guid: 7816b3d25509ca74894cc8966a886c76, type: 3}
+  spriteLeite: {fileID: 21300000, guid: a083cf2014cf61c4ab254bb85ae4261f, type: 3}
+  spriteOvo: {fileID: 21300000, guid: 6ee9b5ad11866814fadb678d6a3ab4c8, type: 3}
   cardColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1407722498
 Transform:
@@ -3499,7 +3497,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.78800005, y: 0.86}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -13, y: -3.9000702}
+  m_AnchoredPosition: {x: -13, y: -3.9000854}
   m_SizeDelta: {x: -12.093689, y: -25.999199}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1917278700
@@ -3546,9 +3544,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1036979918}
         m_TargetAssemblyTypeName: RankingManager, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: IrParaMenuRanking
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3571,7 +3569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.87176263, b: 0.56078434, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

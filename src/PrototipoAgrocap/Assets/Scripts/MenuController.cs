@@ -18,15 +18,17 @@ public class MenuController : MonoBehaviour
     public GameObject MenuOpcoes; //Cria um campo dentro do inspector para atribuir o canva de MenuOpcoes
     //Com o GameObject ( a gente criou diversos campos )
 
-    public RawImage imagemDoVideo;
-    public TextMeshProUGUI titulo;
-    public TextMeshProUGUI subtitulo;
+    public RawImage imagemDoVideo;//Para a imagem do video, que é o plano de fundo do menu, para esconder quando o video acabar
+    public TextMeshProUGUI titulo; //Para o titulo do menu, para esconder quando o video acabar
+    public TextMeshProUGUI subtitulo;//Para o subtitulo do menu, para esconder quando o video acabar
     public GameObject painelControles; //Cria um campo dentro do inspector para atribuir o canva do PainelControle
-    public TMP_InputField inputNome;
-    public GameObject MenuNome;
+    public TMP_InputField inputNome;//Cria um campo dentro do inspector para atribuir a caixinha de texto onde o jogador digita o nome
+    public GameObject MenuNome;//Cria um campo dentro do inspector para atribuir o canva do MenuNome, onde o jogador digita o nome
     public GameObject painelCreditos1; //Cria um campo dentro do inspector para atribuir o canva do PainelCreditos1
     public GameObject painelCreditos2; //Cria um campo dentro do inspector para atribuir o canva do PainelCreditos2
     //Criei dois paineis pois não iria caber em 1 so e um volta para o outro
+    public GameObject painelHistorias1;//Cria um campo dentro do inspector para atribuir o canva do PainelHistorias1
+    public GameObject painelHistorias2;//Cria um campo dentro do inspector para atribuir o canva do PainelHistorias2
 
     private void Awake() // O wake serve para quando o objeto que carrega esse script carregar na cena, ele executar essa 
         // função (ObterNomeJogador), buscando basicamente o banco de dados que utilizamos (PlayerPrefs) 
@@ -176,7 +178,6 @@ public class MenuController : MonoBehaviour
 
     public void SairDoJogo()
     {
-        Debug.Log("Botao Sair clicado.");
         Application.Quit();
     }
 
@@ -254,4 +255,66 @@ public class MenuController : MonoBehaviour
             MenuOpcoes.SetActive(true);
         }
     }
+    public void VoltarMenuNome()
+    {
+        if (MenuNome != null)
+        {
+            MenuNome.SetActive(false);
+        }
+
+        if (MenuOpcoes != null)
+        {
+            MenuOpcoes.SetActive(true);
+        }
+    }
+    public void IrParaHistorias1()
+    {
+        if (MenuOpcoes != null)
+        {
+            MenuOpcoes.SetActive(false);
+        }
+
+        if (painelHistorias1 != null)
+        {
+            painelHistorias1.SetActive(true);
+        }
+    }
+    public void IrParaHistorias2()
+    {
+        if (painelHistorias1 != null)
+        {
+            painelHistorias1.SetActive(false);
+        }
+
+        if (painelHistorias2 != null)
+        {
+            painelHistorias2.SetActive(true);
+        }
+    }
+    public void VoltarParaHistorias1()
+    {
+        if (painelHistorias2 != null)
+        {
+            painelHistorias2.SetActive(false);
+        }
+
+        if (painelHistorias1 != null)
+        {
+            painelHistorias1.SetActive(true);
+        }
+    }
+    public void VoltarParaMenuHistoria()
+    {
+        if (painelHistorias1 != null)
+        {
+            painelHistorias1.SetActive(false);
+        }
+
+        if (MenuOpcoes != null)
+        {
+            MenuOpcoes.SetActive(true);
+        }
+    }
 }
+
+
