@@ -2809,15 +2809,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScoreboardUI
   panelScoreboard: {fileID: 489904364}
   fontePersonalizada: {fileID: 11400000, guid: 140dc99ecdca9624eb73aae06e0fbaa8, type: 2}
-  spriteBoloEspecial: {fileID: 21300000, guid: 57d3486ca66af4743be60389837b5c41, type: 3}
-  spriteBoloChocolate: {fileID: 21300000, guid: 5312d500297b3e740bb85f8554d9fa3d, type: 3}
-  spriteBoloMorango: {fileID: 21300000, guid: 91d4139d44f5ad24380dee4093391dc8, type: 3}
-  spriteBoloSimples: {fileID: 21300000, guid: c9d9baf0487e3f24d80bd76d25260cfc, type: 3}
-  spriteChocolate: {fileID: 21300000, guid: 1e8d1854cd8e5d647b5127e2db99b85b, type: 3}
-  spriteMorango: {fileID: 21300000, guid: d8bc04b621f9b3a4eac93f2944f5ce63, type: 3}
-  spriteFarinha: {fileID: 21300000, guid: 7816b3d25509ca74894cc8966a886c76, type: 3}
-  spriteLeite: {fileID: 21300000, guid: a083cf2014cf61c4ab254bb85ae4261f, type: 3}
-  spriteOvo: {fileID: 21300000, guid: 6ee9b5ad11866814fadb678d6a3ab4c8, type: 3}
+  spriteBoloEspecial: {fileID: 21300000, guid: 362c7586bf6966544bd0e6690c3c47c1, type: 3}
+  spriteBoloChocolate: {fileID: 21300000, guid: 5913a3f7e1917f24c9c36986f35cb8d1, type: 3}
+  spriteBoloMorango: {fileID: 21300000, guid: 3816a18642fabbe4e8fb5aaf036c9636, type: 3}
+  spriteBoloSimples: {fileID: 21300000, guid: a6bac084899b9f24f9d4e48cbeabdd18, type: 3}
+  spriteChocolate: {fileID: 21300000, guid: c89d01ebd4d50a84cbc105744bacde44, type: 3}
+  spriteMorango: {fileID: 21300000, guid: df5e18943a119d24497d7ac412e6298d, type: 3}
+  spriteFarinha: {fileID: 21300000, guid: 3112c78a81aa6564fb6c3bbbcd022d1a, type: 3}
+  spriteLeite: {fileID: 21300000, guid: 126ee37a63dd1744e86737f3503cdedc, type: 3}
+  spriteOvo: {fileID: 21300000, guid: c2de2ce5b6e7fb04b89a303ce7678084, type: 3}
   cardColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1407722498
 Transform:
