@@ -46,8 +46,6 @@ Teste sua precisão, agilidade e estratégia enquanto coleta itens necessários 
     &emsp;Ética e Pensamento Computacional<br>
 |-->Imagens<br>
     &emsp;Capa do jogo<br>
-    &emsp;Imagem do ScoreBoard<br>
-    &emsp;Imagem do menu<br>
 |-->executáveis<br>
     &emsp;|link para o arquivo do exexutável
 &emsp;│-->src<br>
