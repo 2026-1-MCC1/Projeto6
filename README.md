@@ -16,7 +16,7 @@
 ## Descrição
 
 <p class="center">
-<img src="imagens/agrocap.png" alt="AgroCap" width="700">
+<img src="https://github.com/2026-1-MCC1/Projeto6/blob/main/imagens/AgroCap%20Capa%20do%20Jogo.png" width="700">
 </p>
 
 

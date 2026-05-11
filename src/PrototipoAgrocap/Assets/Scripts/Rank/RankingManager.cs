@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 // Alterna entre o Scoreboard local e o ranking online carregado do Firebase.
@@ -145,6 +146,14 @@ public class RankingManager : MonoBehaviour
         {
             textosNomes[i].text = (i + 1) + "o  ---";
             textosPontos[i].text = "---";
+        }
+    }
+    public void IrParaMenuRanking()
+    {
+        if (canvasRanking != null)
+        {
+            canvasRanking.SetActive(false); // Esconde os controles
+            SceneManager.LoadScene("Menu");
         }
     }
 }
