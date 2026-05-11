@@ -1,28 +1,34 @@
 using TMPro;
 using UnityEngine;
 
-// Gerencia o inventário de ingredientes do jogador
-// Armazena os itens coletados e atualiza a interface
-// Tambem controla o feedback visual imediato da coleta na mesa.
+// Gerencia o inventario de ingredientes do jogador.
 public class Inventory : MonoBehaviour
 {
     [Header("Ingredientes")]
-
-    // Quantidade de cada ingrediente
     public int Trigo = 0;
     public int Ovo = 0;
     public int Leite = 0;
     public int Chocolate = 0;
     public int Morango = 0;
     public GameObject[] Luzes;
+
     private GameObject LuzAtual;
 
-
     [Header("UI")]
-
-    // Texto que mostra apenas o último item coletado
-    [SerializeField] private TextMeshProUGUI textoUltimoItem;
     [SerializeField] private ScoreManager scoreManager;
+
+    [System.Serializable]
+    private class ItemHUD
+    {
+        public TextMeshProUGUI quantidade = null;
+    }
+
+    [Header("UI Itens")]
+    [SerializeField] private ItemHUD trigoHUD;
+    [SerializeField] private ItemHUD ovoHUD;
+    [SerializeField] private ItemHUD leiteHUD;
+    [SerializeField] private ItemHUD chocolateHUD;
+    [SerializeField] private ItemHUD morangoHUD;
 
     private void Awake()
     {
@@ -32,14 +38,15 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    // Adiciona um ingrediente ao inventário
+    private void Start()
+    {
+        AtualizarTextoItens();
+    }
+
     public void AdicionarIngrediente(IngredienteTipo tipo)
     {
-        int indiceLuz = -1; // -1 pq  é uma convençao de programação  
-        // se fosse "0" no lugar de -1 o programa iria entender que 
-        // a luz que precisa acender é a 0 (a representação do -1 é vazio ou invalido)
+        int indiceLuz = -1;
 
-        // Verifica qual ingrediente foi coletado
         switch (tipo)
         {
             case IngredienteTipo.Trigo:
@@ -68,24 +75,20 @@ public class Inventory : MonoBehaviour
                 break;
         }
 
-        //Parte para acender e apagar as luzes da mesa conforme a coleta de itens
+        if (LuzAtual != null)
+        {
+            LuzAtual.SetActive(false);
+        }
 
- 
-        //Apaga a luz anterior caso tenha uma acessa
-        if (LuzAtual != null) LuzAtual.SetActive(false);
-        
-        //Acende uma nova luz
         if (indiceLuz != -1 && indiceLuz < Luzes.Length)
         {
             Luzes[indiceLuz].SetActive(true);
             LuzAtual = Luzes[indiceLuz];
         }
 
-        // Exibe no console (debug)
         Debug.Log($"Coletado: {tipo}");
 
-        // Atualiza a UI do último item coletado
-        AtualizarUltimoItem(tipo);
+        AtualizarTextoItens();
 
         if (scoreManager != null)
         {
@@ -93,18 +96,20 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    // Atualiza o texto exibindo apenas o último item coletado
-    private void AtualizarUltimoItem(IngredienteTipo tipo)
+    private void AtualizarTextoItens()
     {
-        if (textoUltimoItem != null)
+        AtualizarItem(trigoHUD, Trigo);
+        AtualizarItem(ovoHUD, Ovo);
+        AtualizarItem(leiteHUD, Leite);
+        AtualizarItem(chocolateHUD, Chocolate);
+        AtualizarItem(morangoHUD, Morango);
+    }
+
+    private void AtualizarItem(ItemHUD item, int quantidade)
+    {
+        if (item != null && item.quantidade != null)
         {
-            textoUltimoItem.text = "Ultimo item: " + tipo;
-        }
-        else
-        {
-            Debug.LogWarning("Texto do último item não está conectado!");
-            //Criar uma função para cada item depois para deixar organizado
-            //Arreumar o range
+            item.quantidade.text = quantidade.ToString();
         }
     }
 }
