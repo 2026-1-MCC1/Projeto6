@@ -36,37 +36,36 @@ O projeto tem como objetivo oferecer uma experiência interativa e desafiadora q
 
 ## 🛠 Estrutura de pastas
 
--Raiz<br>
-|<br>
+-Raiz
 |-->documentos
  |-->Entrega 1
    |-Algoritmos e Lógica da Programação
    |-Cálculo I
    |-Jogos Digitais e Sistemas Digitais Interativos
-   |-Projeto Interdisciplinar 
+   |-Projeto Interdisciplinar - Jogos Digitais
    |-Ética e Pensamento Computacional
  |-->Entrega 2
    |-Algoritmos e Lógica da Programação
    |-Cálculo I
    |-Jogos Digitais e Sistemas Digitais Interativos
-   |-Projeto Interdisciplinar 
+   |-Projeto Interdisciplinar - Jogos Digitais
    |-Ética e Pensamento Computacional
 |-->imagens
- |-Capa do Jogo
- |-imagem de Creditos
- |-imagem do Menu
+ |-icon do jogo
+ |-imagem de final
+ |-imagem do menu
 |-->executáveis
  |-link para o arquivo do exexutável
 |-->src
- |-ProtipoAgroCap
- |-->Entrega 1
- &emsp;|-->Backend<br>
-  &emsp;|-->Frontend<br>
- |-->Entrega 2
- &emsp;|-->Backend<br>
-  &emsp;|-->Frontend<br>
+|-->Entrega 1
+|-BackEnd
+|-FrontEnd
+|-->Entrega 2
+|-BackEnd
+|-FrontEnd
+ |-arquivos do projeto
 |-.gitignore
-|readme.md<br>
+|-readme.md
 
 ## 🛠 Instalação
 
