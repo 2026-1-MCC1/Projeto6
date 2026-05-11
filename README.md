@@ -11,7 +11,7 @@
 
 ## Integrantes: <a href="https://www.linkedin.com/in/kauã-casella-da-silva-9a1135346?">Kauã Casella</a>, <a href="https://www.linkedin.com/in/otavio-sanches-pierini-0b6993306">Otavio Sanches</a>, <a href="https://www.linkedin.com/in/julia-damasio-b6531a24a/">Julia Damasio</a>, <a href="https://www.linkedin.com/in/flavio-lima-ab8989262/">Flavio Lima</a>
 
-## Professores Orientadores: <a href="https://www.linkedin.com/in/adriano-valente-534576135/">Adriano Felix Valente </a>, <a href="https://www.linkedin.com/in/dolemes/"> David de Oliveira Lemes</a>, <a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/"> Eduardo Savino Gomes</a>, <a href="https://www.linkedin.com/in/remuniz/"> Renata Muniz do Nascimento</a>, <a href="https://www.linkedin.com/in/victorbarq/"> Victor Bruno Alexander Rosetti de Quiroz</a>, <a href="https://www.linkedin.com/in/luisspires/"> Luis Pires</a>.
+## Professores Orientadores: <a href="https://www.linkedin.com/in/adriano-valente-534576135/">Adriano Felix Valente </a>, <a href="https://www.linkedin.com/in/dolemes/"> David de Oliveira Lemes</a>, <a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/"> Eduardo Savino Gomes</a>, <a href="https://www.linkedin.com/in/remuniz/"> Renata Muniz do Nascimento</a>, <a href="https://www.linkedin.com/in/victorbarq/"> Victor Bruno Alexander Rosetti de Quiroz</a>, <a href="https://www.linkedin.com/in/luisspires/"> Luis Fernando dos Pires</a>.
 
 ## Descrição
 
@@ -30,18 +30,42 @@ Teste sua precisão, agilidade e estratégia enquanto coleta itens necessários 
 ## 🛠 Estrutura de pastas
 
 -Raiz<br>
+O projeto tem como objetivo oferecer uma experiência interativa e desafiadora que combina entretenimento acessível com objetivos claros, como a coleta de ingredientes para completar receitas de bolo. O jogo busca estimular habilidades como coordenação motora, agilidade e raciocínio, incentivando o jogador a melhorar seu desempenho através de estratégia e precisão.
+
+<br><br>
+
+## 🛠 Estrutura de pastas
+
+-Raiz<br>
 |<br>
-|-->documentos<br>
-  &emsp;|-->antigos<br>
-  &emsp;|Documentação.docx<br>
-|-->executáveis<br>
-  &emsp;|-->windows<br>
-  &emsp;|-->android<br>
-  &emsp;|-->HTML<br>
-|-->imagens<br>
-|-->src<br>
-  &emsp;|-->Backend<br>
+|-->documentos
+ |-->Entrega 1
+   |-Algoritmos e Lógica da Programação
+   |-Cálculo I
+   |-Jogos Digitais e Sistemas Digitais Interativos
+   |-Projeto Interdisciplinar 
+   |-Ética e Pensamento Computacional
+ |-->Entrega 2
+   |-Algoritmos e Lógica da Programação
+   |-Cálculo I
+   |-Jogos Digitais e Sistemas Digitais Interativos
+   |-Projeto Interdisciplinar 
+   |-Ética e Pensamento Computacional
+|-->imagens
+ |-Capa do Jogo
+ |-imagem de Creditos
+ |-imagem do Menu
+|-->executáveis
+ |-link para o arquivo do exexutável
+|-->src
+ |-ProtipoAgroCap
+ |-->Entrega 1
+ &emsp;|-->Backend<br>
   &emsp;|-->Frontend<br>
+ |-->Entrega 2
+ &emsp;|-->Backend<br>
+  &emsp;|-->Frontend<br>
+|-.gitignore
 |readme.md<br>
 
 ## 🛠 Instalação
