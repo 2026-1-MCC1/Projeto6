@@ -47,9 +47,9 @@ Teste sua precisão, agilidade e estratégia enquanto coleta itens necessários 
 |-->Imagens<br>
     &emsp;Capa do jogo<br>
 |-->executáveis<br>
-    &emsp;|link para o arquivo do exexutável
+    &emsp;|link para o arquivo do exexutável<br>
 &emsp;│-->src<br>
-&emsp;│-->Entrega 1<br
+&emsp;│-->Entrega 1<br>
     &emsp;BackEnd<br>
     &emsp;FrontEnd<br>
 &emsp;│-->Entrega 2<br>
