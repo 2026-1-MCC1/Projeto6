@@ -109075,6 +109075,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Morango
       objectReference: {fileID: 0}
+    - target: {fileID: 7081641777337376865, guid: 8e1bab25d341c9c41b05c319801ca2d9, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081641777337376865, guid: 8e1bab25d341c9c41b05c319801ca2d9, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7735983022805602646, guid: 8e1bab25d341c9c41b05c319801ca2d9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1764
@@ -109113,6 +109121,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7735983022805602646, guid: 8e1bab25d341c9c41b05c319801ca2d9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8590334888177785924, guid: 8e1bab25d341c9c41b05c319801ca2d9, type: 3}
+      propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
