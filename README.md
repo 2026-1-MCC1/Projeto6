@@ -33,32 +33,32 @@ Teste sua precisão, agilidade e estratégia enquanto coleta itens necessários 
 |<br>
 |-->documentos<br>
 &emsp;│-->Entrega 1<br>
-  &emsp;│Algoritmos e Lógica da Programação<br>
-  &emsp;|Cálculo I<br>
-  &emsp;|Jogos Digitais e Sistemas Digitais Interativos<br>
-  &emsp;|Projeto Interdisciplinar<br>
-  &emsp;|Ética e Pensamento Computacional<br>
+    &emsp;Algoritmos e Lógica da Programação<br>
+    &emsp;Cálculo I<br>
+    &emsp;Jogos Digitais e Sistemas Digitais Interativos<br>
+    &emsp;Projeto Interdisciplinar<br>
+    &emsp;Ética e Pensamento Computacional<br>
 &emsp;│-->Entrega 2<br>
-  &emsp;│Algoritmos e Lógica da Programação<br>
-  &emsp;|Cálculo I<br>
-  &emsp;|Jogos Digitais e Sistemas Digitais Interativos<br>
-  &emsp;|Projeto Interdisciplinar<br>
-  &emsp;|Ética e Pensamento Computacional<br>
+    &emsp;Algoritmos e Lógica da Programação<br>
+    &emsp;Cálculo I<br>
+    &emsp;Jogos Digitais e Sistemas Digitais Interativos<br>
+    &emsp;Projeto Interdisciplinar<br>
+    &emsp;Ética e Pensamento Computacional<br>
 |-->Imagens<br>
-    &emsp;|Capa do jogo<br>
-    &emsp;|Imagem do ScoreBoard<br>
-    &emsp;|Imagem do menu<br>
+    &emsp;Capa do jogo<br>
+    &emsp;Imagem do ScoreBoard<br>
+    &emsp;Imagem do menu<br>
 |-->executáveis<br>
     &emsp;|link para o arquivo do exexutável
-├── src<br>
+&emsp;│-->src<br>
 &emsp;│-->Entrega 1<br
-    &emsp;|BackEnd<br>
-    &emsp;|FrontEnd<br>
+    &emsp;BackEnd<br>
+    &emsp;FrontEnd<br>
 &emsp;│-->Entrega 2<br>
-    &emsp;|BackEnd<br>
-    &emsp;|FrontEnd<br>
--->.gitignore<br>
--->readme.md<br>
+    &emsp;BackEnd<br>
+    &emsp;FrontEnd<br>
+&emsp;│-->.gitignore<br>
+&emsp;│-->readme.md<br>
 
 ## 🛠 Instalação
 
