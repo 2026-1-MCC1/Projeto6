@@ -1,2 +1,19 @@
 fileFormatVersion: 2
 guid: cd0dc2e779d41c548839a61673d4ab09
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - textoUltimoItem: {instanceID: 0}
+  - textoItens: {instanceID: 0}
+  - scoreManager: {instanceID: 0}
+  - imagemTrigo: {fileID: 2800000, guid: cd0047ec2a6fc2047a9d5cef19049b79, type: 3}
+  - imagemOvo: {fileID: 2800000, guid: 1a2cbd780a397984a9dab61e66826fd2, type: 3}
+  - imagemLeite: {fileID: 2800000, guid: 60df8834e5c46e9449e37bd66aee3c2f, type: 3}
+  - imagemChocolate: {fileID: 2800000, guid: 9e8507e5923275643ac6a69f7e7461f6, type: 3}
+  - imagemMorango: {fileID: 2800000, guid: 0fdc8b4979ceb874683fa21083e8ebab, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

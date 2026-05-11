@@ -5,6 +5,8 @@ using UnityEngine;
 // Responsável por gerar itens, aguardar respawn e atualizar as telas da mesa.
 public class ItemSpawner : MonoBehaviour
 {
+    private const string NomeMarcadorBaseItem = "BaseSpawn";
+
     //Lista de prefabs que podem ser spawnados.
     [Header("Configuração")]
     [SerializeField] private GameObject[] itemPrefabs;
@@ -15,7 +17,7 @@ public class ItemSpawner : MonoBehaviour
     [Header("Referência")]
     [SerializeField] private Inventory inventory;
     [SerializeField] private AnimarGif[] telasGif;
-    [SerializeField] private Transform referenciaFloor;
+    [SerializeField] private Transform referenciaBaseSpawn;
 
     private bool esperandoRespawn = false;
 
@@ -79,11 +81,11 @@ public class ItemSpawner : MonoBehaviour
         int itemIndex = Random.Range(0, itemPrefabs.Length);
 
         Transform ponto = spawnPoints[spawnIndex];
-        ObterPlanoDoFloor(ponto, out Vector3 pontoFloor, out Vector3 normalFloor);
+        Transform referencia = referenciaBaseSpawn != null ? referenciaBaseSpawn : ponto;
 
         // Sorteia um ponto e um prefab diferentes a cada respawn para variar a rodada.
         GameObject item = Instantiate(itemPrefabs[itemIndex], ponto.position, ponto.rotation);
-        AlinharItemComMesa(item, pontoFloor, normalFloor);
+        AlinharItemComMesa(item, referencia.position, referencia.up);
 
         IngredientPickup pickup = item.GetComponent<IngredientPickup>();
 
@@ -108,14 +110,28 @@ public class ItemSpawner : MonoBehaviour
             normalMesa.Normalize();
         }
 
-        if (!TryGetPontoMaisBaixoVisual(item, normalMesa, out float pontoMaisBaixo))
+        float pontoBaseItem = ObterPontoBaseItem(item, normalMesa);
+        float pontoBaseMesa = Vector3.Dot(pontoMesa, normalMesa);
+        float deslocamento = pontoBaseMesa + alturaAcimaDaMesa - pontoBaseItem;
+        item.transform.position += normalMesa * deslocamento;
+    }
+
+    private float ObterPontoBaseItem(GameObject item, Vector3 normalMesa)
+    {
+        foreach (Transform filho in item.GetComponentsInChildren<Transform>(true))
         {
-            return;
+            if (filho.name == NomeMarcadorBaseItem)
+            {
+                return Vector3.Dot(filho.position, normalMesa);
+            }
         }
 
-        float pontoDaMesa = Vector3.Dot(pontoMesa, normalMesa);
-        float deslocamento = pontoDaMesa + alturaAcimaDaMesa - pontoMaisBaixo;
-        item.transform.position += normalMesa * deslocamento;
+        if (TryGetPontoMaisBaixoVisual(item, normalMesa, out float pontoMaisBaixo))
+        {
+            return pontoMaisBaixo;
+        }
+
+        return Vector3.Dot(item.transform.position, normalMesa);
     }
 
     private bool TryGetPontoMaisBaixoVisual(GameObject item, Vector3 normalMesa, out float pontoMaisBaixo)
@@ -153,68 +169,4 @@ public class ItemSpawner : MonoBehaviour
         return encontrouRenderer;
     }
 
-    private void ObterPlanoDoFloor(Transform pontoSpawn, out Vector3 pontoFloor, out Vector3 normalFloor)
-    {
-        Transform floor = referenciaFloor != null ? referenciaFloor : EncontrarFloorMaisProximo(pontoSpawn.position);
-
-        if (floor != null && TryGetTopoDoFloor(floor, out pontoFloor, out normalFloor))
-        {
-            return;
-        }
-
-        pontoFloor = pontoSpawn.position;
-        normalFloor = pontoSpawn.up;
-    }
-
-    private Transform EncontrarFloorMaisProximo(Vector3 posicao)
-    {
-        Renderer[] renderers = FindObjectsByType<Renderer>(FindObjectsSortMode.None);
-        Transform floorMaisProximo = null;
-        float menorDistancia = float.PositiveInfinity;
-
-        foreach (Renderer renderer in renderers)
-        {
-            if (renderer == null || !renderer.enabled || !renderer.gameObject.activeInHierarchy || renderer.gameObject.name != "Floor")
-            {
-                continue;
-            }
-
-            float distancia = (renderer.bounds.ClosestPoint(posicao) - posicao).sqrMagnitude;
-
-            if (distancia < menorDistancia)
-            {
-                menorDistancia = distancia;
-                floorMaisProximo = renderer.transform;
-            }
-        }
-
-        return floorMaisProximo;
-    }
-
-    private bool TryGetTopoDoFloor(Transform floor, out Vector3 pontoFloor, out Vector3 normalFloor)
-    {
-        normalFloor = floor.up;
-
-        BoxCollider boxCollider = floor.GetComponent<BoxCollider>();
-
-        if (boxCollider != null)
-        {
-            Vector3 topoLocal = boxCollider.center + Vector3.up * (boxCollider.size.y * 0.5f);
-            pontoFloor = floor.TransformPoint(topoLocal);
-            return true;
-        }
-
-        MeshFilter meshFilter = floor.GetComponent<MeshFilter>();
-
-        if (meshFilter != null && meshFilter.sharedMesh != null)
-        {
-            Bounds bounds = meshFilter.sharedMesh.bounds;
-            Vector3 topoLocal = bounds.center + Vector3.up * bounds.extents.y;
-            pontoFloor = floor.TransformPoint(topoLocal);
-            return true;
-        }
-
-        pontoFloor = floor.position;
-        return true;
-    }
 }
