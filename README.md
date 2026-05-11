@@ -32,13 +32,13 @@ Teste sua precisão, agilidade e estratégia enquanto coleta itens necessários 
 -Raiz<br>
 |<br>
 |-->documentos<br>
-&emsp;│-->Entrega 1<br>
+│-->Entrega 1<br>
     &emsp;Algoritmos e Lógica da Programação<br>
     &emsp;Cálculo I<br>
     &emsp;Jogos Digitais e Sistemas Digitais Interativos<br>
     &emsp;Projeto Interdisciplinar<br>
     &emsp;Ética e Pensamento Computacional<br>
-&emsp;│-->Entrega 2<br>
+│-->Entrega 2<br>
     &emsp;Algoritmos e Lógica da Programação<br>
     &emsp;Cálculo I<br>
     &emsp;Jogos Digitais e Sistemas Digitais Interativos<br>
@@ -48,7 +48,8 @@ Teste sua precisão, agilidade e estratégia enquanto coleta itens necessários 
     &emsp;Capa do jogo<br>
 |-->executáveis<br>
     &emsp;|link para o arquivo do exexutável<br>
-&emsp;│-->src<br>
+│-->src<br>
+&emsp;│-->ProtoripoAgroCap<br>
 &emsp;│-->Entrega 1<br>
     &emsp;BackEnd<br>
     &emsp;FrontEnd<br>
