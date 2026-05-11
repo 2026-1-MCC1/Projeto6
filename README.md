@@ -30,33 +30,32 @@ Teste sua precisão, agilidade e estratégia enquanto coleta itens necessários 
 ## 🛠 Estrutura de pastas
 
 -Raiz<br>
-|<br>
 ├── documentos<br>
 │   ├── Entrega 1<br>
-│   │   ├── &emsp;Algoritmos e Lógica da Programação<br>
-│   │   ├── &emsp;Cálculo I<br>
-│   │   ├── &emsp;Jogos Digitais e Sistemas Digitais Interativos<br>
-│   │   ├── &emsp;Projeto Interdisciplinar<br>
-│   │   └── &emsp;Ética e Pensamento Computacional<br>
+│   │   &emsp;Algoritmos e Lógica da Programação<br>
+│   │   &emsp;Cálculo I<br>
+│   │   &emsp;Jogos Digitais e Sistemas Digitais Interativos<br>
+│   │   &emsp;Projeto Interdisciplinar<br>
+│   │   &emsp;Ética e Pensamento Computacional<br>
 │   └── Entrega 2<br>
-│       ├── &emsp;Algoritmos e Lógica da Programação<br>
-│       ├── &emsp;Cálculo I<br>
-│       ├── &emsp;Jogos Digitais e Sistemas Digitais Interativos<br>
-│       ├── &emsp;Projeto Interdisciplinar<br>
-│       └── &emsp;Ética e Pensamento Computacional<br>
+│       &emsp;Algoritmos e Lógica da Programação<br>
+│       &emsp;Cálculo I<br>
+│       &emsp;Jogos Digitais e Sistemas Digitais Interativos<br>
+│       &emsp;Projeto Interdisciplinar<br>
+│       &emsp;Ética e Pensamento Computacional<br>
 ├── imagens<br>
-│   ├── &emsp;icon do jogo<br>
-│   ├── &emsp;imagem de final<br>
-│   └── &emsp;imagem do menu<br>
+│   &emsp;icon do jogo<br>
+│   &emsp;imagem de final<br>
+│   &emsp;imagem do menu<br>
 ├── executáveis<br>
 │   └── link para o arquivo do exexutável
 ├── src<br>
 │   ├── Entrega 1<br>
-│   │   ├── &emsp;BackEnd<br>
-│   │   └── &emsp;FrontEnd<br>
+│   │   &emsp;BackEnd<br>
+│   │   &emsp;FrontEnd<br>
 │   ├── Entrega 2<br>
-│   │   ├── &emsp;BackEnd<br>
-│   │   └── &emsp;FrontEnd<br>
+│   │   &emsp;BackEnd<br>
+│   │   &emsp;FrontEnd<br>
 ├── .gitignore<br>
 └── readme.md<br>
 
