@@ -11,7 +11,7 @@
 
 ## Integrantes: <a href="https://www.linkedin.com/in/kauã-casella-da-silva-9a1135346?">Kauã Casella</a>, <a href="https://www.linkedin.com/in/otavio-sanches-pierini-0b6993306">Otavio Sanches</a>, <a href="https://www.linkedin.com/in/julia-damasio-b6531a24a/">Julia Damasio</a>, <a href="https://www.linkedin.com/in/flavio-lima-ab8989262/">Flavio Lima</a>
 
-## Professores Orientadores: <a href="https://www.linkedin.com/in/adriano-valente-534576135/">Adriano Felix Valente </a>, <a href="https://www.linkedin.com/in/dolemes/"> David de Oliveira Lemes</a>, <a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/"> Eduardo Savino Gomes</a>, <a href="https://www.linkedin.com/in/remuniz/"> Renata Muniz do Nascimento</a>, <a href="https://www.linkedin.com/in/victorbarq/"> Victor Bruno Alexander Rosetti de Quiroz</a>, <a href="https://www.linkedin.com/in/luisspires/"> Luis Pires</a>.
+## Professores Orientadores: <a href="https://www.linkedin.com/in/adriano-valente-534576135/">Adriano Felix Valente </a>, <a href="https://www.linkedin.com/in/dolemes/"> David de Oliveira Lemes</a>, <a href="https://www.linkedin.com/in/eduardo-savino-gomes-77833a10/"> Eduardo Savino Gomes</a>, <a href="https://www.linkedin.com/in/remuniz/"> Renata Muniz do Nascimento</a>, <a href="https://www.linkedin.com/in/victorbarq/"> Victor Bruno Alexander Rosetti de Quiroz</a>, <a href="https://www.linkedin.com/in/luisspires/"> Luis Fernando dos Pires</a>.
 
 ## Descrição
 
@@ -32,17 +32,32 @@ Teste sua precisão, agilidade e estratégia enquanto coleta itens necessários 
 -Raiz<br>
 |<br>
 |-->documentos<br>
-  &emsp;|-->antigos<br>
-  &emsp;|Documentação.docx<br>
+│-->Entrega 1<br>
+    &emsp;Algoritmos e Lógica da Programação<br>
+    &emsp;Cálculo I<br>
+    &emsp;Jogos Digitais e Sistemas Digitais Interativos<br>
+    &emsp;Projeto Interdisciplinar<br>
+    &emsp;Ética e Pensamento Computacional<br>
+│-->Entrega 2<br>
+    &emsp;Algoritmos e Lógica da Programação<br>
+    &emsp;Cálculo I<br>
+    &emsp;Jogos Digitais e Sistemas Digitais Interativos<br>
+    &emsp;Projeto Interdisciplinar<br>
+    &emsp;Ética e Pensamento Computacional<br>
+|-->Imagens<br>
+    &emsp;Capa do jogo<br>
 |-->executáveis<br>
-  &emsp;|-->windows<br>
-  &emsp;|-->android<br>
-  &emsp;|-->HTML<br>
-|-->imagens<br>
-|-->src<br>
-  &emsp;|-->Backend<br>
-  &emsp;|-->Frontend<br>
-|readme.md<br>
+    &emsp;|link para o arquivo do exexutável<br>
+│-->src<br>
+&emsp;│-->ProtoripoAgroCap<br>
+&emsp;│-->Entrega 1<br>
+    &emsp;BackEnd<br>
+    &emsp;FrontEnd<br>
+&emsp;│-->Entrega 2<br>
+    &emsp;BackEnd<br>
+    &emsp;FrontEnd<br>
+&emsp;│-->.gitignore<br>
+&emsp;│-->readme.md<br>
 
 ## 🛠 Instalação
 
@@ -54,11 +69,6 @@ Encontre o JOGO.exe na pasta executáveis e execute-o como qualquer outro progra
 ```sh
 Coloque código do prompt de comnando se for necessário
 ```
-
-<b>HTML:</b>
-
-Não há instalação!
-Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
 
 ## 💻 Configuração para Desenvolvimento
 
