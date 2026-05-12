@@ -72,11 +72,11 @@ Coloque código do prompt de comnando se for necessário
 
 ## 💻 Configuração para Desenvolvimento
 
-Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
+Baixar o arquivo pelo google drive e descompactar o arquivo e executar.
 
 Para abrir este projeto você necessita das seguintes ferramentas:
 
--<a href="https://godotengine.org/download">GODOT</a>
+-<a href="https://godotengine.org/download">Google Drive</a>
 
 ```sh
 make install
