@@ -48,12 +48,6 @@ public class DeathZone : MonoBehaviour
         // Espera antes de reposicionar
         yield return new WaitForSeconds(respawnDelay);
 
-        // Reabre o SaidaBola antes de devolver a bola para a area de lancamento
-        if (bloqueadorSaida != null)
-        {
-            bloqueadorSaida.ResetarPassagem();
-        }
-
         // Move a bola para o SpawnPoint
         rb.position = SpawnPoint.position;
     }
