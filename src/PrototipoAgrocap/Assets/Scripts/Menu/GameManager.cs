@@ -133,7 +133,7 @@ public class GameManager : MonoBehaviour
             inventory.Leite--;
 
             simples++;
-            pontos += 250;
+            pontos += 2000;
         }
 
         int pontosIngredientesRestantes =
