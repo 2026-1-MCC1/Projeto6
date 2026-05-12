@@ -76,7 +76,7 @@ Baixar o arquivo pelo google drive e descompactar o arquivo e executar.
 
 Para abrir este projeto você necessita das seguintes ferramentas:
 
--<a href="https://godotengine.org/download">Google Drive</a>
+-<a href="https://drive.google.com/drive/folders/1qVFkOdOLoRwTRgQq0dUOWzDPEpGf8on4?usp=drive_link">Google Drive</a>
 
 ```sh
 make install
