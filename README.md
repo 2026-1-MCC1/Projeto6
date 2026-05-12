@@ -90,10 +90,8 @@ Coloque código do prompt de comnando se for necessário
 ## 🎓 Referências
 
 Aqui estão as referências usadas no projeto.
-
-1. <https://github.com/iuricode/readme-template>
-2. <https://github.com/gabrieldejesus/readme-model>
+1. <https://youtu.be/LXOy2uWjJFQ?si=nE2vUzINxWhpZOEe>
+2. <https://www.crazygames.com/br/game/pinball>
 3. <https://chooser-beta.creativecommons.org/>
 4. <https://freesound.org/>
 5. <https://www.toptal.com/developers/gitignore>
-6. Músicas por: <a href="https://freesound.org/people/DaveJf/sounds/616544/"> DaveJf </a> e <a href="https://freesound.org/people/DRFX/sounds/338986/"> DRFX </a> ambas com Licença CC 0.
