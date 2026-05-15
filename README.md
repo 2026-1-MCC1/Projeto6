@@ -76,7 +76,7 @@ Baixar o arquivo pelo google drive e descompactar o arquivo e executar.
 
 Para abrir este projeto você necessita das seguintes ferramentas:
 
--<a href="https://drive.google.com/drive/folders/1qVFkOdOLoRwTRgQq0dUOWzDPEpGf8on4?usp=drive_link">Google Drive</a>
+-<a href="https://drive.google.com/file/d/1LtrFZQaKu9955jLKlex4Q4fKAwX5JWBv/view?usp=drive_link">Google Drive</a>
 
 ```sh
 make install
